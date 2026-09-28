@@ -124,7 +124,18 @@
     var dirEl = esc.querySelector('.esc3d__dir');
     var levelBtns = Array.prototype.slice.call(esc.querySelectorAll('[data-level]'));
     var titles = cards.map(function (c) { return c.querySelector('.card3d__title').textContent; });
-    var SP = 0.3, K = 1.38, B = 0.1;          // card spacing, ride speed, entry offset
+    // Each card owns its own stretch of scroll: it rides in, slows to a near-stop
+    // in the middle of the incline while you read it, then rides out before the
+    // next card arrives. u is the card's own progress through that stretch.
+    var N = 3.7, LEAD = 0.15;
+    function cardU(p, i) { return p * N - i + LEAD; }
+    function uToT(u) {
+      if (u < 0) return u * 2;                            // still below the landing
+      if (u < 0.2) return u / 0.2 * 0.42;                 // ride in
+      if (u < 0.8) return 0.42 + (u - 0.2) / 0.6 * 0.16;  // the reading hold
+      if (u < 1) return 0.58 + (u - 0.8) / 0.2 * 0.42;    // ride out
+      return 1 + (u - 1) * 2;
+    }
     var cur = 0, last = 0, still = 0, raf = 0, visible = false, lastT = 0;
     var W = 0, H = 0, mobile = false, cw = 400, ch = 420;
 
@@ -132,7 +143,7 @@
       var r = esc.getBoundingClientRect();
       return clamp01(-r.top / Math.max(r.height - innerHeight, 1));
     }
-    function pAt(i) { return clamp01((0.5 - B + i * SP) / K); }
+    function pAt(i) { return clamp01((i + 0.5 - LEAD) / N); }
     function measure() {
       W = stageEl.clientWidth; H = stageEl.clientHeight; mobile = W < 700;
       cw = mobile ? Math.min(W - 76, 330) : Math.min(400, W * 0.34);
@@ -172,13 +183,13 @@
       rails.forEach(function (r) { r.style.transform = ro; });
       var best = 0, bestD = 9;
       cards.forEach(function (c, i) {
-        var t = B + cur * K - i * SP;
+        var t = uToT(cardU(cur, i));
         var dist = Math.abs(t - 0.5);
         if (dist < bestD) { bestD = dist; best = i; }
         if (t < -0.12 || t > 1.12) { c.style.opacity = '0'; c.style.pointerEvents = 'none'; c.classList.remove('is-focal'); return; }
         var pt = path(clamp01(t));
         // phones show one card at a time: a clean crossfade between neighbours
-        var op = mobile ? (t < 0.3 ? 0 : t < 0.4 ? (t - 0.3) / 0.1 : t < 0.6 ? 1 : t < 0.7 ? (0.7 - t) / 0.1 : 0)
+        var op = mobile ? (t < 0.25 ? 0 : t < 0.4 ? (t - 0.25) / 0.15 : t < 0.6 ? 1 : t < 0.75 ? (0.75 - t) / 0.15 : 0)
                         : (t < 0.1 ? t / 0.1 : t > 0.9 ? (1 - t) / 0.1 : 1);
         op = clamp01(op);
         c.style.opacity = op.toFixed(3);
@@ -205,7 +216,7 @@
     // Keyboard: tabbing to a card that has not ridden into view parks the ride on it.
     cards.forEach(function (c, i) {
       c.addEventListener('focus', function () {
-        if (Math.abs(B + progress() * K - i * SP - 0.5) > 0.2) { scrollToCard(i, false); cur = last = progress(); }
+        if (Math.abs(uToT(cardU(progress(), i)) - 0.5) > 0.2) { scrollToCard(i, false); cur = last = progress(); }
       });
     });
     new IntersectionObserver(function (en) {

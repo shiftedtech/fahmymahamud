@@ -109,3 +109,11 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   All are public landing pages; the crew app's public marketing page shows no client data. Re-run the capture if a site
   changes.
 - **DataSentinel text and stack** come from its public GitHub repo description and topics (Python, MCP, Docker).
+- **Escalator pacing (29 Sep, round 3).** Cards were hard to read because they moved constantly and overlapped.
+  - Each card now owns its own stretch of scroll: ride in (20%), a near-stop reading hold in the middle of the incline
+    (60%), ride out (20%). The next card only arrives after the last has left.
+  - The pin grew from 4.2 to 7 screens. Measured: each card is alone and fully readable for about 1,300px of scroll on
+    desktop and about 800px on phone, with zero overlap.
+- **Vercel Hobby cannot connect Git repos owned by an organization** (per Vercel's limits docs). That is why
+  `vercel git connect` failed for `shiftedtech/fahmymahamud`. Options: keep deploying with the CLI, move the repo to the
+  personal account, or upgrade to Pro.
