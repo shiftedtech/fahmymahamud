@@ -1,0 +1,10 @@
+.tools
+screenshots
+lab
+node_modules
+brand_assets
+design
+archive
+*.pdf
+.env*
+*.log

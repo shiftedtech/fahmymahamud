@@ -63,3 +63,13 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   After that I made the font non-render-blocking, deferred the scripts and used a smaller logo. Most of the remaining
   mobile gap was missing gzip on the local server, which Vercel adds.
 - Page weight: about 0.45 MB for the whole `site/` folder.
+
+## GitHub & Vercel
+- `shiftedtech/fahmymahamud` already existed (public) with an earlier `index.html` card page (5–6 Sep). I merged
+  histories instead of force-pushing and moved that file to `archive/fahmy-card.html`. It's not served.
+- gh: the winget install stalled on a Windows admin prompt, so I used the portable build in `.tools/gh` instead.
+- Vercel project `fahmymahamud` (scope fahmymahamud-9940): Framework Other, output `site`. Production:
+  https://fahmymahamud.vercel.app. `.vercelignore` keeps brand_assets (the resume PDF), .tools, design, archive and
+  screenshots out of CLI uploads. Verified live: those paths return 404.
+- `vercel git connect` failed with "You need to add a Login Connection to your GitHub account first". Until that's
+  added in Vercel, pushes to main do not redeploy. Run `npx vercel@latest deploy --prod --scope fahmymahamud-9940` instead.

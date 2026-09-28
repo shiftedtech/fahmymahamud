@@ -7,3 +7,6 @@ screenshots/
 lab/
 *.log
 brand_assets/*.pdf
+
+.vercel
+.env*
