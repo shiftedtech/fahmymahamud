@@ -522,7 +522,7 @@ time { font-variant-numeric: tabular-nums; }
   /* phone: a slim tab on the right edge, icon and floor number only */
   .wrap { padding-right: 52px; }
   .lift-nav { right: 0; }
-  .lift-nav__display { border-right: 0; border-radius: var(--r) 0 0 var(--r); padding: .55rem .35rem .65rem .4rem; gap: .4rem; }
+  .lift-nav__display { border-right: 0; border-radius: var(--r) 0 0 var(--r); padding: .55rem .4rem .65rem .45rem; gap: .4rem; min-width: 46px; }
   .lift-nav__name { display: none; }
   .lift-nav__icon svg { width: 18px; height: 23px; }
   .lift-nav__floor { min-width: 1.75rem; height: 1.75rem; font-size: 1rem; }
