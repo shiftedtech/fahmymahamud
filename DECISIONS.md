@@ -33,7 +33,7 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 - The Story chapter adds a small "Then / Now" pair built from resume wording (lifts, escalators, travellators → pipelines,
   dashboards, automations).
 - "Open source · runs every day" on MyJobSearchBot comes from the resume ("open-source daily job-alert automation").
-- Only real numbers are animated: 12+ years, 60+ escalator units.
+- Only real numbers are animated: 9+ years, 60+ escalator units.
 
 ## Design
 - **Grammar:** chaptered editorial. Each section is a "floor" with its own light ground (white, off-white, light grey,

@@ -53,7 +53,7 @@ G  Curiosity    a light Singapore morning skyline that leans as your pointer mov
 2  Competence   skills set as a clean spec sheet, grouped, nothing decorative
 3  Anticipation→Delight   the floor indicator reaches 3, the doors hold shut, then part under your hand
 4  Trust        certifications, compact, provider by provider (administrative, compressed)
-5  Grounding    the timeline: real employers, real dates, 12+ years
+5  Grounding    the timeline: real employers, real dates, 9+ years
 6  Resolve      the lift arrives: green ground, one line, email and GitHub, the indicator settles on 6
 ```
 Adjacent acts carry different feelings.
@@ -69,7 +69,7 @@ The first ~15% of the projects pin holds the doors shut on purpose (anticipation
 | Beat | Device | Why |
 |---|---|---|
 | G Lobby | bespoke pointer + scroll parallax (SVG planes) | depth from differential motion; the world leans |
-| 1 Story | flow + in, count (12+, 60+) | prose with real figures |
+| 1 Story | flow + in, count (9+, 60+) | prose with real figures |
 | 2 Skills | flow + reveal (chapter wipe) | a change of floor is a change of state |
 | 3 Projects | pin + `--sc-p` doors (signature) | the peak; held breath then release |
 | 4 Certifications | flow + in (short stagger) | compress the administrative part |

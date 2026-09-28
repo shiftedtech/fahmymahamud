@@ -11,7 +11,7 @@ Fahmy Mahamud (Mohammad Fahmy Bin Mahamud) · Singapore Citizen · English (flue
 Data engineering & AI automation
 
 ## Summary
-12+ years in engineering operations and facilities, now building data pipelines and AI automations.
+9+ years in engineering operations and facilities, now building data pipelines and AI automations.
 I kept lifts and escalators running for Singapore's rail network at SMRT, was promoted to Assistant Engineer II,
 and moved into data engineering through Generation Singapore's Junior Data Engineer programme
 (with Microsoft and Temasek Polytechnic). I work with Python, SQL, ETL/ELT pipelines, Microsoft Fabric,

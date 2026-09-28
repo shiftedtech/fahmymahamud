@@ -10,14 +10,14 @@ in `brand_assets/` are left off the site (see DECISIONS.md).
 - Heading: **Fahmy Mahamud**
 - Avatar: `brand_assets/avatar.png`
 - Headline: Data engineering & AI automation
-- Subline: Former SMRT lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.
+- Subline: Lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.
 - Buttons: **View projects** (→ #projects) · **Contact me** (→ #contact)
 - Skyline label: Singapore · 1.35°N 103.82°E
 
 ## 1. My story
 Heading: From lifts to data.
 
-I spent 12+ years in engineering operations and facilities. At SMRT I kept lifts and escalators running for
+I spent 9+ years in engineering operations and facilities. At SMRT I kept lifts and escalators running for
 Singapore's rail network, was promoted to Assistant Engineer II, and stepped up as team lead on short notice
 to clear a backlog of undone documentation by priority. That is where I saw how much more I could do with data
 and AI. So I retrained through Generation Singapore's Junior Data Engineer programme (with Microsoft and
