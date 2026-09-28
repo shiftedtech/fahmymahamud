@@ -121,3 +121,7 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   within Vercel Hobby's personal, non-commercial terms. It now reads: "I really enjoy tinkering with AI automations and messy data
   problems on the side. If you're working on something interesting or want to bounce ideas around, feel free to reach out
   at fahmymahamud@gmail.com."
+- **Contact section (29 Sep).** The heading is now "Making everyday tasks effortless on the side." A row of five logo links
+  replaces the buttons: Gmail (mailto), LinkedIn, GitHub, Instagram and Facebook, as you asked (this overrides the CLAUDE.md
+  email + LinkedIn + GitHub list). The logos are Simple Icons marks (CC0), drawn in the site green rather than brand colours to
+  keep the palette. The LinkedIn URL is now filled in, so nothing in brand_assets is marked ADD anymore.

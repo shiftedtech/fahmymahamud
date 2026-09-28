@@ -85,9 +85,12 @@ Education:
 - Higher NITEC in Logistics Management & Supply Chain, ITE College East (2007 – 2009)
 
 ## 6. Contact
-Heading: Let's work together.
+Heading: Making everyday tasks effortless on the side.
 Line: I really enjoy tinkering with AI automations and messy data problems on the side. If you're working on something interesting or want to bounce ideas around, feel free to reach out at fahmymahamud@gmail.com.
 
 - Email: fahmymahamud@gmail.com
 - GitHub: https://github.com/fahmymahamud
-- LinkedIn: (ADD-YOUR-HANDLE in profile.md, left off until it's filled in)
+- LinkedIn: https://www.linkedin.com/in/fahmymahamud/
+- Instagram: https://www.instagram.com/careershifttechguy/
+- Facebook: https://www.facebook.com/profile.php?id=61592200658626
+(Shown as a row of logo links: Gmail, LinkedIn, GitHub, Instagram, Facebook.)

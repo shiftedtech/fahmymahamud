@@ -486,10 +486,29 @@ time { font-variant-numeric: tabular-nums; }
 /* contact: arrival */
 .floor--contact { min-height: 88svh; display: flex; flex-direction: column; }
 .contact { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: clamp(3rem, 7vw, 6rem); }
-.contact__h { margin: 0; font-size: clamp(2.6rem, 1.4rem + 5vw, 5.5rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
+.contact__h { margin: 0; max-width: 16ch; text-wrap: balance; font-size: clamp(2.4rem, 1.3rem + 4.4vw, 4.75rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
 .contact__line { margin: 1.25rem 0 0; max-width: 40ch; font-size: clamp(1.15rem, 1rem + .6vw, 1.45rem); line-height: 1.5; text-wrap: pretty; }
 .contact__line a { font-weight: 600; overflow-wrap: anywhere; }
-.contact__ctas { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+/* the contact links: brand marks in the site green, not each brand's own colour */
+.social { list-style: none; margin: 2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; }
+.social__link {
+  display: flex; flex-direction: column; align-items: center; gap: .45rem; min-width: 60px;
+  color: var(--grey-600); text-decoration: none; font-size: .8125rem; font-weight: 600;
+}
+.social__icon {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  background: var(--white); color: var(--green-dark);
+  border: 1px solid color-mix(in oklab, var(--green) 22%, transparent);
+  box-shadow: 0 1px 2px hsl(0 0% 7% / .06), 0 8px 18px -10px hsl(152 100% 12% / .35);
+  transition: background-color 160ms var(--sc-ease-out), color 160ms var(--sc-ease-out), transform 160ms var(--sc-ease-out);
+}
+.social__icon svg { fill: currentColor; }
+.social__link:hover { color: var(--green-dark); }
+.social__link:hover .social__icon { background: var(--green); color: var(--white); transform: translateY(-2px); }
+.social__link:active .social__icon { transform: translateY(0); }
+.social__link:focus-visible { outline: none; }
+.social__link:focus-visible .social__icon { outline: 2px solid var(--green); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .social__link:hover .social__icon { transform: none; } }
 .foot { border-top: 1px solid color-mix(in oklab, var(--green) 20%, transparent); }
 .foot__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
 .foot img { width: auto; height: 34px; }
@@ -586,6 +605,9 @@ time { font-variant-numeric: tabular-nums; }
   .stop__body { padding-left: 0; }
   .lift__floor { padding-block: 1.5rem 3rem; }
   .foot__in { flex-direction: column; align-items: flex-start; }
+  .social { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .25rem; }
+  .social__link { min-width: 0; font-size: .7rem; }
+  .social__icon { width: 50px; height: 50px; }
   .hpi { gap: 8px; padding: 6px 8px; }
   /* phone: the card carries the story, so the stats panel goes and the card gets shorter */
   .esc3d.is-live .esc3d__hud { display: none; }
