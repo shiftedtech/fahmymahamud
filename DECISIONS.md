@@ -16,17 +16,15 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 | Item | Where | Status on site |
 |---|---|---|
 | LinkedIn URL | profile.md (`ADD-YOUR-HANDLE`) | **left off**; contact shows email + GitHub only |
-| Waseel link | projects.md (`ADD LINK`) | project shown, no link |
-| DataSentinel link | projects.md (`ADD LINK`) | project shown, no link, no stack (none given) |
+| DataSentinel stack | projects.md (none given) | card shows no stack line |
 | Freelance start date | resume-portfolio.md (`CONFIRM`) | shown as "Now" |
-| Google Cloud Associate Cloud Engineer date | resume-portfolio.md (`CONFIRM`) | cert shown, no date |
-| GitHub Foundations GH-900 date | resume-portfolio.md (`CONFIRM`) | cert shown, no date |
 | profile.md header still says "EDIT ME" | profile.md | used the values as written |
 
 ## Other content calls
 - **Email:** `fahmymahamud@gmail.com`, as listed. profile.md suggests `hello@shiftedtech.com` as an option; change it in
   `site/index.html` (3 places) if you prefer that one.
-- **Instagram:** left off. CLAUDE.md says contact = email + LinkedIn + GitHub only.
+- **Instagram:** `@careershifttechguy` appears only under the Freelance role in Experience, as you asked in chat (29 Sep).
+  It is not in the contact section, which stays email + GitHub as CLAUDE.md asks.
 - **GitHub link:** personal `github.com/fahmymahamud` (the project repo lives there). The shiftedtech org isn't linked separately.
 - **Resume PDF:** not published and git-ignored (`brand_assets/*.pdf`). Nothing was taken from it, including the phone number.
 - No `inspiration.png` or `component.txt` in brand_assets, so neither was used.
@@ -41,6 +39,17 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 - **Signature move: the lift.** A floor indicator (G, 1–6) follows your scroll. It sits in the left margin at ≥1280px and
   bottom-right on smaller screens. Press it to open a lift button panel that jumps to any section. On floor 3, brushed-steel
   doors slide open as you scroll to reveal MyJobSearchBot.
+- **Update 29 Sep (your feedback):**
+  - The indicator moved to the right edge on every screen, with a lift icon (frame, call arrows, doors). Text columns reserve
+    room for it, so it never covers words (checked automatically at 1440, 1024 and 390).
+  - Floor 3 is now a lift landing: wall, steel frame, a call-button plate and a digital HPI (hall position indicator) reading
+    "▲ 3 PROJECTS". The arrow blinks while the car arrives, the hall lanterns light, the doors part, and then the landing
+    scales past you as you step in.
+  - "Also built" is an escalator: 4 clickable project cards (crew scheduling, RemindClient, Waseel, DataSentinel) stand on
+    stepped treads (amber nose, cleats, risers) under a moving handrail. On desktop they ride up into place as the section
+    arrives, then hold still for reading. On phone it is a swipe carousel with previous/next buttons. There's no motion
+    under reduced motion. I didn't use the pasted Tailwind/3D sample: it needs a CDN framework, a dark theme and fake
+    dashboards, which break the brand and tech rules. I rebuilt the idea in plain HTML/CSS in the site's own style.
 - **Hero skyline:** a hand-built inline SVG (line art), with no images. From back to front: sun, far CBD towers, water,
   mid landmarks (Esplanade, Marina Bay Sands, ArtScience Museum, Singapore Flyer, towers) and near Supertrees with an OCBC
   Skyway. The Flyer turns (90s per turn), Supertree canopies glow softly, and 106 window lights twinkle at their own pace.

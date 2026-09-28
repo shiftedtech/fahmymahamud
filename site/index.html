@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fahmy Mahamud — Data engineering & AI automation</title>
-<meta name="description" content="Fahmy Mahamud: lift engineer, now building data pipelines and AI automations. Python, SQL, Microsoft Fabric, Azure, Google Cloud, Snowflake. Singapore, open to remote.">
+<meta name="description" content="Fahmy Mahamud: former lift engineer, now building data pipelines and AI automations. Python, SQL, Microsoft Fabric, Azure, Google Cloud, Snowflake. Singapore, open to remote.">
 <meta name="author" content="Fahmy Mahamud">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://fahmymahamud.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="shiftedtech">
 <meta property="og:title" content="Fahmy Mahamud — Data engineering & AI automation">
-<meta property="og:description" content="Lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.">
+<meta property="og:description" content="Former lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.">
 <meta property="og:image" content="https://fahmymahamud.vercel.app/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -52,8 +52,15 @@
 <!-- The lift. Floor indicator + button panel: the page's navigation. -->
 <nav class="lift-nav" aria-label="Sections">
   <button class="lift-nav__display" type="button" aria-expanded="false" aria-controls="lift-panel">
-    <span class="lift-nav__arrow" aria-hidden="true">
-      <svg viewBox="0 0 12 12" width="12" height="12"><path d="M6 2 11 9H1z" fill="currentColor"/></svg>
+    <span class="lift-nav__icon" aria-hidden="true">
+      <svg viewBox="0 0 22 28" width="22" height="28">
+        <rect class="li-frame" x="1" y="1" width="20" height="26" rx="2.5"/>
+        <path class="li-up" d="M6.5 3 9.6 7.4H3.4z"/>
+        <path class="li-down" d="M15.5 7.4 18.6 3h-6.2z"/>
+        <path class="li-frame" d="M3.5 26.9V10.5h15v16.4"/>
+        <rect class="li-door li-door--l" x="4.6" y="11.6" width="6.2" height="15.3"/>
+        <rect class="li-door li-door--r" x="11.2" y="11.6" width="6.2" height="15.3"/>
+      </svg>
     </span>
     <span class="lift-nav__floor" aria-hidden="true">G</span>
     <span class="lift-nav__name">Lobby</span>
@@ -78,7 +85,7 @@
       <div class="lobby__copy">
         <h1 id="hero-title" class="lobby__name">Fahmy Mahamud</h1>
         <p class="lobby__headline">Data engineering &amp; AI automation</p>
-        <p class="lobby__sub">Lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.</p>
+        <p class="lobby__sub">Former lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.</p>
         <div class="lobby__ctas">
           <a class="btn btn--primary" href="#projects">View projects</a>
           <a class="btn btn--ghost" href="#contact">Contact me</a>
@@ -249,7 +256,7 @@
 
   <!-- 3 · PROJECTS: the peak. Pinned; the lift doors part under the scroll. -->
   <section class="floor floor--projects" id="projects" data-floor="3" data-floor-name="Projects" aria-labelledby="projects-h">
-    <div class="lift" data-sc-act="pin" data-sc-span="2.2">
+    <div class="lift" data-sc-act="pin" data-sc-span="2.4">
       <div class="lift__stage" data-sc-stage>
         <div class="wrap lift__floor">
           <h2 id="projects-h" class="h2">Things I've built.</h2>
@@ -263,32 +270,70 @@
             <a class="btn btn--primary feature__link" href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
           </article>
         </div>
-        <div class="doors" aria-hidden="true">
-          <div class="door door--l"></div>
-          <div class="door door--r"></div>
-          <div class="doors__sign"><span class="doors__floor">3</span><span>Projects</span></div>
+        <div class="landing" aria-hidden="true">
+          <div class="landing__rig">
+            <div class="landing__doorway">
+              <div class="landing__door landing__door--l"></div>
+              <div class="landing__door landing__door--r"></div>
+            </div>
+            <div class="hpi">
+              <span class="hpi__lantern"></span>
+              <span class="hpi__screen">
+                <svg class="hpi__arrow" viewBox="0 0 12 12" width="16" height="16"><path d="M6 1.5 11 9.5H1z" fill="currentColor"/></svg>
+                <span class="hpi__digit">3</span>
+                <span class="hpi__label">Projects</span>
+              </span>
+              <span class="hpi__lantern"></span>
+            </div>
+            <div class="callplate"><span class="callplate__btn callplate__btn--up"></span><span class="callplate__btn"></span></div>
+          </div>
+          <div class="landing__floor"></div>
         </div>
       </div>
     </div>
 
     <div class="wrap more">
-      <h3 class="more__h">Also built</h3>
-      <ul class="ledger" data-sc-in data-sc-stagger="70">
-        <li class="ledger__row">
-          <h4 class="ledger__title">Crew scheduling app</h4>
-          <p class="ledger__desc">Scheduling web app for a Singapore cleaning company: job creation and assignment, WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.</p>
-          <p class="ledger__meta"><span>JavaScript · Supabase · Google sign-in</span><span class="ledger__note">Client project, private</span></p>
-        </li>
-        <li class="ledger__row">
-          <h4 class="ledger__title">Waseel: Quran memory tester</h4>
-          <p class="ledger__desc">Free web app that tests Quran memorisation with a random ayah by Juz.</p>
-          <p class="ledger__meta"><span>HTML · JavaScript · GitHub Pages</span></p>
-        </li>
-        <li class="ledger__row">
-          <h4 class="ledger__title">DataSentinel</h4>
-          <p class="ledger__desc">MCP-based data auditing tool.</p>
-        </li>
-      </ul>
+      <h3 class="more__h" id="also-h">Also built</h3>
+      <div class="esc" role="group" aria-labelledby="also-h">
+        <div class="esc__track">
+          <svg class="esc__rail" aria-hidden="true" focusable="false"></svg>
+          <a class="ride" href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">
+            <span class="ride__tag">Client project</span>
+            <h4 class="ride__title">Crew scheduling app</h4>
+            <p class="ride__desc">Scheduling web app for a Singapore cleaning company: job creation and assignment, WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.</p>
+            <p class="ride__stack">JavaScript · Supabase · Google sign-in</p>
+            <span class="ride__url">Open the app <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+            <span class="ride__step" aria-hidden="true"></span>
+          </a>
+          <a class="ride" href="https://remindclient.app/" target="_blank" rel="noopener">
+            <span class="ride__tag">Web app</span>
+            <h4 class="ride__title">RemindClient</h4>
+            <p class="ride__desc">Sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders through a Telegram bot.</p>
+            <p class="ride__stack">AI · Telegram bot</p>
+            <span class="ride__url">Visit remindclient.app <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+            <span class="ride__step" aria-hidden="true"></span>
+          </a>
+          <a class="ride" href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">
+            <span class="ride__tag">Free web app</span>
+            <h4 class="ride__title">Waseel: Quran memory tester</h4>
+            <p class="ride__desc">Tests Quran memorisation with a random ayah by Juz.</p>
+            <p class="ride__stack">HTML · JavaScript · GitHub Pages</p>
+            <span class="ride__url">Try it <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+            <span class="ride__step" aria-hidden="true"></span>
+          </a>
+          <a class="ride" href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">
+            <span class="ride__tag">Open source</span>
+            <h4 class="ride__title">DataSentinel</h4>
+            <p class="ride__desc">MCP-based data auditing tool.</p>
+            <span class="ride__url">View on GitHub <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+            <span class="ride__step" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="esc__nav" hidden>
+          <button class="esc__btn" type="button" data-esc="-1" aria-label="Previous project"><svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true"><path d="M8 1.5 3 6l5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="esc__btn" type="button" data-esc="1" aria-label="Next project"><svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true"><path d="M4 1.5 9 6l-5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -326,7 +371,7 @@
         </div>
         <div class="cert">
           <h3 class="cert__provider">Google Cloud</h3>
-          <ul><li>Associate Cloud Engineer</li></ul>
+          <ul><li>Associate Cloud Engineer <time>Jul 2026</time></li></ul>
         </div>
         <div class="cert">
           <h3 class="cert__provider">Databricks</h3>
@@ -338,7 +383,7 @@
         </div>
         <div class="cert">
           <h3 class="cert__provider">GitHub</h3>
-          <ul><li>GitHub Foundations <span class="nw">(GH-900)</span></li></ul>
+          <ul><li>GitHub Foundations <span class="nw">(GH-900)</span> <time>Aug 2026</time></li></ul>
         </div>
       </div>
       <p class="certs__next"><strong>Next:</strong> starting the Google Cloud Professional Cloud Architect course with GEAR in October 2026.</p>
@@ -357,9 +402,9 @@
         <li class="stop">
           <p class="stop__when">Now</p>
           <div class="stop__body">
-            <h3 class="stop__role">Freelance: data &amp; AI automation</h3>
-            <p class="stop__org">shiftedtech</p>
-            <p>Built and run a crew scheduling web app for a Singapore cleaning company. Built MyJobSearchBot, an open-source daily job-alert automation.</p>
+            <h3 class="stop__role">Freelance: Data &amp; AI automation</h3>
+            <p class="stop__org"><a href="https://www.instagram.com/careershifttechguy/" target="_blank" rel="noopener me">@careershifttechguy<span class="sr-only"> on Instagram (opens in a new tab)</span></a></p>
+            <p>Built and run a crew scheduling web app for a Singapore cleaning company. Built RemindClient to help freelancers send reminders using a Telegram bot. Built MyJobSearchBot, an open-source daily job-alert automation.</p>
           </div>
         </li>
         <li class="stop">

@@ -28,6 +28,7 @@ Power BI, Azure, Google Cloud and Snowflake, and I build automations that save s
 ### Freelance — Data & AI automation (shiftedtech) · CONFIRM start date – Present
 - Built and run a crew scheduling web app for a Singapore cleaning company: job creation and assignment,
   WhatsApp message generation, crew availability forms, calendar sync, Google sign-in, and an audit log of changes.
+- Built RemindClient to help freelancers send reminders using a Telegram bot (https://remindclient.app/).
 - Built MyJobSearchBot, an open-source daily job-alert automation (Trigger.dev + Telegram).
 
 ### Junior Data Engineer Program Trainee · Generation Singapore (with Microsoft & Temasek Polytechnic) · Jul 2025 – Oct 2025
@@ -54,9 +55,9 @@ Power BI, Azure, Google Cloud and Snowflake, and I build automations that save s
 
 ## Certifications
 - Snowflake: SnowPro Associate: Platform (Apr 2026)
-- Google Cloud: Associate Cloud Engineer (CONFIRM date)
+- Google Cloud: Associate Cloud Engineer (Jul 2026)
 - Microsoft: Azure AI Fundamentals AI-900 (Feb 2026), Azure Fundamentals AZ-900 (Jan 2026), Azure Data Fundamentals DP-900 (Dec 2025)
-- GitHub: GitHub Foundations GH-900 (CONFIRM date)
+- GitHub: GitHub Foundations GH-900 (Aug 2026)
 - Google: Cybersecurity Professional (Mar 2026), IT Automation with Python (Oct 2025), Advanced Data Analytics (Sep 2025),
   Project Management (Aug 2025), Data Analytics (Jul 2025), AI Prompting Essentials (Jun 2025)
 - Databricks: Academy Accreditation, Fundamentals & Generative AI (Oct 2025)

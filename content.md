@@ -10,7 +10,7 @@ in `brand_assets/` are left off the site (see DECISIONS.md).
 - Heading: **Fahmy Mahamud**
 - Avatar: `brand_assets/avatar.png`
 - Headline: Data engineering & AI automation
-- Subline: Lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.
+- Subline: Former lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.
 - Buttons: **View projects** (→ #projects) · **Contact me** (→ #contact)
 - Skyline label: Singapore · 1.35°N 103.82°E
 
@@ -41,28 +41,23 @@ and sends the top 15 to Telegram. Open source.
 Stack: TypeScript, Trigger.dev, Telegram Bot API, GitHub
 Link: https://github.com/fahmymahamud/remotejobsearch
 
-### Crew scheduling app (client project)
-Scheduling web app for a Singapore cleaning company: job creation and assignment, WhatsApp message generation,
-crew availability forms, calendar sync, Google sign-in, and an audit log of changes.
-Stack: JavaScript, Supabase, Google sign-in
-Link: private client project, no public link
-
-### Waseel: Quran memory tester
-Free web app that tests Quran memorisation with a random ayah by Juz.
-Stack: HTML, JavaScript, GitHub Pages
-Link: (ADD LINK in projects.md, left off)
-
-### DataSentinel
-MCP-based data auditing tool.
-Link: (ADD LINK in projects.md, left off)
+### Also built (escalator carousel, 4 clickable cards)
+1. **Crew scheduling app** (client project): scheduling web app for a Singapore cleaning company: job creation and assignment,
+   WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.
+   JavaScript · Supabase · Google sign-in → https://crewscheduling.netlify.app/
+2. **RemindClient** (web app): sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers
+   send reminders through a Telegram bot. → https://remindclient.app/
+3. **Waseel: Quran memory tester** (free web app): tests Quran memorisation with a random ayah by Juz.
+   HTML · JavaScript · GitHub Pages → https://waseelapp.github.io/quranmemorytester/
+4. **DataSentinel** (open source): MCP-based data auditing tool. → https://github.com/fahmymahamud/DataSentinel
 
 ## 4. Certifications (by provider)
 Heading: Certifications.
 
 - **Snowflake:** SnowPro Associate: Platform (Apr 2026)
-- **Google Cloud:** Associate Cloud Engineer (date CONFIRM, left off)
+- **Google Cloud:** Associate Cloud Engineer (Jul 2026)
 - **Microsoft:** Azure AI Fundamentals AI-900 (Feb 2026) · Azure Fundamentals AZ-900 (Jan 2026) · Azure Data Fundamentals DP-900 (Dec 2025)
-- **GitHub:** GitHub Foundations GH-900 (date CONFIRM, left off)
+- **GitHub:** GitHub Foundations GH-900 (Aug 2026)
 - **Google:** Cybersecurity Professional (Mar 2026) · IT Automation with Python (Oct 2025) · Advanced Data Analytics (Sep 2025) · Project Management (Aug 2025) · Data Analytics (Jul 2025) · AI Prompting Essentials (Jun 2025)
 - **Databricks:** Academy Accreditation, Fundamentals & Generative AI (Oct 2025)
 - **ServiceNow:** Micro-Certification, Platform Analytics (Nov 2025)
@@ -71,8 +66,8 @@ Heading: Certifications.
 ## 5. Experience
 Heading: Where I've worked.
 
-- **Freelance, data & AI automation (shiftedtech)** · Now (start date CONFIRM, left off)
-  Built and run a crew scheduling web app for a Singapore cleaning company. Built MyJobSearchBot.
+- **Freelance: Data & AI automation** · [@careershifttechguy](https://www.instagram.com/careershifttechguy/) · Now (start date CONFIRM, left off)
+  Built and run a crew scheduling web app for a Singapore cleaning company. Built RemindClient to help freelancers send reminders using a Telegram bot. Built MyJobSearchBot.
 - **Junior Data Engineer Program Trainee, Generation Singapore** (with Microsoft & Temasek Polytechnic) · Jul 2025 – Oct 2025
   Microsoft Fabric, ETL pipelines, Power BI dashboards. Built and presented a data pipeline capstone to stakeholders.
 - **Escalator & Lift Assistant Engineer II, SMRT Corporation** · Aug 2021 – Aug 2025 (promoted May 2025)

@@ -72,9 +72,10 @@
   }
 
   /* -------------------------------------------------------- lift doors -- */
-  var stage = document.querySelector('.lift__stage');
-  var doors = document.querySelector('.doors');
-  var OPEN_FROM = 0.1, OPEN_TO = 0.58;
+  // Three beats on the landing: the HPI blinks while the car arrives, the doors
+  // part, then the whole landing scales past you as you step in.
+  var landing = document.querySelector('.landing');
+  var OPEN_FROM = 0.06, OPEN_END = 0.34, ENTER_END = 0.58, OPEN_TO = ENTER_END;
 
   function liftProgress() {
     var r = lift.getBoundingClientRect();
@@ -82,10 +83,93 @@
     return clamp01(-r.top / travel);
   }
   function paintDoors() {
-    if (!lift || !stage || reduce) return;
-    var open = smooth((liftProgress() - OPEN_FROM) / (OPEN_TO - OPEN_FROM));
-    stage.style.setProperty('--open', open.toFixed(4));
-    doors.classList.toggle('is-open', open >= 0.999);
+    if (!lift || !landing || reduce) return;
+    var r = lift.getBoundingClientRect();
+    landing.classList.toggle('is-live', r.bottom > 0 && r.top < innerHeight);
+    var p = liftProgress();
+    var open = smooth((p - OPEN_FROM) / (OPEN_END - OPEN_FROM));
+    var enter = smooth((p - OPEN_END - 0.02) / (ENTER_END - OPEN_END - 0.02));
+    landing.style.setProperty('--open', open.toFixed(4));
+    landing.style.setProperty('--enter', enter.toFixed(4));
+    landing.classList.toggle('is-arrived', p > 0.02);
+    landing.classList.toggle('is-in', enter >= 0.999);
+  }
+
+  /* --------------------------------------------------------- escalator -- */
+  // Desktop: the four projects ride up the incline into place as the section
+  // arrives, then hold still. Phone: a swipe carousel with the same steps.
+  var esc = document.querySelector('.esc');
+  var track = esc && esc.querySelector('.esc__track');
+  var rail = esc && esc.querySelector('.esc__rail');
+  var rides = esc ? Array.prototype.slice.call(esc.querySelectorAll('.ride')) : [];
+  var escNav = esc && esc.querySelector('.esc__nav');
+  var escVisible = false;
+
+  function isCarousel() { return !!track && getComputedStyle(track).overflowX === 'auto'; }
+
+  function drawRail() {
+    if (!track || !rides.length) return;
+    var rise = parseFloat(getComputedStyle(esc).getPropertyValue('--rise')) || 38;
+    var a = rides[0], b = rides[rides.length - 1];
+    var pitch = rides.length > 1 ? (rides[1].offsetLeft - a.offsetLeft) : a.offsetWidth;
+    var slope = rise / pitch;
+    var lift0 = rise * 1.25;
+    var x0 = a.offsetLeft - 14, y0 = a.offsetTop - lift0 + 14 * slope;
+    var x1 = b.offsetLeft + b.offsetWidth * 0.62;
+    var y1 = a.offsetTop - lift0 - (x1 - a.offsetLeft) * slope;
+    var drop = 64;
+    var W = track.scrollWidth, H = track.scrollHeight;
+    rail.setAttribute('width', W); rail.setAttribute('height', H);
+    rail.style.width = W + 'px'; rail.style.height = H + 'px';
+    rail.innerHTML =
+      '<path class="esc__glass" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + 'L' + x1 + ' ' + (y1 + drop) + 'L' + x0 + ' ' + (y0 + drop) + 'Z"/>' +
+      '<path class="esc__hand" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + '"/>' +
+      '<path class="esc__beads" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + '"/>';
+    if (escNav) escNav.hidden = !isCarousel();
+    updateEscButtons();
+  }
+  function paintEsc() {
+    if (!esc || reduce) return;
+    if (isCarousel()) {
+      rides.forEach(function (c) { c.style.removeProperty('--rx'); c.style.removeProperty('--ry'); c.style.removeProperty('--ro'); });
+      return;
+    }
+    var r = esc.getBoundingClientRect();
+    var q = clamp01((innerHeight - r.top) / (innerHeight * 0.9));
+    var rise = parseFloat(getComputedStyle(esc).getPropertyValue('--rise')) || 46;
+    var pitch = rides.length > 1 ? rides[1].offsetLeft - rides[0].offsetLeft : 300;
+    rides.forEach(function (c, i) {
+      var t = smooth((q - 0.05 - i * 0.1) / 0.35);
+      var k = 1 - t;
+      c.style.setProperty('--rx', (-k * pitch * 0.9).toFixed(1) + 'px');
+      c.style.setProperty('--ry', (k * rise * 0.9).toFixed(1) + 'px');
+      c.style.setProperty('--ro', (0.25 + 0.75 * t).toFixed(3));
+    });
+  }
+  function updateEscButtons() {
+    if (!escNav || escNav.hidden) return;
+    var b = escNav.querySelectorAll('.esc__btn');
+    b[0].disabled = track.scrollLeft < 4;
+    b[1].disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 4;
+  }
+  if (esc) {
+    escNav.addEventListener('click', function (e) {
+      var bt = e.target.closest('[data-esc]');
+      if (!bt) return;
+      var step = rides.length > 1 ? rides[1].offsetLeft - rides[0].offsetLeft : track.clientWidth;
+      track.scrollBy({ left: step * parseFloat(bt.getAttribute('data-esc')), behavior: reduce ? 'auto' : 'smooth' });
+    });
+    track.addEventListener('scroll', updateEscButtons, { passive: true });
+    addEventListener('resize', drawRail);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawRail);
+    addEventListener('load', drawRail);
+    drawRail();
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) {
+        escVisible = en[0].isIntersecting;
+        esc.classList.toggle('is-offscreen', !escVisible);
+      }).observe(esc);
+    }
   }
   // Keyboard: a focused link behind closed doors is a trap. Park the act where
   // the doors are fully open instead.
@@ -169,6 +253,7 @@
   function frame() {
     var moving = lobbyVisible && !reduce ? paintSkyline() : false;
     paintDoors();
+    paintEsc();
     paintFloor();
     if (moving) requestAnimationFrame(frame); else running = false;
   }

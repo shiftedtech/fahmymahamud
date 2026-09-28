@@ -8,13 +8,17 @@ Link: https://github.com/fahmymahamud/remotejobsearch
 ## Waseel — Quran memory tester
 What: Free web app that tests Quran memorisation with a random ayah by Juz.
 Stack: HTML, JavaScript, GitHub Pages
-Link: ADD LINK
+Link: https://waseelapp.github.io/quranmemorytester/
 
 ## Crew scheduling app (client project)
 What: Scheduling web app for a cleaning company — job assignment, WhatsApp message generation, calendar sync.
 Stack: JavaScript, Supabase, Google sign-in
-Link: (private client project — no link)
+Link: https://crewscheduling.netlify.app/
 
 ## DataSentinel
 What: MCP-based data auditing tool.
-Link: ADD LINK
+Link: https://github.com/fahmymahamud/DataSentinel
+
+## RemindClient
+What: RemindClient sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders using a Telegram bot.
+Link: https://remindclient.app/
