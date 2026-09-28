@@ -117,3 +117,7 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 - **Vercel Hobby cannot connect Git repos owned by an organization** (per Vercel's limits docs). That is why
   `vercel git connect` failed for `shiftedtech/fahmymahamud`. Options: keep deploying with the CLI, move the repo to the
   personal account, or upgrade to Pro.
+- **Non-commercial contact line (29 Sep).** At your request, the contact line no longer offers paid automation work, to stay
+  within Vercel Hobby's personal, non-commercial terms. It now reads: "I really enjoy tinkering with AI automations and messy data
+  problems on the side. If you're working on something interesting or want to bounce ideas around, feel free to reach out
+  at fahmymahamud@gmail.com."

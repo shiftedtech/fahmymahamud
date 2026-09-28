@@ -86,7 +86,7 @@ Education:
 
 ## 6. Contact
 Heading: Let's work together.
-Line: Hiring for a data or AI automation role, or have manual work you want automated? Email me.
+Line: I really enjoy tinkering with AI automations and messy data problems on the side. If you're working on something interesting or want to bounce ideas around, feel free to reach out at fahmymahamud@gmail.com.
 
 - Email: fahmymahamud@gmail.com
 - GitHub: https://github.com/fahmymahamud
