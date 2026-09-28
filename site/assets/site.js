@@ -298,6 +298,27 @@
     });
   }
 
+  /* -------------------------------------------------------------- email -- */
+  // The Gmail logo is a mailto with a subject and message ready. If nothing on
+  // this device handles mailto (common on desktops with no mail app set up),
+  // the page never loses focus, so open Gmail's web compose with the same draft.
+  Array.prototype.forEach.call(document.querySelectorAll('a[data-gmail-fallback]'), function (a) {
+    a.addEventListener('click', function () {
+      var left = false;
+      function gone() { left = true; }
+      addEventListener('blur', gone);
+      document.addEventListener('visibilitychange', gone);
+      setTimeout(function () {
+        removeEventListener('blur', gone);
+        document.removeEventListener('visibilitychange', gone);
+        if (left || !document.hasFocus()) return;
+        var url = a.getAttribute('data-gmail-fallback');
+        var w = window.open(url, '_blank');
+        if (w) w.opener = null; else location.href = url;
+      }, 1200);
+    });
+  });
+
   /* -------------------------------------------------------------- loop -- */
   function frame() {
     var moving = lobbyVisible && !reduce ? paintSkyline() : false;
