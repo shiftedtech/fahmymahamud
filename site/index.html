@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fahmy Mahamud — Data engineering & AI automation</title>
+<meta name="description" content="Fahmy Mahamud: former SMRT lift engineer, now building data pipelines and AI automations. Python, SQL, Microsoft Fabric, Azure, Google Cloud, Snowflake. Singapore, open to remote.">
+<meta name="author" content="Fahmy Mahamud">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="canonical" href="https://fahmymahamud.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="shiftedtech">
+<meta property="og:title" content="Fahmy Mahamud — Data engineering & AI automation">
+<meta property="og:description" content="Former SMRT lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.">
+<meta property="og:image" content="https://fahmymahamud.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fahmy Mahamud, data engineering and AI automation, over a line drawing of the Singapore skyline">
+<meta property="og:url" content="https://fahmymahamud.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/scrollcraft.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>
+  // JS is on: let the scroll effects take over. If the engine has not mounted
+  // within 3s (blocked or failed script), show everything anyway.
+  document.documentElement.classList.replace('no-js', 'js');
+  setTimeout(function () {
+    if (!document.documentElement.classList.contains('sc-ready')) document.documentElement.classList.add('sc-failed');
+  }, 3000);
+</script>
+</head>
+<body>
+
+<a class="skip" href="#story">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="bar__logo" href="#top" aria-label="shiftedtech, back to top">
+      <img src="assets/logo-320.webp" srcset="assets/logo-320.webp 320w, assets/logo.webp 640w" sizes="160px" width="640" height="192" alt="shiftedtech: data engineering and AI automation">
+    </a>
+    <a class="btn btn--ghost btn--sm" href="#contact">Contact me</a>
+  </div>
+</header>
+
+<!-- The lift. Floor indicator + button panel: the page's navigation. -->
+<nav class="lift-nav" aria-label="Sections">
+  <button class="lift-nav__display" type="button" aria-expanded="false" aria-controls="lift-panel">
+    <span class="lift-nav__arrow" aria-hidden="true">
+      <svg viewBox="0 0 12 12" width="12" height="12"><path d="M6 2 11 9H1z" fill="currentColor"/></svg>
+    </span>
+    <span class="lift-nav__floor" aria-hidden="true">G</span>
+    <span class="lift-nav__name">Lobby</span>
+    <span class="sr-only">: open the section menu</span>
+  </button>
+  <ol class="lift-nav__panel" id="lift-panel" hidden>
+    <li><a href="#contact" data-floor-link="6"><span class="key">6</span>Contact</a></li>
+    <li><a href="#experience" data-floor-link="5"><span class="key">5</span>Experience</a></li>
+    <li><a href="#certifications" data-floor-link="4"><span class="key">4</span>Certifications</a></li>
+    <li><a href="#projects" data-floor-link="3"><span class="key">3</span>Projects</a></li>
+    <li><a href="#skills" data-floor-link="2"><span class="key">2</span>Skills</a></li>
+    <li><a href="#story" data-floor-link="1"><span class="key">1</span>Story</a></li>
+    <li><a href="#top" data-floor-link="G"><span class="key">G</span>Lobby</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- G · LOBBY -->
+  <section class="lobby" data-floor="G" data-floor-name="Lobby" aria-labelledby="hero-title">
+    <div class="wrap lobby__grid">
+      <div class="lobby__copy">
+        <h1 id="hero-title" class="lobby__name">Fahmy Mahamud</h1>
+        <p class="lobby__headline">Data engineering &amp; AI automation</p>
+        <p class="lobby__sub">Former SMRT lift engineer, now building data pipelines and AI automations. Based in Singapore, open to remote.</p>
+        <div class="lobby__ctas">
+          <a class="btn btn--primary" href="#projects">View projects</a>
+          <a class="btn btn--ghost" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <img class="lobby__avatar" src="assets/avatar-560.webp"
+           srcset="assets/avatar-280.webp 280w, assets/avatar-560.webp 560w"
+           sizes="(min-width: 960px) 280px, 104px"
+           width="560" height="560" fetchpriority="high"
+           alt="Illustrated portrait of Fahmy: dark hair, tinted glasses, dark suit and burgundy tie">
+    </div>
+    <div class="skyline" aria-hidden="true">
+<svg class="skyline__svg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" role="presentation" focusable="false">
+<defs>
+<radialGradient id="sk-glow"><stop offset="0" stop-color="#007A3D" stop-opacity=".55"/><stop offset=".55" stop-color="#007A3D" stop-opacity=".16"/><stop offset="1" stop-color="#007A3D" stop-opacity="0"/></radialGradient>
+<radialGradient id="sk-sun"><stop offset="0" stop-color="#FFFBEB"/><stop offset=".7" stop-color="#FFFBEB"/><stop offset="1" stop-color="#FFFBEB" stop-opacity="0"/></radialGradient>
+<linearGradient id="sk-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6F5ED"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+<pattern id="sk-durian" width="9" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 4.5 1.5 9 8" fill="none" stroke="#A3A3A3" stroke-width=".8"/></pattern>
+<pattern id="sk-lattice" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0 8 8M8 0 0 8" stroke="#007A3D" stroke-width=".6" opacity=".55"/></pattern>
+</defs>
+<g class="sk-layer" data-depth="0.15"><circle cx="1120" cy="120" r="70" fill="url(#sk-sun)"/><circle cx="1120" cy="120" r="46" fill="none" stroke="#F59E0B" stroke-opacity=".35" stroke-width="1.2"/></g>
+<g class="sk-layer sk-far" data-depth="0.35">
+<path d="M-10 330V239h4v-14h48v14h4V330z"/>
+<rect x="48" y="254" width="52" height="76"/>
+<path d="M105 330V213h5v-14h33v14h6V330z"/>
+<rect x="155" y="199" width="49" height="131"/>
+<rect x="212" y="134" width="52" height="196"/>
+<rect x="268" y="253" width="47" height="77"/>
+<rect x="317" y="237" width="36" height="93"/>
+<rect x="369" y="140" width="49" height="190"/>
+<path d="M428 330V203h5v-14h42v14h6V330z"/>
+<rect x="485" y="248" width="31" height="82"/>
+<rect x="522" y="225" width="31" height="105"/>
+<path d="M561 330V225h6v-14h31v14h7V330z"/>
+<path d="M607 330V236h5v-14h26v14h5V330z"/>
+<rect x="647" y="269" width="39" height="61"/>
+<rect x="689" y="218" width="47" height="112"/>
+<path d="M747 330V263h6v-14h24v14h6V330z"/>
+<path d="M798 330V240h6v-14h19v14h6V330z"/>
+<path d="M838 330V267h4v-14h22v14h5V330z"/>
+<rect x="876" y="255" width="39" height="75"/>
+<rect x="922" y="126" width="35" height="204"/>
+<rect x="960" y="145" width="56" height="185"/>
+<rect x="1029" y="209" width="34" height="121"/>
+<rect x="1070" y="174" width="40" height="156"/>
+<path d="M1123 330V274h5v-14h51v14h5V330z"/>
+<path d="M1196 330V130h6v-14h42v14h7V330z"/>
+<rect x="1255" y="188" width="32" height="142"/>
+<rect x="1296" y="147" width="37" height="183"/>
+<path d="M1339 330V204h4v-14h28v14h5V330z"/>
+<rect x="1385" y="191" width="35" height="139"/>
+<path d="M1427 330V130h4v-14h48v14h4V330z"/>
+</g>
+<g class="sk-layer sk-water" data-depth="0.9"><rect x="-80" y="330" width="1600" height="140" fill="url(#sk-water)"/>
+<g class="sk-refl" stroke="#D4D4D4" stroke-width="1.2" stroke-linecap="round"><path d="M567 342h203"/><path d="M598 353h134"/><path d="M602 364h99"/><path d="M620 375h75"/><path d="M964 342h106"/><path d="M978 353h74"/><path d="M969 364h79"/><path d="M994 375h43"/><path d="M273 342h117"/><path d="M293 353h91"/><path d="M298 364h74"/><path d="M292 375h59"/><path d="M808 342h58"/><path d="M819 353h48"/><path d="M818 364h26"/><path d="M825 375h23"/><path d="M140 342h55"/><path d="M127 353h59"/><path d="M130 364h51"/><path d="M147 375h24"/><path d="M1252 342h97"/><path d="M1268 353h53"/><path d="M1285 364h45"/><path d="M1285 375h37"/></g></g>
+<g class="sk-layer sk-mid" data-depth="0.6" fill="#FFFFFF" stroke="#737373" stroke-width="1.4" stroke-linejoin="round">
+<rect x="18" y="180" width="58" height="150"/>
+<rect x="84" y="134" width="44" height="196"/>
+<rect x="136" y="212" width="70" height="118"/>
+<rect x="214" y="158" width="34" height="172"/>
+<rect x="1150" y="116" width="54" height="214"/>
+<rect x="1212" y="180" width="40" height="150"/>
+<rect x="1262" y="94" width="66" height="236"/>
+<rect x="1336" y="154" width="50" height="176"/>
+<rect x="1392" y="202" width="60" height="128"/>
+<path d="M250 330A72 60 0 0 1 394 330Z" fill="url(#sk-durian)"/>
+<path d="M372 330A54 46 0 0 1 480 330Z" fill="url(#sk-durian)"/>
+<path d="M560 330 565 160h36l5 170z"/>
+<path d="M583 162v168" stroke="#D4D4D4" stroke-width="1"/>
+<path d="M632 330 637 160h36l5 170z"/>
+<path d="M655 162v168" stroke="#D4D4D4" stroke-width="1"/>
+<path d="M704 330 709 160h36l5 170z"/>
+<path d="M727 162v168" stroke="#D4D4D4" stroke-width="1"/>
+<path d="M563 186h40M563 204h40M563 222h40M563 240h40M563 258h40M563 276h40M563 294h40M563 312h40M635 186h40M635 204h40M635 222h40M635 240h40M635 258h40M635 276h40M635 294h40M635 312h40M707 186h40M707 204h40M707 222h40M707 240h40M707 258h40M707 276h40M707 294h40M707 312h40" stroke="#E5E5E5" stroke-width="1" fill="none"/>
+<path d="M546 158 556 146h214l26 5-6 7z"/>
+<path d="M798 330c0-16 4-30 12-44l12 26c3-15 9-29 18-40l7 36c6-13 13-22 22-28l1 34c6-7 12-11 20-13-1 13-6 22-13 29z"/>
+<path d="M944 330v-14h140v14"/>
+<path d="M978 316 1012 198 1046 316" fill="none" stroke-width="2"/>
+<g class="sk-flyer"><circle cx="1012" cy="198" r="110" fill="none" stroke-width="2"/><circle cx="1012" cy="198" r="104" fill="none" stroke="#D4D4D4" stroke-width="1"/><path d="M1012 198L1122.0 198.0M1012 198L1118.3 226.5M1012 198L1107.3 253.0M1012 198L1089.8 275.8M1012 198L1067.0 293.3M1012 198L1040.5 304.3M1012 198L1012.0 308.0M1012 198L983.5 304.3M1012 198L957.0 293.3M1012 198L934.2 275.8M1012 198L916.7 253.0M1012 198L905.7 226.5M1012 198L902.0 198.0M1012 198L905.7 169.5M1012 198L916.7 143.0M1012 198L934.2 120.2M1012 198L957.0 102.7M1012 198L983.5 91.7M1012 198L1012.0 88.0M1012 198L1040.5 91.7M1012 198L1067.0 102.7M1012 198L1089.8 120.2M1012 198L1107.3 143.0M1012 198L1118.3 169.5" stroke="#D4D4D4" stroke-width=".8" fill="none"/><circle cx="1012" cy="198" r="7"/><g stroke-width="1.2"><circle cx="1129.0" cy="198.0" r="4"/><circle cx="1126.1" cy="224.0" r="4"/><circle cx="1117.4" cy="248.8" r="4"/><circle cx="1103.5" cy="270.9" r="4"/><circle cx="1084.9" cy="289.5" r="4"/><circle cx="1062.8" cy="303.4" r="4"/><circle cx="1038.0" cy="312.1" r="4"/><circle cx="1012.0" cy="315.0" r="4"/><circle cx="986.0" cy="312.1" r="4"/><circle cx="961.2" cy="303.4" r="4"/><circle cx="939.1" cy="289.5" r="4"/><circle cx="920.5" cy="270.9" r="4"/><circle cx="906.6" cy="248.8" r="4"/><circle cx="897.9" cy="224.0" r="4"/><circle cx="895.0" cy="198.0" r="4"/><circle cx="897.9" cy="172.0" r="4"/><circle cx="906.6" cy="147.2" r="4"/><circle cx="920.5" cy="125.1" r="4"/><circle cx="939.1" cy="106.5" r="4"/><circle cx="961.2" cy="92.6" r="4"/><circle cx="986.0" cy="83.9" r="4"/><circle cx="1012.0" cy="81.0" r="4"/><circle cx="1038.0" cy="83.9" r="4"/><circle cx="1062.8" cy="92.6" r="4"/><circle cx="1084.9" cy="106.5" r="4"/><circle cx="1103.5" cy="125.1" r="4"/><circle cx="1117.4" cy="147.2" r="4"/><circle cx="1126.1" cy="172.0" r="4"/></g></g>
+<g class="sk-wins" stroke="none"><rect class="win win--a" x="35" y="205" width="4" height="6"/><rect class="win win--a" x="55" y="205" width="4" height="6"/><rect class="win win--a" x="65" y="218" width="4" height="6"/><rect class="win win--g" x="25" y="231" width="4" height="6"/><rect class="win win--a" x="25" y="244" width="4" height="6"/><rect class="win win--a" x="55" y="257" width="4" height="6"/><rect class="win win--a" x="65" y="257" width="4" height="6"/><rect class="win win--a" x="25" y="283" width="4" height="6"/><rect class="win win--a" x="45" y="283" width="4" height="6"/><rect class="win win--a" x="45" y="309" width="4" height="6"/><rect class="win win--a" x="111" y="146" width="4" height="6"/><rect class="win win--a" x="101" y="159" width="4" height="6"/><rect class="win win--g" x="91" y="185" width="4" height="6"/><rect class="win win--a" x="91" y="224" width="4" height="6"/><rect class="win win--g" x="101" y="224" width="4" height="6"/><rect class="win win--a" x="101" y="263" width="4" height="6"/><rect class="win win--a" x="111" y="302" width="4" height="6"/><rect class="win win--a" x="143" y="224" width="4" height="6"/><rect class="win win--a" x="153" y="237" width="4" height="6"/><rect class="win win--a" x="183" y="250" width="4" height="6"/><rect class="win win--a" x="193" y="250" width="4" height="6"/><rect class="win win--g" x="183" y="263" width="4" height="6"/><rect class="win win--a" x="143" y="276" width="4" height="6"/><rect class="win win--a" x="153" y="276" width="4" height="6"/><rect class="win win--a" x="153" y="302" width="4" height="6"/><rect class="win win--a" x="193" y="302" width="4" height="6"/><rect class="win win--a" x="193" y="315" width="4" height="6"/><rect class="win win--g" x="231" y="183" width="4" height="6"/><rect class="win win--a" x="231" y="196" width="4" height="6"/><rect class="win win--a" x="231" y="209" width="4" height="6"/><rect class="win win--a" x="221" y="248" width="4" height="6"/><rect class="win win--g" x="231" y="248" width="4" height="6"/><rect class="win win--a" x="231" y="274" width="4" height="6"/><rect class="win win--a" x="231" y="287" width="4" height="6"/><rect class="win win--a" x="231" y="313" width="4" height="6"/><rect class="win win--g" x="1167" y="141" width="4" height="6"/><rect class="win win--g" x="1177" y="141" width="4" height="6"/><rect class="win win--a" x="1187" y="141" width="4" height="6"/><rect class="win win--a" x="1177" y="167" width="4" height="6"/><rect class="win win--a" x="1167" y="180" width="4" height="6"/><rect class="win win--a" x="1177" y="180" width="4" height="6"/><rect class="win win--g" x="1187" y="180" width="4" height="6"/><rect class="win win--a" x="1177" y="193" width="4" height="6"/><rect class="win win--a" x="1187" y="193" width="4" height="6"/><rect class="win win--a" x="1167" y="206" width="4" height="6"/><rect class="win win--a" x="1177" y="206" width="4" height="6"/><rect class="win win--g" x="1167" y="219" width="4" height="6"/><rect class="win win--a" x="1157" y="232" width="4" height="6"/><rect class="win win--a" x="1167" y="245" width="4" height="6"/><rect class="win win--g" x="1157" y="258" width="4" height="6"/><rect class="win win--a" x="1157" y="284" width="4" height="6"/><rect class="win win--a" x="1157" y="297" width="4" height="6"/><rect class="win win--g" x="1177" y="297" width="4" height="6"/><rect class="win win--a" x="1167" y="310" width="4" height="6"/><rect class="win win--a" x="1187" y="310" width="4" height="6"/><rect class="win win--a" x="1219" y="205" width="4" height="6"/><rect class="win win--a" x="1229" y="205" width="4" height="6"/><rect class="win win--g" x="1219" y="218" width="4" height="6"/><rect class="win win--g" x="1219" y="231" width="4" height="6"/><rect class="win win--a" x="1229" y="231" width="4" height="6"/><rect class="win win--a" x="1219" y="244" width="4" height="6"/><rect class="win win--a" x="1239" y="244" width="4" height="6"/><rect class="win win--a" x="1219" y="270" width="4" height="6"/><rect class="win win--a" x="1229" y="270" width="4" height="6"/><rect class="win win--a" x="1229" y="283" width="4" height="6"/><rect class="win win--g" x="1269" y="106" width="4" height="6"/><rect class="win win--a" x="1309" y="106" width="4" height="6"/><rect class="win win--a" x="1309" y="119" width="4" height="6"/><rect class="win win--a" x="1279" y="145" width="4" height="6"/><rect class="win win--g" x="1289" y="145" width="4" height="6"/><rect class="win win--a" x="1299" y="158" width="4" height="6"/><rect class="win win--a" x="1289" y="171" width="4" height="6"/><rect class="win win--a" x="1309" y="184" width="4" height="6"/><rect class="win win--a" x="1309" y="210" width="4" height="6"/><rect class="win win--a" x="1299" y="223" width="4" height="6"/><rect class="win win--g" x="1319" y="223" width="4" height="6"/><rect class="win win--a" x="1269" y="236" width="4" height="6"/><rect class="win win--a" x="1269" y="249" width="4" height="6"/><rect class="win win--a" x="1309" y="249" width="4" height="6"/><rect class="win win--a" x="1299" y="262" width="4" height="6"/><rect class="win win--a" x="1269" y="288" width="4" height="6"/><rect class="win win--g" x="1279" y="288" width="4" height="6"/><rect class="win win--g" x="1289" y="288" width="4" height="6"/><rect class="win win--g" x="1299" y="288" width="4" height="6"/><rect class="win win--a" x="1279" y="301" width="4" height="6"/><rect class="win win--g" x="1289" y="301" width="4" height="6"/><rect class="win win--a" x="1309" y="301" width="4" height="6"/><rect class="win win--a" x="1269" y="314" width="4" height="6"/><rect class="win win--g" x="1289" y="314" width="4" height="6"/><rect class="win win--g" x="1319" y="314" width="4" height="6"/><rect class="win win--g" x="1373" y="166" width="4" height="6"/><rect class="win win--g" x="1343" y="179" width="4" height="6"/><rect class="win win--a" x="1363" y="192" width="4" height="6"/><rect class="win win--a" x="1343" y="205" width="4" height="6"/><rect class="win win--a" x="1373" y="205" width="4" height="6"/><rect class="win win--g" x="1363" y="218" width="4" height="6"/><rect class="win win--a" x="1343" y="244" width="4" height="6"/><rect class="win win--a" x="1363" y="257" width="4" height="6"/><rect class="win win--g" x="1353" y="309" width="4" height="6"/><rect class="win win--a" x="1373" y="309" width="4" height="6"/><rect class="win win--a" x="1399" y="227" width="4" height="6"/><rect class="win win--a" x="1439" y="253" width="4" height="6"/><rect class="win win--a" x="1429" y="266" width="4" height="6"/><rect class="win win--g" x="1399" y="279" width="4" height="6"/><rect class="win win--a" x="1409" y="279" width="4" height="6"/><rect class="win win--a" x="1429" y="305" width="4" height="6"/></g>
+</g>
+<g class="sk-layer sk-near" data-depth="1" stroke="#005C2E" stroke-width="1.5" stroke-linejoin="round">
+<g class="sk-glows"><ellipse class="glow" cx="398" cy="244" rx="38" ry="14" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="452" cy="190" rx="51" ry="18" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="505" cy="222" rx="42" ry="14" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="620" cy="238" rx="40" ry="14" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="1118" cy="248" rx="37" ry="14" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="1170" cy="198" rx="48" ry="18" fill="url(#sk-glow)" stroke="none"/><ellipse class="glow" cx="1226" cy="232" rx="41" ry="14" fill="url(#sk-glow)" stroke="none"/></g>
+<path d="M388 330 393 266h10l5 64z" fill="url(#sk-lattice)"/>
+<path d="M392 266 378 246h40l-14 20z" fill="#E6F5ED"/>
+<ellipse cx="398" cy="246" rx="20" ry="4" fill="#FFFFFF"/>
+<path d="M442 330 447 218h10l5 112z" fill="url(#sk-lattice)"/>
+<path d="M446 218 419 192h66l-27 26z" fill="#E6F5ED"/>
+<ellipse cx="452" cy="192" rx="33" ry="4" fill="#FFFFFF"/>
+<path d="M495 330 500 244h10l5 86z" fill="url(#sk-lattice)"/>
+<path d="M499 244 481 224h48l-18 20z" fill="#E6F5ED"/>
+<ellipse cx="505" cy="224" rx="24" ry="4" fill="#FFFFFF"/>
+<path d="M610 330 615 260h10l5 70z" fill="url(#sk-lattice)"/>
+<path d="M614 260 598 240h44l-16 20z" fill="#E6F5ED"/>
+<ellipse cx="620" cy="240" rx="22" ry="4" fill="#FFFFFF"/>
+<path d="M1108 330 1113 270h10l5 60z" fill="url(#sk-lattice)"/>
+<path d="M1112 270 1099 250h38l-13 20z" fill="#E6F5ED"/>
+<ellipse cx="1118" cy="250" rx="19" ry="4" fill="#FFFFFF"/>
+<path d="M1160 330 1165 226h10l5 104z" fill="url(#sk-lattice)"/>
+<path d="M1164 226 1140 200h60l-24 26z" fill="#E6F5ED"/>
+<ellipse cx="1170" cy="200" rx="30" ry="4" fill="#FFFFFF"/>
+<path d="M1216 330 1221 254h10l5 76z" fill="url(#sk-lattice)"/>
+<path d="M1220 254 1203 234h46l-17 20z" fill="#E6F5ED"/>
+<ellipse cx="1226" cy="234" rx="23" ry="4" fill="#FFFFFF"/>
+<path d="M452 292q26 6 53 0M1170 288q28 6 56 0" fill="none" stroke-width="2.2"/>
+<path d="M-20 330H1460" stroke="#A3A3A3" stroke-width="1"/>
+</g>
+</svg>
+    </div>
+    <p class="skyline__label">Singapore · 1.35°N 103.82°E</p>
+  </section>
+
+  <!-- 1 · STORY -->
+  <section class="floor floor--story" id="story" data-floor="1" data-floor-name="Story" aria-labelledby="story-h">
+    <div class="wrap story">
+      <div class="story__head">
+        <div class="floor__title" data-sc-act="flow">
+          <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.34">
+            <h2 id="story-h" class="h2">From lifts to data.</h2>
+          </div>
+        </div>
+        <dl class="then-now" data-sc-in data-sc-stagger="80">
+          <div><dt>Then</dt><dd>Lifts, escalators and travellators</dd></div>
+          <div><dt>Now</dt><dd>Data pipelines, dashboards and automations</dd></div>
+        </dl>
+      </div>
+      <div class="prose" data-sc-in data-sc-stagger="70">
+        <p class="lede">I spent <span class="num" data-sc-count="0 12">12</span>+ years in engineering operations and facilities.</p>
+        <p>At SMRT I kept lifts and escalators running for Singapore's rail network. I was promoted to Assistant Engineer II, and I stepped up as team lead on short notice to clear a backlog of undone documentation by priority.</p>
+        <p>That's where I saw how much more I could do with data and AI.</p>
+        <p>So I retrained through Generation Singapore's Junior Data Engineer programme, with Microsoft and Temasek Polytechnic. Now I build data pipelines and AI automations that save small businesses hours of manual work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · SKILLS -->
+  <section class="floor floor--skills" id="skills" data-floor="2" data-floor-name="Skills" aria-labelledby="skills-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
+          <h2 id="skills-h" class="h2">What I work with.</h2>
+        </div>
+      </div>
+      <dl class="spec" data-sc-in data-sc-stagger="60">
+        <div class="spec__row">
+          <dt>Data engineering</dt>
+          <dd><ul class="chips"><li>Python</li><li>SQL</li><li>ETL/ELT pipelines</li><li>Microsoft Fabric</li><li>Power BI</li><li>Computational notebooks</li><li>Snowflake</li><li>Databricks</li></ul></dd>
+        </div>
+        <div class="spec__row">
+          <dt>Cloud</dt>
+          <dd><ul class="chips"><li>Microsoft Azure</li><li>Google Cloud (Cloud Run, Firebase)</li><li>Supabase</li><li>Vercel</li></ul></dd>
+        </div>
+        <div class="spec__row">
+          <dt>AI &amp; automation</dt>
+          <dd><ul class="chips"><li>Prompt engineering</li><li>AI agents (Claude Code)</li><li>Trigger.dev</li><li>Telegram bots</li><li>Workflow automation</li></ul></dd>
+        </div>
+        <div class="spec__row">
+          <dt>Web</dt>
+          <dd><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>GitHub</li><li>Version control</li></ul></dd>
+        </div>
+        <div class="spec__row spec__row--soft">
+          <dt>Also</dt>
+          <dd><ul class="chips"><li>Stakeholder management</li><li>Vendor &amp; contractor coordination</li><li>Regulatory compliance (BCA, LTA)</li><li>Agile</li></ul></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 3 · PROJECTS: the peak. Pinned; the lift doors part under the scroll. -->
+  <section class="floor floor--projects" id="projects" data-floor="3" data-floor-name="Projects" aria-labelledby="projects-h">
+    <div class="lift" data-sc-act="pin" data-sc-span="2.2">
+      <div class="lift__stage" data-sc-stage>
+        <div class="wrap lift__floor">
+          <h2 id="projects-h" class="h2">Things I've built.</h2>
+          <article class="feature">
+            <div class="feature__main">
+              <p class="feature__kicker">Open source · runs every day</p>
+              <h3 class="feature__title">MyJobSearchBot</h3>
+              <p class="feature__desc">A daily bot that checks 5 job sites, keeps the remote AI and data roles open to Singapore, ranks them against my resume, and sends the top 15 to Telegram.</p>
+              <ul class="chips chips--on-white" aria-label="Stack"><li>TypeScript</li><li>Trigger.dev</li><li>Telegram Bot API</li><li>GitHub</li></ul>
+            </div>
+            <a class="btn btn--primary feature__link" href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          </article>
+        </div>
+        <div class="doors" aria-hidden="true">
+          <div class="door door--l"></div>
+          <div class="door door--r"></div>
+          <div class="doors__sign"><span class="doors__floor">3</span><span>Projects</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap more">
+      <h3 class="more__h">Also built</h3>
+      <ul class="ledger" data-sc-in data-sc-stagger="70">
+        <li class="ledger__row">
+          <h4 class="ledger__title">Crew scheduling app</h4>
+          <p class="ledger__desc">Scheduling web app for a Singapore cleaning company: job creation and assignment, WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.</p>
+          <p class="ledger__meta"><span>JavaScript · Supabase · Google sign-in</span><span class="ledger__note">Client project, private</span></p>
+        </li>
+        <li class="ledger__row">
+          <h4 class="ledger__title">Waseel: Quran memory tester</h4>
+          <p class="ledger__desc">Free web app that tests Quran memorisation with a random ayah by Juz.</p>
+          <p class="ledger__meta"><span>HTML · JavaScript · GitHub Pages</span></p>
+        </li>
+        <li class="ledger__row">
+          <h4 class="ledger__title">DataSentinel</h4>
+          <p class="ledger__desc">MCP-based data auditing tool.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4 · CERTIFICATIONS: compressed, administrative -->
+  <section class="floor floor--certs" id="certifications" data-floor="4" data-floor-name="Certifications" aria-labelledby="certs-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
+          <h2 id="certs-h" class="h2">Certifications.</h2>
+        </div>
+      </div>
+      <div class="certs" data-sc-in data-sc-stagger="50">
+        <div class="cert">
+          <h3 class="cert__provider">Google</h3>
+          <ul>
+            <li>Cybersecurity Professional <time>Mar 2026</time></li>
+            <li>IT Automation with Python <time>Oct 2025</time></li>
+            <li>Advanced Data Analytics <time>Sep 2025</time></li>
+            <li>Project Management <time>Aug 2025</time></li>
+            <li>Data Analytics <time>Jul 2025</time></li>
+            <li>AI Prompting Essentials <time>Jun 2025</time></li>
+          </ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">Microsoft</h3>
+          <ul>
+            <li>Azure AI Fundamentals <span class="nw">(AI-900)</span> <time>Feb 2026</time></li>
+            <li>Azure Fundamentals <span class="nw">(AZ-900)</span> <time>Jan 2026</time></li>
+            <li>Azure Data Fundamentals <span class="nw">(DP-900)</span> <time>Dec 2025</time></li>
+          </ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">Snowflake</h3>
+          <ul><li>SnowPro Associate: Platform <time>Apr 2026</time></li></ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">Google Cloud</h3>
+          <ul><li>Associate Cloud Engineer</li></ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">Databricks</h3>
+          <ul><li>Academy Accreditation: Fundamentals &amp; Generative AI <time>Oct 2025</time></li></ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">ServiceNow</h3>
+          <ul><li>Micro-Certification: Platform Analytics <time>Nov 2025</time></li></ul>
+        </div>
+        <div class="cert">
+          <h3 class="cert__provider">GitHub</h3>
+          <ul><li>GitHub Foundations <span class="nw">(GH-900)</span></li></ul>
+        </div>
+      </div>
+      <p class="certs__next"><strong>Next:</strong> starting the Google Cloud Professional Cloud Architect course with GEAR in October 2026.</p>
+    </div>
+  </section>
+
+  <!-- 5 · EXPERIENCE -->
+  <section class="floor floor--experience" id="experience" data-floor="5" data-floor-name="Experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
+          <h2 id="exp-h" class="h2">Where I've worked.</h2>
+        </div>
+      </div>
+      <ol class="timeline" data-sc-in data-sc-stagger="70">
+        <li class="stop">
+          <p class="stop__when">Now</p>
+          <div class="stop__body">
+            <h3 class="stop__role">Freelance: data &amp; AI automation</h3>
+            <p class="stop__org">shiftedtech</p>
+            <p>Built and run a crew scheduling web app for a Singapore cleaning company. Built MyJobSearchBot, an open-source daily job-alert automation.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <p class="stop__when">Jul 2025 – Oct 2025</p>
+          <div class="stop__body">
+            <h3 class="stop__role">Junior Data Engineer Program Trainee</h3>
+            <p class="stop__org">Generation Singapore, with Microsoft &amp; Temasek Polytechnic</p>
+            <p>Microsoft Fabric, ETL pipelines, Power BI dashboards and data visualisation. Built and presented a data pipeline capstone to stakeholders.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <p class="stop__when">Aug 2021 – Aug 2025</p>
+          <div class="stop__body">
+            <h3 class="stop__role">Escalator &amp; Lift Assistant Engineer II</h3>
+            <p class="stop__org">SMRT Corporation · promoted May 2025</p>
+            <p>Managed monthly maintenance schedules for escalators, lifts and travellators across depots and stations. Coordinated contractors and regulators (BCA, LTA) for inspections, safety audits and incident investigations. Stepped up as team lead on short notice and cleared a documentation backlog by priority.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <p class="stop__when">Jan 2019 – Aug 2021</p>
+          <div class="stop__body">
+            <h3 class="stop__role">Senior Technician</h3>
+            <p class="stop__org">9G Elevator Pte Ltd · promoted Apr 2021</p>
+            <p>Led a team maintaining <span class="num" data-sc-count="0 60">60</span>+ escalator units a month, across KONE, Otis, Hitachi, Schindler and Mitsubishi systems.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <p class="stop__when">Jan 2016 – Jan 2019</p>
+          <div class="stop__body">
+            <h3 class="stop__role">Assistant Executive, Sports Facilities</h3>
+            <p class="stop__org">Nanyang Technological University</p>
+            <p>Ran bookings, logistics, procurement and contractor coordination for a large sports facilities portfolio.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="edu">
+        <h3 class="edu__h">Education</h3>
+        <ul>
+          <li>Diploma in Engineering Operations Management, Republic Polytechnic <time>2018 – 2021</time></li>
+          <li>Higher NITEC in Logistics Management &amp; Supply Chain, ITE College East <time>2007 – 2009</time></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · CONTACT: the lift arrives. Holds; nothing fades out. -->
+  <section class="floor floor--contact" id="contact" data-floor="6" data-floor-name="Contact" aria-labelledby="contact-h">
+    <div class="wrap contact">
+      <h2 id="contact-h" class="contact__h">Let's work together.</h2>
+      <p class="contact__line">Hiring for a data or AI automation role, or have manual work you want automated? Email me at <a href="mailto:fahmymahamud@gmail.com">fahmymahamud@gmail.com</a>.</p>
+      <div class="contact__ctas">
+        <a class="btn btn--primary" href="mailto:fahmymahamud@gmail.com">Contact me</a>
+        <a class="btn btn--ghost" href="https://github.com/fahmymahamud" target="_blank" rel="noopener me">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+    <footer class="foot">
+      <div class="wrap foot__in">
+        <img src="assets/logo-320.webp" width="320" height="96" alt="shiftedtech" loading="lazy">
+        <p>© 2026 Fahmy Mahamud · Singapore</p>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<script src="assets/scrollcraft.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# Decisions log
+
+Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
+
+## Process
+- **Checkpoints skipped on purpose.** CLAUDE.md asks me to stop before the plan, GitHub and Vercel. In chat you said
+  "Run fully on your own... Do NOT stop to ask for my approval", and CLAUDE.md lets chat instructions override it.
+- **New git repo in `portfolio/`.** The folder was inside a git repo rooted at `C:\Users\USER` (your whole home folder).
+  I ran `git init` in `portfolio/` so only this project can be pushed. Commits use your configured identity (fahmymahamud).
+- **scroll-craft workspace** is `design/` (via `.scrollcraft.json`). `design/builds/fahmy-portfolio/BRIEF.md` is the design
+  brief, written by me under your creative delegation. `design/FINGERPRINTS.md` has this build's row.
+- Doctor: node, full ffmpeg and Chrome were OK. I installed `playwright-core` (dev dependency) and `gh` (winget).
+  There's no `KIE_AI_API_KEY`, and none was needed.
+
+## Content left off (still ADD / EDIT ME / CONFIRM in brand_assets)
+| Item | Where | Status on site |
+|---|---|---|
+| LinkedIn URL | profile.md (`ADD-YOUR-HANDLE`) | **left off**; contact shows email + GitHub only |
+| Waseel link | projects.md (`ADD LINK`) | project shown, no link |
+| DataSentinel link | projects.md (`ADD LINK`) | project shown, no link, no stack (none given) |
+| Freelance start date | resume-portfolio.md (`CONFIRM`) | shown as "Now" |
+| Google Cloud Associate Cloud Engineer date | resume-portfolio.md (`CONFIRM`) | cert shown, no date |
+| GitHub Foundations GH-900 date | resume-portfolio.md (`CONFIRM`) | cert shown, no date |
+| profile.md header still says "EDIT ME" | profile.md | used the values as written |
+
+## Other content calls
+- **Email:** `fahmymahamud@gmail.com`, as listed. profile.md suggests `hello@shiftedtech.com` as an option; change it in
+  `site/index.html` (3 places) if you prefer that one.
+- **Instagram:** left off. CLAUDE.md says contact = email + LinkedIn + GitHub only.
+- **GitHub link:** personal `github.com/fahmymahamud` (the project repo lives there). The shiftedtech org isn't linked separately.
+- **Resume PDF:** not published and git-ignored (`brand_assets/*.pdf`). Nothing was taken from it, including the phone number.
+- No `inspiration.png` or `component.txt` in brand_assets, so neither was used.
+- The Story chapter adds a small "Then / Now" pair built from resume wording (lifts, escalators, travellators → pipelines,
+  dashboards, automations).
+- "Open source · runs every day" on MyJobSearchBot comes from the resume ("open-source daily job-alert automation").
+- Only real numbers are animated: 12+ years, 60+ escalator units.
+
+## Design
+- **Grammar:** chaptered editorial. Each section is a "floor" with its own light ground (white, off-white, light grey,
+  green-light). No dark sections.
+- **Signature move: the lift.** A floor indicator (G, 1–6) follows your scroll. It sits in the left margin at ≥1280px and
+  bottom-right on smaller screens. Press it to open a lift button panel that jumps to any section. On floor 3, brushed-steel
+  doors slide open as you scroll to reveal MyJobSearchBot.
+- **Hero skyline:** a hand-built inline SVG (line art), with no images. From back to front: sun, far CBD towers, water,
+  mid landmarks (Esplanade, Marina Bay Sands, ArtScience Museum, Singapore Flyer, towers) and near Supertrees with an OCBC
+  Skyway. The Flyer turns (90s per turn), Supertree canopies glow softly, and 106 window lights twinkle at their own pace.
+  Layers lean with the mouse and separate on scroll. Animation pauses when the hero is off screen or the tab is hidden.
+  The skyline sits below the text in its own band, so it can never cover copy. Phones get their own crop that keeps
+  the whole Flyer.
+- **Reduced motion:** there's no parallax or animation, the doors never render, and the pinned act becomes a normal section.
+- **No JS / failed JS:** all content shows. There's a no-js class, a 3s fallback if the engine never mounts, and the
+  doors only exist once JS is ready.
+- **Inter** as the brand requires. scroll-craft discourages Inter by default, but the brand rule wins.
+- Kept the em dash in the `<title>` because you specified that exact title. Visible copy has no em dashes.
+- The scroll-craft engine (`scrollcraft.js/.css`) is copied unmodified. All bespoke code is in `site/assets/site.js`/`site.css`.
+
+## Checks run
+- Screenshot loop, 3 rounds at 1440 and 390, plus 390 with reduced motion (screenshots/ is git-ignored). No horizontal
+  overflow, no console errors or failed requests, all tap targets at least 44px, all anchors resolve, external links return 200.
+- Round 1 fixes: hero subline measure, cert codes breaking mid-token, education years wrapping, a phone art-directed
+  skyline crop, and the logo tap target.
+- Lighthouse on the local server: desktop 99/100/100/100, mobile 86/100/100/100 (perf/a11y/best-practices/SEO).
+  After that I made the font non-render-blocking, deferred the scripts and used a smaller logo. Most of the remaining
+  mobile gap was missing gzip on the local server, which Vercel adds.
+- Page weight: about 0.45 MB for the whole `site/` folder.

@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+.tools/
+.vercel/
+screenshots/
+lab/
+*.log
+brand_assets/*.pdf
