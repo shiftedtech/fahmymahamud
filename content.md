@@ -86,7 +86,6 @@ Education:
 
 ## 6. Contact
 Heading: Making everyday tasks effortless on the side.
-Line: I really enjoy tinkering with AI automations and messy data problems on the side. If you're working on something interesting or want to bounce ideas around, feel free to reach out at fahmymahamud@gmail.com.
 
 - Email: fahmymahamud@gmail.com
 - GitHub: https://github.com/fahmymahamud

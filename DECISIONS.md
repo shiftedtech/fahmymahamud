@@ -125,3 +125,4 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   replaces the buttons: Gmail (mailto), LinkedIn, GitHub, Instagram and Facebook, as you asked (this overrides the CLAUDE.md
   email + LinkedIn + GitHub list). The logos are Simple Icons marks (CC0), drawn in the site green rather than brand colours to
   keep the palette. The LinkedIn URL is now filled in, so nothing in brand_assets is marked ADD anymore.
+- **Contact line removed (29 Sep).** At your request the contact section is now just the heading and the five logo links.
