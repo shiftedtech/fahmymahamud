@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahmy Mahamud — Data & Cloud Engineer</title>
+<meta name="description" content="Fahmy Mahamud — facilities engineer turned data & cloud engineer. Contact card, resume, and links.">
+<meta property="og:title" content="Fahmy Mahamud">
+<meta property="og:description" content="Data & cloud engineer. Save my contact, view my resume, connect on LinkedIn and GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEFEA;
+    --ink:#14212B;
+    --ink-2:#4A5760;
+    --line:#C9D1CC;
+    --signal:#0F6E56;
+    --signal-2:#0B5A46;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  body{min-height:100dvh;display:flex;justify-content:center;padding:24px 16px 56px}
+  main{width:100%;max-width:440px}
+
+  /* Header */
+  .head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:12px 0 28px}
+  .photo{width:88px;height:88px;border-radius:50%;background:var(--line);object-fit:cover;flex:0 0 auto;border:3px solid var(--white)}
+  .photo.placeholder{display:grid;place-items:center;font-weight:700;font-size:30px;color:var(--ink-2)}
+  h1{font-size:44px;line-height:.95;font-weight:700;letter-spacing:-.02em;margin:0 0 8px;font-variation-settings:"opsz" 96}
+  .role{font-size:17px;line-height:1.35;color:var(--ink-2);margin:0;font-weight:300}
+  .loc{font-size:14px;color:var(--ink-2);margin:6px 0 0}
+
+  /* Intro reveal (one orchestrated moment) */
+  .reveal{opacity:0;transform:translateY(8px);animation:up .5s ease-out forwards}
+  .reveal:nth-child(2){animation-delay:.08s}
+  @keyframes up{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+
+  /* Primary action */
+  .save{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 18px;border:0;border-radius:14px;background:var(--signal);color:var(--white);font:inherit;font-size:17px;font-weight:500;cursor:pointer}
+  .save:hover{background:var(--signal-2)}
+  .save:focus-visible,.link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .save svg{width:20px;height:20px}
+  .hint{font-size:13px;color:var(--ink-2);text-align:center;margin:10px 0 0}
+
+  /* Links */
+  .links{list-style:none;padding:0;margin:32px 0 0;border-top:1px solid var(--line)}
+  .links li{border-bottom:1px solid var(--line)}
+  .link{display:flex;align-items:center;gap:14px;padding:16px 4px;color:inherit;text-decoration:none}
+  .link:hover .name{text-decoration:underline;text-underline-offset:3px}
+  .ico{width:36px;height:36px;border-radius:10px;background:var(--white);display:grid;place-items:center;flex:0 0 auto}
+  .ico svg{width:18px;height:18px;fill:var(--ink)}
+  .name{font-size:17px;font-weight:500;line-height:1.2}
+  .sub{font-size:13.5px;color:var(--ink-2);margin-top:2px}
+  .txt{flex:1;min-width:0}
+  .sub.trunc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+  /* Path — the lift indicator */
+  section{margin-top:40px}
+  h2{font-size:15px;font-weight:500;color:var(--ink-2);margin:0 0 14px}
+  .path{list-style:none;margin:0;padding:0;position:relative}
+  .path::before{content:"";position:absolute;left:11px;top:10px;bottom:10px;width:2px;background:var(--line)}
+  .path li{position:relative;padding:0 0 18px 34px}
+  .path li:last-child{padding-bottom:0}
+  .path li::before{content:"";position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--line)}
+  .path li.now::before{background:var(--signal);border-color:var(--signal)}
+  .path .when{font-size:13px;color:var(--ink-2)}
+  .path .what{font-size:16px;font-weight:500;line-height:1.3}
+  .path .where{font-size:14px;color:var(--ink-2)}
+
+  /* Certs */
+  .certs{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .certs li{font-size:13.5px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--white)}
+  .certs li.lead{border-color:var(--signal);color:var(--signal-2);font-weight:500}
+
+  footer{margin-top:44px;font-size:13px;color:var(--ink-2);line-height:1.5}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <header class="head">
+    <div class="reveal">
+      <h1>Fahmy<br>Mahamud</h1>
+      <p class="role">Data &amp; cloud engineer, formerly keeping lifts and escalators running for SMRT.</p>
+      <p class="loc">Singapore</p>
+    </div>
+    <!-- Replace the div below with: <img class="photo" src="photo.jpg" alt="Fahmy Mahamud"> -->
+    <div class="photo placeholder reveal" aria-hidden="true">FM</div>
+  </header>
+
+  <button class="save" id="save" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v12"/><path d="m6 11 6 6 6-6"/><path d="M5 21h14"/></svg>
+    Save my contact
+  </button>
+  <p class="hint">Adds name, email and links to your phone's contacts.</p>
+
+  <ul class="links" id="links"></ul>
+
+  <section>
+    <h2>Where I've been</h2>
+    <ol class="path">
+      <li class="now"><div class="when">2025 – now</div><div class="what">Data engineering &amp; cloud</div><div class="where">Junior Data Engineer Programme, Generation Singapore with Microsoft &amp; Temasek Poly</div></li>
+      <li><div class="when">2021 – 2025</div><div class="what">Escalator &amp; Lift Assistant Engineer II</div><div class="where">SMRT</div></li>
+      <li><div class="when">2019 – 2021</div><div class="what">Senior Technician</div><div class="where">9G Elevator</div></li>
+      <li><div class="when">2016 – 2019</div><div class="what">Assistant Executive, Sports Facilities</div><div class="where">Nanyang Technological University</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Certified in</h2>
+    <ul class="certs">
+      <li class="lead">SnowPro Associate</li>
+      <li class="lead">Azure AZ-900</li>
+      <li class="lead">Azure DP-900</li>
+      <li>Azure AI-900</li>
+      <li>GitHub Foundations</li>
+      <li>Databricks Fundamentals</li>
+      <li>Google Advanced Data Analytics</li>
+      <li>Google Cybersecurity</li>
+      <li>Google IT Automation with Python</li>
+      <li>Google Project Management</li>
+    </ul>
+  </section>
+
+  <footer>
+    English and Malay. Open to data engineering, analytics engineering and cloud roles.<br>
+    <a href="mailto:fahmymahamud@gmail.com">fahmymahamud@gmail.com</a>
+  </footer>
+</main>
+
+<script>
+  // ---- Edit these once. Everything else builds itself. ----
+  const ME = {
+    first: "Mohammad Fahmy",
+    last: "Bin Mahamud",
+    display: "Fahmy Mahamud",
+    title: "Data & Cloud Engineer",
+    email: "fahmymahamud@gmail.com",
+    phone: "",                                  // e.g. "+6591234567" — leave "" to omit
+    site: "https://YOUR-USERNAME.github.io/card",   // this page's URL once deployed
+    links: [
+      { id:"linkedin",  name:"LinkedIn",  sub:"Work history, posts, recommendations", url:"https://www.linkedin.com/in/YOUR-HANDLE" },
+      { id:"github",    name:"GitHub",    sub:"github.com/fahmymahamud",              url:"https://github.com/fahmymahamud" },
+      { id:"resume",    name:"Resume",    sub:"PDF, one page",                         url:"resume.pdf" },
+      { id:"instagram", name:"Instagram", sub:"@careershifttechguy — the career-change journey", url:"https://www.instagram.com/careershifttechguy" },
+      { id:"facebook",  name:"Facebook",  sub:"Personal",                              url:"https://www.facebook.com/YOUR-HANDLE" },
+      { id:"mail",      name:"Email",     sub:"fahmymahamud@gmail.com",                url:"mailto:fahmymahamud@gmail.com" },
+    ]
+  };
+
+  const ICONS = {
+    linkedin:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>',
+    github:'<svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>',
+    resume:'<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5z"/></svg>',
+    instagram:'<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1.1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.4-8.4a1.2 1.2 0 1 0-2.4 0 1.2 1.2 0 0 0 2.4 0z"/></svg>',
+    facebook:'<svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>',
+    mail:'<svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>'
+  };
+
+  // Build the link list
+  const ul = document.getElementById("links");
+  ME.links.forEach(l => {
+    const li = document.createElement("li");
+    const external = /^https?:/.test(l.url);
+    li.innerHTML = `<a class="link" href="${l.url}" ${external ? 'target="_blank" rel="noopener"' : ''}>
+      <span class="ico" aria-hidden="true">${ICONS[l.id] || ""}</span>
+      <span class="txt"><div class="name">${l.name}</div><div class="sub trunc">${l.sub}</div></span>
+    </a>`;
+    ul.appendChild(li);
+  });
+
+  // vCard download
+  document.getElementById("save").addEventListener("click", () => {
+    const urls = ME.links.filter(l => /^https?:/.test(l.url)).map(l => `URL;TYPE=${l.name}:${l.url}`);
+    const vcf = [
+      "BEGIN:VCARD","VERSION:3.0",
+      `N:${ME.last};${ME.first};;;`,
+      `FN:${ME.display}`,
+      `TITLE:${ME.title}`,
+      `EMAIL;TYPE=INTERNET:${ME.email}`,
+      ME.phone ? `TEL;TYPE=CELL:${ME.phone}` : null,
+      `URL:${ME.site}`,
+      ...urls,
+      "END:VCARD"
+    ].filter(Boolean).join("\r\n");
+    const blob = new Blob([vcf], { type: "text/vcard;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "Fahmy-Mahamud.vcf";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  });
+</script>
+</body>
+</html>
