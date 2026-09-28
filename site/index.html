@@ -256,7 +256,7 @@
 
   <!-- 3 · PROJECTS: the peak. Pinned; the lift doors part under the scroll. -->
   <section class="floor floor--projects" id="projects" data-floor="3" data-floor-name="Projects" aria-labelledby="projects-h">
-    <div class="lift" data-sc-act="pin" data-sc-span="2.4">
+    <div class="lift" data-sc-act="pin" data-sc-span="1.8">
       <div class="lift__stage" data-sc-stage>
         <div class="wrap lift__floor">
           <h2 id="projects-h" class="h2">Things I've built.</h2>
@@ -273,6 +273,7 @@
         <div class="landing" aria-hidden="true">
           <div class="landing__rig">
             <div class="landing__doorway">
+              <div class="landing__car"></div>
               <div class="landing__door landing__door--l"></div>
               <div class="landing__door landing__door--r"></div>
             </div>
@@ -292,46 +293,84 @@
       </div>
     </div>
 
-    <div class="wrap more">
-      <h3 class="more__h" id="also-h">Also built</h3>
-      <div class="esc" role="group" aria-labelledby="also-h">
-        <div class="esc__track">
-          <svg class="esc__rail" aria-hidden="true" focusable="false"></svg>
-          <a class="ride" href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">
-            <span class="ride__tag">Client project</span>
-            <h4 class="ride__title">Crew scheduling app</h4>
-            <p class="ride__desc">Scheduling web app for a Singapore cleaning company: job creation and assignment, WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.</p>
-            <p class="ride__stack">JavaScript · Supabase · Google sign-in</p>
-            <span class="ride__url">Open the app <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
-            <span class="ride__step" aria-hidden="true"></span>
+    <!-- Also built: the escalator. Pinned; four projects ride up the incline
+         as you scroll. Without JS or with reduced motion it is a plain grid. -->
+    <div class="esc3d" data-sc-act="pin" data-sc-span="4.2" role="region" aria-labelledby="also-h">
+      <div class="esc3d__stage" data-sc-stage>
+        <div class="wrap esc3d__head">
+          <h3 class="esc3d__title" id="also-h">Also built</h3>
+          <p class="esc3d__hint">Four more projects, riding up. Tap a card to open it.</p>
+        </div>
+        <div class="esc3d__scene" aria-hidden="true">
+          <div class="esc3d__assembly">
+            <div class="esc3d__shadow"></div>
+            <div class="esc3d__truss"><i></i></div>
+            <div class="esc3d__glass esc3d__glass--back"></div>
+            <div class="esc3d__steps"><div class="esc3d__belt esc3d__belt--steps"></div></div>
+            <div class="esc3d__rail esc3d__rail--back"><div class="esc3d__belt esc3d__belt--rail"></div></div>
+            <div class="esc3d__glass esc3d__glass--front"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="esc3d__rail esc3d__rail--front"><div class="esc3d__belt esc3d__belt--rail"></div></div>
+          </div>
+        </div>
+        <div class="esc3d__cards">
+          <a class="card3d" href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener" data-i="0">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">crewscheduling.netlify.app</span><span class="card3d__n" aria-hidden="true">P1</span></span>
+            <span class="card3d__shot"><img src="assets/projects/crew.webp" width="720" height="450" loading="lazy" alt="Crew Scheduling landing page: your crew's whole week, in one link"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Client project</span>
+              <h4 class="card3d__title">Crew scheduling app</h4>
+              <span class="card3d__desc">Scheduling web app for a Singapore cleaning company: job assignment, WhatsApp messages, crew availability, calendar sync and an audit log.</span>
+              <span class="card3d__tags"><span>JavaScript</span><span>Supabase</span><span>Google sign-in</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
-          <a class="ride" href="https://remindclient.app/" target="_blank" rel="noopener">
-            <span class="ride__tag">Web app</span>
-            <h4 class="ride__title">RemindClient</h4>
-            <p class="ride__desc">Sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders through a Telegram bot.</p>
-            <p class="ride__stack">AI · Telegram bot</p>
-            <span class="ride__url">Visit remindclient.app <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
-            <span class="ride__step" aria-hidden="true"></span>
+          <a class="card3d" href="https://remindclient.app/" target="_blank" rel="noopener" data-i="1">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">remindclient.app</span><span class="card3d__n" aria-hidden="true">P2</span></span>
+            <span class="card3d__shot"><img src="assets/projects/remind.webp" width="720" height="450" loading="lazy" alt="RemindClient landing page: never chase payments again"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Web app</span>
+              <h4 class="card3d__title">RemindClient</h4>
+              <span class="card3d__desc">Sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders through a Telegram bot.</span>
+              <span class="card3d__tags"><span>AI</span><span>Telegram bot</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
-          <a class="ride" href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">
-            <span class="ride__tag">Free web app</span>
-            <h4 class="ride__title">Waseel: Quran memory tester</h4>
-            <p class="ride__desc">Tests Quran memorisation with a random ayah by Juz.</p>
-            <p class="ride__stack">HTML · JavaScript · GitHub Pages</p>
-            <span class="ride__url">Try it <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
-            <span class="ride__step" aria-hidden="true"></span>
+          <a class="card3d" href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener" data-i="2">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">waseelapp.github.io</span><span class="card3d__n" aria-hidden="true">P3</span></span>
+            <span class="card3d__shot"><img src="assets/projects/waseel.webp" width="720" height="450" loading="lazy" alt="Waseel landing page: test and reinforce your Quran memory"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Free web app</span>
+              <h4 class="card3d__title">Waseel: Quran memory tester</h4>
+              <span class="card3d__desc">Tests Quran memorisation with a random ayah by Juz.</span>
+              <span class="card3d__tags"><span>HTML</span><span>JavaScript</span><span>GitHub Pages</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
-          <a class="ride" href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">
-            <span class="ride__tag">Open source</span>
-            <h4 class="ride__title">DataSentinel</h4>
-            <p class="ride__desc">MCP-based data auditing tool.</p>
-            <span class="ride__url">View on GitHub <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
-            <span class="ride__step" aria-hidden="true"></span>
+          <a class="card3d" href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener" data-i="3">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">github.com/fahmymahamud/DataSentinel</span><span class="card3d__n" aria-hidden="true">P4</span></span>
+            <span class="card3d__shot"><img src="assets/projects/sentinel.webp" width="720" height="450" loading="lazy" alt="DataSentinel repository on GitHub"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Open source</span>
+              <h4 class="card3d__title">DataSentinel</h4>
+              <span class="card3d__desc">An agent-based pipeline that uses the Model Context Protocol (MCP) to automate data auditing.</span>
+              <span class="card3d__tags"><span>Python</span><span>MCP</span><span>Docker</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
         </div>
-        <div class="esc__nav" hidden>
-          <button class="esc__btn" type="button" data-esc="-1" aria-label="Previous project"><svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true"><path d="M8 1.5 3 6l5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <button class="esc__btn" type="button" data-esc="1" aria-label="Next project"><svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true"><path d="M4 1.5 9 6l-5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="esc3d__hud" aria-hidden="true">
+          <span class="esc3d__stat"><small>Escalator position</small><b class="esc3d__pos">0%</b></span>
+          <span class="esc3d__sep"></span>
+          <span class="esc3d__stat"><small>Now riding</small><b class="esc3d__now">Crew scheduling app</b></span>
+          <span class="esc3d__sep"></span>
+          <span class="esc3d__dir">Stationary</span>
+        </div>
+        <div class="esc3d__levels" role="group" aria-label="Jump to a project">
+          <span class="esc3d__levels-label" aria-hidden="true">Level</span>
+          <button type="button" data-level="0" aria-label="Crew scheduling app">P1</button>
+          <button type="button" data-level="1" aria-label="RemindClient">P2</button>
+          <button type="button" data-level="2" aria-label="Waseel">P3</button>
+          <button type="button" data-level="3" aria-label="DataSentinel">P4</button>
         </div>
       </div>
     </div>

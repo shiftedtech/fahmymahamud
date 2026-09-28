@@ -16,7 +16,8 @@ Stack: JavaScript, Supabase, Google sign-in
 Link: https://crewscheduling.netlify.app/
 
 ## DataSentinel
-What: MCP-based data auditing tool.
+What: MCP-based data auditing tool. An agent-based pipeline that uses the Model Context Protocol to automate data auditing (from the repo description).
+Stack: Python, MCP, Docker (repo topics)
 Link: https://github.com/fahmymahamud/DataSentinel
 
 ## RemindClient

@@ -12,6 +12,12 @@
   // long static hold. Turn it into an ordinary section before the engine reads it.
   var lift = document.querySelector('.lift');
   if (reduce && lift) lift.removeAttribute('data-sc-act');
+  // The escalator is a pinned 3D ride only with motion allowed and the engine
+  // present; otherwise it stays a plain grid of four cards.
+  var esc = document.querySelector('.esc3d');
+  if (esc && reduce) esc.removeAttribute('data-sc-act');
+  var escLive = !!(esc && !reduce && window.ScrollCraft);
+  if (escLive) esc.classList.add('is-live');
 
   if (window.ScrollCraft) ScrollCraft.mount(document.body);
 
@@ -72,115 +78,147 @@
   }
 
   /* -------------------------------------------------------- lift doors -- */
-  // Three beats on the landing: the HPI blinks while the car arrives, the doors
-  // part, then the whole landing scales past you as you step in.
+  /* --------------------------------------------------------- lift doors -- */
+  // A real lift: when you reach floor 3 the car arrives (arrow stops, lanterns
+  // light), the doors open on a timer, then you step in as the landing fades.
+  // Time-based, so a fast flick on a phone cannot skip it. Scroll back above
+  // the floor and it resets, ready to arrive again.
   var landing = document.querySelector('.landing');
-  var OPEN_FROM = 0.06, OPEN_END = 0.34, ENTER_END = 0.58, OPEN_TO = ENTER_END;
-
-  function liftProgress() {
-    var r = lift.getBoundingClientRect();
-    var travel = Math.max(r.height - innerHeight, 1);
-    return clamp01(-r.top / travel);
+  var liftState = 0, liftTimers = [];
+  function liftAt(state) {
+    liftTimers.forEach(clearTimeout);
+    liftTimers = [];
+    liftState = state;
+    landing.classList.toggle('is-arrived', state >= 1);
+    landing.classList.toggle('is-open', state >= 2);
+    landing.classList.toggle('is-in', state >= 3);
   }
   function paintDoors() {
     if (!lift || !landing || reduce) return;
     var r = lift.getBoundingClientRect();
-    landing.classList.toggle('is-live', r.bottom > 0 && r.top < innerHeight);
-    var p = liftProgress();
-    var open = smooth((p - OPEN_FROM) / (OPEN_END - OPEN_FROM));
-    var enter = smooth((p - OPEN_END - 0.02) / (ENTER_END - OPEN_END - 0.02));
-    landing.style.setProperty('--open', open.toFixed(4));
-    landing.style.setProperty('--enter', enter.toFixed(4));
-    landing.classList.toggle('is-arrived', p > 0.02);
-    landing.classList.toggle('is-in', enter >= 0.999);
-  }
-
-  /* --------------------------------------------------------- escalator -- */
-  // Desktop: the four projects ride up the incline into place as the section
-  // arrives, then hold still. Phone: a swipe carousel with the same steps.
-  var esc = document.querySelector('.esc');
-  var track = esc && esc.querySelector('.esc__track');
-  var rail = esc && esc.querySelector('.esc__rail');
-  var rides = esc ? Array.prototype.slice.call(esc.querySelectorAll('.ride')) : [];
-  var escNav = esc && esc.querySelector('.esc__nav');
-  var escVisible = false;
-
-  function isCarousel() { return !!track && getComputedStyle(track).overflowX === 'auto'; }
-
-  function drawRail() {
-    if (!track || !rides.length) return;
-    var rise = parseFloat(getComputedStyle(esc).getPropertyValue('--rise')) || 38;
-    var a = rides[0], b = rides[rides.length - 1];
-    var pitch = rides.length > 1 ? (rides[1].offsetLeft - a.offsetLeft) : a.offsetWidth;
-    var slope = rise / pitch;
-    var lift0 = rise * 1.25;
-    var x0 = a.offsetLeft - 14, y0 = a.offsetTop - lift0 + 14 * slope;
-    var x1 = b.offsetLeft + b.offsetWidth * 0.62;
-    var y1 = a.offsetTop - lift0 - (x1 - a.offsetLeft) * slope;
-    var drop = 64;
-    var W = track.scrollWidth, H = track.scrollHeight;
-    rail.setAttribute('width', W); rail.setAttribute('height', H);
-    rail.style.width = W + 'px'; rail.style.height = H + 'px';
-    rail.innerHTML =
-      '<path class="esc__glass" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + 'L' + x1 + ' ' + (y1 + drop) + 'L' + x0 + ' ' + (y0 + drop) + 'Z"/>' +
-      '<path class="esc__hand" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + '"/>' +
-      '<path class="esc__beads" d="M' + x0 + ' ' + y0 + 'L' + x1 + ' ' + y1 + '"/>';
-    if (escNav) escNav.hidden = !isCarousel();
-    updateEscButtons();
-  }
-  function paintEsc() {
-    if (!esc || reduce) return;
-    if (isCarousel()) {
-      rides.forEach(function (c) { c.style.removeProperty('--rx'); c.style.removeProperty('--ry'); c.style.removeProperty('--ro'); });
-      return;
-    }
-    var r = esc.getBoundingClientRect();
-    var q = clamp01((innerHeight - r.top) / (innerHeight * 0.9));
-    var rise = parseFloat(getComputedStyle(esc).getPropertyValue('--rise')) || 46;
-    var pitch = rides.length > 1 ? rides[1].offsetLeft - rides[0].offsetLeft : 300;
-    rides.forEach(function (c, i) {
-      var t = smooth((q - 0.05 - i * 0.1) / 0.35);
-      var k = 1 - t;
-      c.style.setProperty('--rx', (-k * pitch * 0.9).toFixed(1) + 'px');
-      c.style.setProperty('--ry', (k * rise * 0.9).toFixed(1) + 'px');
-      c.style.setProperty('--ro', (0.25 + 0.75 * t).toFixed(3));
-    });
-  }
-  function updateEscButtons() {
-    if (!escNav || escNav.hidden) return;
-    var b = escNav.querySelectorAll('.esc__btn');
-    b[0].disabled = track.scrollLeft < 4;
-    b[1].disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 4;
-  }
-  if (esc) {
-    escNav.addEventListener('click', function (e) {
-      var bt = e.target.closest('[data-esc]');
-      if (!bt) return;
-      var step = rides.length > 1 ? rides[1].offsetLeft - rides[0].offsetLeft : track.clientWidth;
-      track.scrollBy({ left: step * parseFloat(bt.getAttribute('data-esc')), behavior: reduce ? 'auto' : 'smooth' });
-    });
-    track.addEventListener('scroll', updateEscButtons, { passive: true });
-    addEventListener('resize', drawRail);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawRail);
-    addEventListener('load', drawRail);
-    drawRail();
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (en) {
-        escVisible = en[0].isIntersecting;
-        esc.classList.toggle('is-offscreen', !escVisible);
-      }).observe(esc);
+    if (liftState === 0 && r.top <= innerHeight * 0.08 && r.bottom > innerHeight * 0.6) {
+      liftAt(1);
+      liftTimers.push(setTimeout(function () {
+        liftAt(2);
+        liftTimers.push(setTimeout(function () { liftAt(3); }, 1500));
+      }, 550));
+    } else if (liftState > 0 && r.top > innerHeight * 0.5) {
+      liftAt(0);
     }
   }
-  // Keyboard: a focused link behind closed doors is a trap. Park the act where
-  // the doors are fully open instead.
-  if (lift && !reduce) {
-    lift.addEventListener('focusin', function () {
-      if (liftProgress() >= OPEN_TO) return;
-      var top = lift.getBoundingClientRect().top + scrollY;
-      var travel = lift.offsetHeight - innerHeight;
-      scrollTo({ top: top + travel * (OPEN_TO + 0.12), behavior: 'instant' });
+  // Keyboard: a focused link behind closed doors is a trap. Open them at once.
+  if (lift && landing && !reduce) lift.addEventListener('focusin', function () { liftAt(3); });
+
+  /* ---------------------------------------------------------- escalator -- */
+  // After the Gemini "3D escalator scroll showcase": a pinned stage, a tilted
+  // escalator whose steps and handrails run with the scroll, and four project
+  // cards riding the incline from the bottom landing to the top one.
+  if (escLive) (function () {
+    var stageEl = esc.querySelector('.esc3d__stage');
+    var scene = esc.querySelector('.esc3d__scene');
+    var cards = Array.prototype.slice.call(esc.querySelectorAll('.card3d'));
+    var stepsBelt = esc.querySelector('.esc3d__belt--steps');
+    var rails = Array.prototype.slice.call(esc.querySelectorAll('.esc3d__belt--rail'));
+    var posEl = esc.querySelector('.esc3d__pos');
+    var nowEl = esc.querySelector('.esc3d__now');
+    var dirEl = esc.querySelector('.esc3d__dir');
+    var levelBtns = Array.prototype.slice.call(esc.querySelectorAll('[data-level]'));
+    var titles = cards.map(function (c) { return c.querySelector('.card3d__title').textContent; });
+    var SP = 0.3, K = 1.38, B = 0.1;          // card spacing, ride speed, entry offset
+    var cur = 0, last = 0, still = 0, raf = 0, visible = false, lastT = 0;
+    var W = 0, H = 0, mobile = false, cw = 400, ch = 420;
+
+    function progress() {
+      var r = esc.getBoundingClientRect();
+      return clamp01(-r.top / Math.max(r.height - innerHeight, 1));
+    }
+    function pAt(i) { return clamp01((0.5 - B + i * SP) / K); }
+    function measure() {
+      W = stageEl.clientWidth; H = stageEl.clientHeight; mobile = W < 700;
+      cw = mobile ? Math.min(W - 76, 330) : Math.min(400, W * 0.34);
+      esc.style.setProperty('--cw', cw + 'px');
+      ch = cards[0].offsetHeight || cw;
+      var sc = mobile ? Math.max(W / 820, 0.42) : Math.min(W / 1300, H / 850) * 0.95;
+      scene.style.setProperty('--s', sc.toFixed(3));
+    }
+    function path(t) {
+      var sx, sy, ex, ey;
+      // bottom-left landing up to the top-right one, along the visible incline
+      if (mobile) { var u = W - 52; sx = u * 0.44 + 4; sy = H * 0.62; ex = u * 0.56 + 4; ey = H * 0.44; }
+      else { sx = W * 0.34; sy = H * 0.68; ex = W * 0.68; ey = H * 0.42; }
+      var bump = Math.sin(t * Math.PI);
+      var pitch = t < 0.15 ? t / 0.15 * 14 : t > 0.85 ? (1 - t) / 0.15 * 14 : 14;
+      return {
+        x: sx + (ex - sx) * t - cw / 2,
+        y: sy + (ey - sy) * t - ch / 2,
+        z: (bump * 160 + (1 - t) * 40) * (mobile ? 0.35 : 1),
+        s: mobile ? 0.9 + bump * 0.1 : 0.85 + bump * 0.22,
+        pitch: mobile ? pitch * 0.5 : pitch
+      };
+    }
+    function render(now) {
+      raf = 0;
+      var target = progress();
+      // Same glide at any frame rate: 0.085 per 60fps frame, scaled by real elapsed time.
+      var dt = now && lastT ? Math.min(now - lastT, 250) : 16.7;
+      lastT = now;
+      cur += (target - cur) * (1 - Math.pow(1 - 0.085, dt / 16.7));
+      if (Math.abs(target - cur) < 0.0004) cur = target;
+      var d = cur - last; last = cur;
+      // The conveyor moves with the scroll, plus a slow idle crawl, like a real escalator.
+      var idle = (now || 0) * 0.012;
+      stepsBelt.style.transform = 'translate3d(' + (-((cur * 1800 + idle) % 96)).toFixed(1) + 'px,0,0)';
+      var ro = 'translate3d(' + (-((cur * 2400 + idle * 1.3) % 90)).toFixed(1) + 'px,0,0)';
+      rails.forEach(function (r) { r.style.transform = ro; });
+      var best = 0, bestD = 9;
+      cards.forEach(function (c, i) {
+        var t = B + cur * K - i * SP;
+        var dist = Math.abs(t - 0.5);
+        if (dist < bestD) { bestD = dist; best = i; }
+        if (t < -0.12 || t > 1.12) { c.style.opacity = '0'; c.style.pointerEvents = 'none'; c.classList.remove('is-focal'); return; }
+        var pt = path(clamp01(t));
+        // phones show one card at a time: a clean crossfade between neighbours
+        var op = mobile ? (t < 0.3 ? 0 : t < 0.4 ? (t - 0.3) / 0.1 : t < 0.6 ? 1 : t < 0.7 ? (0.7 - t) / 0.1 : 0)
+                        : (t < 0.1 ? t / 0.1 : t > 0.9 ? (1 - t) / 0.1 : 1);
+        op = clamp01(op);
+        c.style.opacity = op.toFixed(3);
+        c.style.pointerEvents = op > 0.4 ? 'auto' : 'none';
+        c.style.transform = 'translate3d(' + pt.x.toFixed(1) + 'px,' + pt.y.toFixed(1) + 'px,' + pt.z.toFixed(1) + 'px) scale(' + pt.s.toFixed(3) + ') rotateX(' + (-pt.pitch).toFixed(2) + 'deg)';
+        c.style.zIndex = String(Math.round(pt.z + 100));
+        c.classList.toggle('is-focal', dist < 0.18);
+      });
+      posEl.textContent = Math.round(cur * 100) + '%';
+      nowEl.textContent = titles[best];
+      var dir = Math.abs(d) > 0.0002 ? (d > 0 ? 'up' : 'down') : '';
+      if (dir) { dirEl.setAttribute('data-dir', dir); dirEl.textContent = dir === 'up' ? '▲ Ascending' : '▼ Descending'; still = 0; }
+      else if (++still > 12) { dirEl.removeAttribute('data-dir'); dirEl.textContent = 'Stationary'; }
+      levelBtns.forEach(function (b, i) {
+        if (i === best) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+      });
+      if (visible) raf = requestAnimationFrame(render);
+    }
+    function scrollToCard(i, smoothly) {
+      var top = esc.getBoundingClientRect().top + scrollY;
+      scrollTo({ top: top + (esc.offsetHeight - innerHeight) * pAt(i), behavior: smoothly ? 'smooth' : 'instant' });
+    }
+    levelBtns.forEach(function (b, i) { b.addEventListener('click', function () { scrollToCard(i, true); }); });
+    // Keyboard: tabbing to a card that has not ridden into view parks the ride on it.
+    cards.forEach(function (c, i) {
+      c.addEventListener('focus', function () {
+        if (Math.abs(B + progress() * K - i * SP - 0.5) > 0.2) { scrollToCard(i, false); cur = last = progress(); }
+      });
     });
-  }
+    new IntersectionObserver(function (en) {
+      visible = en[0].isIntersecting;
+      if (visible && !raf) raf = requestAnimationFrame(render);
+    }).observe(esc);
+    addEventListener('resize', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    addEventListener('load', measure);
+    measure();
+    cur = last = progress();
+    render(0);
+  })();
 
   /* --------------------------------------------------- floor indicator -- */
   var nav = document.querySelector('.lift-nav');
@@ -253,7 +291,6 @@
   function frame() {
     var moving = lobbyVisible && !reduce ? paintSkyline() : false;
     paintDoors();
-    paintEsc();
     paintFloor();
     if (moving) requestAnimationFrame(frame); else running = false;
   }

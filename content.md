@@ -41,7 +41,7 @@ and sends the top 15 to Telegram. Open source.
 Stack: TypeScript, Trigger.dev, Telegram Bot API, GitHub
 Link: https://github.com/fahmymahamud/remotejobsearch
 
-### Also built (escalator carousel, 4 clickable cards)
+### Also built (3D escalator ride, 4 clickable cards with real screenshots of each site)
 1. **Crew scheduling app** (client project): scheduling web app for a Singapore cleaning company: job creation and assignment,
    WhatsApp message generation, crew availability forms, calendar sync, Google sign-in and an audit log of changes.
    JavaScript · Supabase · Google sign-in → https://crewscheduling.netlify.app/
@@ -49,7 +49,8 @@ Link: https://github.com/fahmymahamud/remotejobsearch
    send reminders through a Telegram bot. → https://remindclient.app/
 3. **Waseel: Quran memory tester** (free web app): tests Quran memorisation with a random ayah by Juz.
    HTML · JavaScript · GitHub Pages → https://waseelapp.github.io/quranmemorytester/
-4. **DataSentinel** (open source): MCP-based data auditing tool. → https://github.com/fahmymahamud/DataSentinel
+4. **DataSentinel** (open source): an agent-based pipeline that uses the Model Context Protocol (MCP) to automate data auditing.
+   Python · MCP · Docker → https://github.com/fahmymahamud/DataSentinel
 
 ## 4. Certifications (by provider)
 Heading: Certifications.

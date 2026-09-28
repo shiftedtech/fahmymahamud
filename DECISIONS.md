@@ -82,3 +82,30 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   screenshots out of CLI uploads. Verified live: those paths return 404.
 - `vercel git connect` failed with "You need to add a Login Connection to your GitHub account first". Until that's
   added in Vercel, pushes to main do not redeploy. Run `npx vercel@latest deploy --prod --scope fahmymahamud-9940` instead.
+
+## Update 29 Sep (round 2): escalator after the Gemini sample, doors fixed on phones
+- **Lift doors on phones.** Tested in WebKit (the iPhone Safari engine). Two causes:
+  1. The walk-in scaled a giant wall layer (a 250vmax shadow ×5.5), which WebKit dropped, so the landing popped away.
+  2. The doors were scroll-scrubbed over ~260px, which one thumb-flick skips.
+
+  The doors now behave like a real lift. When you reach floor 3 the car arrives (HPI arrow stops, lanterns light), the doors
+  open on a timer (1.1s) onto the lit car interior, and the landing fades as you step in. Scroll back above to reset.
+  "View projects" now plays the whole arrival. Checked in Chrome desktop, Chrome phone and WebKit iPhone 13.
+- **Escalator: follows the Gemini "3D escalator scroll showcase" structure.**
+  - A pinned stage with the same tilted assembly (rotateX 24°, rotateY -18°, rotateZ 6°).
+  - A truss, back and front glass balustrades, a step conveyor and two handrail belts that run with the scroll, plus a
+    slow idle crawl.
+  - Four cards ride the incline with depth, scale and pitch, using the same path maths.
+  - A HUD shows escalator position, the project now riding and the direction. P1–P4 buttons jump to each project.
+  - Changed from the sample for the brand and tech rules:
+    - no Tailwind CDN, light palette
+    - Inter only (no Space Grotesk or JetBrains Mono)
+    - no fake charts: each card shows a real screenshot of the live site
+    - no "customize" modal or auto-play
+  - Phones get their own art direction: one card at a time with a crossfade, a shorter card and no HUD.
+  - The glide is frame-rate independent.
+  - Reduced motion or no JS shows a plain 2-column grid (1 column on phones).
+- **Project screenshots.** Captured from the four public pages on 29 Sep (site/assets/projects/*.webp, 11–30 KB each).
+  All are public landing pages; the crew app's public marketing page shows no client data. Re-run the capture if a site
+  changes.
+- **DataSentinel text and stack** come from its public GitHub repo description and topics (Python, MCP, Docker).
