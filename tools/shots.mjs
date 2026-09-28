@@ -53,7 +53,7 @@ for (const [w, h, reduced] of [[1440, 900, false], [390, 844, false], [390, 844,
     const bad = [];
     document.querySelectorAll('body *').forEach(el => {
       const r = el.getBoundingClientRect();
-      if (r.width && (r.right > vw + 1 || r.left < -1) && !el.closest('.skyline,.doors,.sk-layer')) bad.push(`${el.tagName}.${el.className} ${Math.round(r.left)}..${Math.round(r.right)}`);
+      if (r.width && (r.right > vw + 1 || r.left < -1) && !el.closest('.skyline,.landing,.sk-layer')) bad.push(`${el.tagName}.${el.className} ${Math.round(r.left)}..${Math.round(r.right)}`);
     });
     return { scrollW: document.documentElement.scrollWidth, vw, bad: bad.slice(0, 10) };
   });

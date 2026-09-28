@@ -396,6 +396,8 @@ time { font-variant-numeric: tabular-nums; }
 .stop__body > * { margin: 0; }
 .stop__role { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3; }
 .stop__org { color: var(--grey-600); font-weight: 500; margin-bottom: .5rem !important; }
+/* a text link, but with a full-size tap target */
+.stop__org a { display: inline-block; padding-block: 11px; margin-block: -11px; }
 .edu { margin-top: 1.5rem; padding-top: 1.75rem; border-top: 1px solid var(--grey-200); }
 .edu__h { margin: 0 0 .75rem; font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--grey-600); }
 .edu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
