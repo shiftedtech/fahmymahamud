@@ -126,3 +126,6 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   email + LinkedIn + GitHub list). The logos are Simple Icons marks (CC0), drawn in the site green rather than brand colours to
   keep the palette. The LinkedIn URL is now filled in, so nothing in brand_assets is marked ADD anymore.
 - **Contact line removed (29 Sep).** At your request the contact section is now just the heading and the five logo links.
+- **Lift indicator follows the scroll (29 Sep).** It now rides the right edge like the browser scrollbar thumb: top of the page =
+  top of the screen, bottom = bottom (16px margins). The floor panel opens downward in the top half and upward in the bottom
+  half, so it stays on screen. Without JS it stays centred as before. Checked at 1440, 1024 and 390px along the whole page: it covers no text.

@@ -269,6 +269,19 @@
     }
   }
 
+  // Follow the page like the browser's scrollbar thumb.
+  var EDGE = 16;
+  if (nav) nav.classList.add('is-tracking');
+  function paintNavPosition() {
+    if (!nav) return;
+    var max = doc.scrollHeight - innerHeight;
+    var p = max > 0 ? clamp01(scrollY / max) : 0;
+    var room = innerHeight - btn.offsetHeight - EDGE * 2;
+    var y = EDGE + p * Math.max(room, 0);
+    nav.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)';
+    nav.setAttribute('data-half', y + btn.offsetHeight / 2 < innerHeight / 2 ? 'top' : 'bottom');
+  }
+
   function setPanel(open) {
     panel.hidden = !open;
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -324,6 +337,7 @@
     var moving = lobbyVisible && !reduce ? paintSkyline() : false;
     paintDoors();
     paintFloor();
+    paintNavPosition();
     if (moving) requestAnimationFrame(frame); else running = false;
   }
   function kick() { if (!running) { running = true; requestAnimationFrame(frame); } }

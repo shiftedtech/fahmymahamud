@@ -518,6 +518,11 @@ time { font-variant-numeric: tabular-nums; }
 /* Fixed to the right edge, vertically centred. Text columns reserve room for
    it (see .wrap below), so it never sits on top of words. */
 .lift-nav { position: fixed; z-index: 60; right: 14px; top: 50%; translate: 0 -50%; }
+/* With JS, the indicator rides the right edge like the browser's scrollbar
+   thumb: top of the page = top of the screen, bottom = bottom. */
+.lift-nav.is-tracking { top: 0; translate: none; will-change: transform; }
+.lift-nav.is-tracking[data-half="top"] .lift-nav__panel { top: 0; translate: none; }
+.lift-nav.is-tracking[data-half="bottom"] .lift-nav__panel { top: auto; bottom: 0; translate: none; }
 .lift-nav__display {
   display: flex; flex-direction: column; align-items: center; gap: .5rem;
   padding: .7rem .45rem .9rem;
