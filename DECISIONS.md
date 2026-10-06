@@ -129,3 +129,29 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 - **Lift indicator follows the scroll (29 Sep).** It now rides the right edge like the browser scrollbar thumb: top of the page =
   top of the screen, bottom = bottom (16px margins). The floor panel opens downward in the top half and upward in the bottom
   half, so it stays on screen. Without JS it stays centred as before. Checked at 1440, 1024 and 390px along the whole page: it covers no text.
+
+## Update 6 Oct: "What I enjoy doing" replaces Certifications and Where I've worked
+- **Work history removed**, as you asked; visitors go to LinkedIn. The final section has every link: Gmail, LinkedIn,
+  GitHub, Instagram, Facebook, Credly and Credential.net.
+- **Wording stays non-commercial** ("What I enjoy doing", "How I'd tackle it", no prices or "hire me"), to keep the free
+  Vercel Hobby plan.
+- **Five ideas, five floors (lift numbers 4 to 8):**
+  - 4 · Your task: a problem picker with 5 everyday problems. Each shows how I'd tackle it, what's already built and the
+    certifications behind it.
+  - 5 · What I enjoy doing: the 5 services from your table. Pointing at a service lights its certificates in a lobby-style
+    "certificate directory" and draws green wires to them; pointing at a certificate does the reverse. On phones it's a tap.
+  - 6 · Live demo: a real 4-step cleaning pipeline on a made-up lift maintenance log, clearly labelled sample data.
+  - 7 · Certified: 12 certifications framed like a lift inspection certificate. Hover or tap: a VERIFIED stamp lands,
+    then the plate flips to "Used it for" and "Helps with", plus a Verify link where one exists.
+  - 8 · Badge wall: all 26 badges from Credly and Credential.net, with filters that regroup the wall (FLIP animation).
+- **Proof added where your table left it blank** (factual, from projects.md): AI assistants & bots → RemindClient,
+  DataSentinel; Automate repetitive work → MyJobSearchBot.
+- **Dates:** plates use resume dates. Credly sometimes shows a later issue date for the same certificate (for example Google
+  Data Analytics is Jul 2025 on the resume and Oct 2025 on Credly). Databricks Generative AI uses its credential date
+  (Nov 2025). Credly-only badges use Credly dates.
+- **Without a public verify link:** Microsoft AI-900, AZ-900, DP-900 and GitHub GH-900 (they're not on either profile).
+  SnowPro and Cybersecurity have no project yet, so their plates say "Trained in" rather than claiming use.
+- **The older Project Management v2 badge is left off the wall** to avoid a duplicate (v3 is shown).
+- **Badge images** are downloaded from your own Credly/Credential.net badges into site/assets/badges (27 WebP files,
+  220 KB). They are your credentials, not stock images.
+- **Without JS** everything is readable: plates show both sides and the wall shows all badges.

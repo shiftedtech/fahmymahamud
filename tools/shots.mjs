@@ -43,7 +43,7 @@ for (const [w, h, reduced] of [[1440, 900, false], [390, 844, false], [390, 844,
     await page.waitForTimeout(350);
     await page.screenshot({ path: `${out}/${tag}-lift-${String(p).replace('.', '')}.png` });
   }
-  for (const id of ['story', 'skills', 'certifications', 'experience', 'contact']) {
+  for (const id of ['story', 'skills', 'task', 'enjoy', 'demo', 'certified', 'badges', 'contact']) {
     await page.evaluate(i => { const e = document.getElementById(i); scrollTo(0, e.getBoundingClientRect().top + scrollY - innerHeight * 0.15); }, id);
     await page.waitForTimeout(500);
     await page.screenshot({ path: `${out}/${tag}-sec-${id}.png` });

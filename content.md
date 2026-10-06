@@ -52,39 +52,39 @@ Link: https://github.com/fahmymahamud/remotejobsearch
 4. **DataSentinel** (open source): an agent-based pipeline that uses the Model Context Protocol (MCP) to automate data auditing.
    Python · MCP · Docker → https://github.com/fahmymahamud/DataSentinel
 
-## 4. Certifications (by provider)
-Heading: Certifications.
+## 4. Your task (picker)
+Heading: Got something eating your time?
+Pick a problem, see "How I'd tackle it", what's already built, and the certifications behind it:
+- "I copy the same data between spreadsheets every week" → Automate repetitive work (MyJobSearchBot)
+- "My weekly report takes hours to put together" → Data pipelines & dashboards (Generation capstone)
+- "I keep chasing people for payments and replies" → AI assistants & bots (RemindClient)
+- "My team runs on WhatsApp groups and sticky notes" → Custom web apps for small teams (Crew scheduling app)
+- "My app needs a proper home online" → Cloud setup & hosting (Crew app on Supabase, this site on Vercel)
 
-- **Snowflake:** SnowPro Associate: Platform (Apr 2026)
-- **Google Cloud:** Associate Cloud Engineer (Jul 2026)
-- **Microsoft:** Azure AI Fundamentals AI-900 (Feb 2026) · Azure Fundamentals AZ-900 (Jan 2026) · Azure Data Fundamentals DP-900 (Dec 2025)
-- **GitHub:** GitHub Foundations GH-900 (Aug 2026)
-- **Google:** Cybersecurity Professional (Mar 2026) · IT Automation with Python (Oct 2025) · Advanced Data Analytics (Sep 2025) · Project Management (Aug 2025) · Data Analytics (Jul 2025) · AI Prompting Essentials (Jun 2025)
-- **Databricks:** Academy Accreditation, Fundamentals & Generative AI (Oct 2025)
-- **ServiceNow:** Micro-Certification, Platform Analytics (Nov 2025)
-- Next: Google Cloud Professional Cloud Architect course with GEAR, from October 2026.
+## 5. What I enjoy doing (services linked both ways to a certificate directory)
+1. AI assistants & bots · Built: RemindClient, DataSentinel · AI-900, Databricks Generative AI Fundamentals, AI Prompting Essentials
+2. Data pipelines & dashboards · Built: data pipeline capstone (Microsoft Fabric, Power BI) · DP-900, Google Data Analytics, Advanced Data Analytics
+3. Cloud setup & hosting · Built: Crew scheduling app (Supabase), this site (Vercel) · Google Cloud ACE, AZ-900
+4. Automate repetitive work · Built: MyJobSearchBot · Google IT Automation with Python, AI Prompting Essentials
+5. Custom web apps for small teams · Built: Crew scheduling app, Waseel · GitHub Foundations (GH-900)
 
-## 5. Experience
-Heading: Where I've worked.
+## 6. Live demo
+"Watch messy data get cleaned." A made-up lift maintenance log (10 rows) goes through a real 4-step pipeline in the browser:
+tidy names, one date format, remove duplicates, flag missing status. Result: 7 clean rows, 3 duplicates removed, 2 flagged,
+plus a jobs-per-station chart. Labelled as sample data.
 
-- **Freelance: Data & AI automation** · [@careershifttechguy](https://www.instagram.com/careershifttechguy/) · Now (start date CONFIRM, left off)
-  Built and run a crew scheduling web app for a Singapore cleaning company. Built RemindClient to help freelancers send reminders using a Telegram bot. Built MyJobSearchBot.
-- **Junior Data Engineer Program Trainee, Generation Singapore** (with Microsoft & Temasek Polytechnic) · Jul 2025 – Oct 2025
-  Microsoft Fabric, ETL pipelines, Power BI dashboards. Built and presented a data pipeline capstone to stakeholders.
-- **Escalator & Lift Assistant Engineer II, SMRT Corporation** · Aug 2021 – Aug 2025 (promoted May 2025)
-  Ran monthly maintenance schedules for escalators, lifts and travellators across depots and stations.
-  Coordinated contractors and regulators (BCA, LTA) for inspections, safety audits and incident investigations.
-  Stepped up as team lead on short notice and cleared a documentation backlog by priority.
-- **Senior Technician, 9G Elevator Pte Ltd** · Jan 2019 – Aug 2021 (promoted Apr 2021)
-  Led a team maintaining 60+ escalator units monthly across KONE, Otis, Hitachi, Schindler and Mitsubishi systems.
-- **Assistant Executive, Sports Facilities, Nanyang Technological University** · Jan 2016 – Jan 2019
-  Bookings, logistics, procurement and contractor coordination for a large sports facilities portfolio.
+## 7. Certified (inspection-certificate plates; hover or tap to flip)
+Google Cloud ACE (Jul 2026), SnowPro Associate: Platform (Apr 2026), AI-900 (Feb 2026), AZ-900 (Jan 2026), DP-900 (Dec 2025),
+GitHub Foundations GH-900 (Aug 2026), Databricks Generative AI Fundamentals (Nov 2025), Google IT Automation with Python (Oct 2025),
+Google Advanced Data Analytics (Sep 2025), Google Data Analytics (Jul 2025), Google AI Prompting Essentials (Jun 2025),
+Google Cybersecurity (Mar 2026). Back of each: "Used it for" projects, "Helps with" service, Verify link where public.
 
-Education:
-- Diploma in Engineering Operations Management, Republic Polytechnic (2018 – 2021)
-- Higher NITEC in Logistics Management & Supply Chain, ITE College East (2007 – 2009)
+## 8. Badge wall
+All 26 badges from https://www.credly.com/users/fahmy-m/badges/credly and
+https://www.credential.net/profile/fahmymahamud87873/wallet, filterable by AI, Data, Cloud, Automation, Security & IT,
+Work & design. Each badge links to its verification page. Images in site/assets/badges/.
 
-## 6. Contact
+## 9. Contact
 Heading: Making everyday tasks effortless on the side.
 
 - Email: fahmymahamud@gmail.com

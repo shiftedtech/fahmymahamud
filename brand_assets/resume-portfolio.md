@@ -63,5 +63,13 @@ Power BI, Azure, Google Cloud and Snowflake, and I build automations that save s
 - Databricks: Academy Accreditation, Fundamentals & Generative AI (Oct 2025)
 - ServiceNow: Micro-Certification, Platform Analytics (Nov 2025)
 
+- From Credly and Credential.net (checked 6 Oct 2026), not listed above: Google UX Design (Sep 2026),
+  AI Generalist: AI at Work, Generation (Aug 2026), Google AI Essentials (Oct 2025), Google IT Support (Nov 2025),
+  Google Cloud skill badges (App Dev Environment, Load Balancing, Develop and Build a Secure Cloud Network,
+  Cloud Security Fundamentals, Gemini Enterprise app: Apr-May 2026), Microsoft AI Skills Fest 2026 (Jun 2026),
+  Microsoft Power Up: Intro to Agents (Jan 2026), Asana Workflow Specialist and Asana Administrator (Jun 2026),
+  Google Ads AI-Powered Performance (Oct 2026), Databricks Fundamentals (Oct 2025).
+  Profiles: https://www.credly.com/users/fahmy-m/badges/credly · https://www.credential.net/profile/fahmymahamud87873/wallet
+
 ## Currently
 - Starting the Google Cloud Professional Cloud Architect (PCA) course with GEAR in October 2026.

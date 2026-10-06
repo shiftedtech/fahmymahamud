@@ -67,9 +67,12 @@
     <span class="sr-only">: open the section menu</span>
   </button>
   <ol class="lift-nav__panel" id="lift-panel" hidden>
-    <li><a href="#contact" data-floor-link="6"><span class="key">6</span>Contact</a></li>
-    <li><a href="#experience" data-floor-link="5"><span class="key">5</span>Experience</a></li>
-    <li><a href="#certifications" data-floor-link="4"><span class="key">4</span>Certifications</a></li>
+    <li><a href="#contact" data-floor-link="9"><span class="key">9</span>Contact</a></li>
+    <li><a href="#badges" data-floor-link="8"><span class="key">8</span>Badges</a></li>
+    <li><a href="#certified" data-floor-link="7"><span class="key">7</span>Certified</a></li>
+    <li><a href="#demo" data-floor-link="6"><span class="key">6</span>Live demo</a></li>
+    <li><a href="#enjoy" data-floor-link="5"><span class="key">5</span>What I enjoy</a></li>
+    <li><a href="#task" data-floor-link="4"><span class="key">4</span>Your task</a></li>
     <li><a href="#projects" data-floor-link="3"><span class="key">3</span>Projects</a></li>
     <li><a href="#skills" data-floor-link="2"><span class="key">2</span>Skills</a></li>
     <li><a href="#story" data-floor-link="1"><span class="key">1</span>Story</a></li>
@@ -376,121 +379,517 @@
     </div>
   </section>
 
-  <!-- 4 · CERTIFICATIONS: compressed, administrative -->
-  <section class="floor floor--certs" id="certifications" data-floor="4" data-floor-name="Certifications" aria-labelledby="certs-h">
+  <!-- 4 · YOUR TASK: pick a problem, see how I'd tackle it -->
+  <section class="floor floor--task" id="task" data-floor="4" data-floor-name="Your task" aria-labelledby="task-h">
     <div class="wrap">
       <div class="floor__title" data-sc-act="flow">
         <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
-          <h2 id="certs-h" class="h2">Certifications.</h2>
+          <h2 id="task-h" class="h2">Got something eating your time?</h2>
         </div>
       </div>
-      <div class="certs" data-sc-in data-sc-stagger="50">
-        <div class="cert">
-          <h3 class="cert__provider">Google</h3>
-          <ul>
-            <li>Cybersecurity Professional <time>Mar 2026</time></li>
-            <li>IT Automation with Python <time>Oct 2025</time></li>
-            <li>Advanced Data Analytics <time>Sep 2025</time></li>
-            <li>Project Management <time>Aug 2025</time></li>
-            <li>Data Analytics <time>Jul 2025</time></li>
-            <li>AI Prompting Essentials <time>Jun 2025</time></li>
-          </ul>
+      <p class="floor__lede">Pick the one that sounds like you. I'll show you how I'd tackle it, and what I've already built that's close.</p>
+      <div class="picker">
+        <div class="picker__tasks" role="tablist" aria-label="Pick a problem">
+          <button type="button" class="task" role="tab" id="task-auto" aria-controls="taskres-auto" aria-selected="true" data-task="auto">
+            <span class="task__q">I copy the same data between spreadsheets every week</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-data" aria-controls="taskres-data" aria-selected="false" data-task="data">
+            <span class="task__q">My weekly report takes hours to put together</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-ai" aria-controls="taskres-ai" aria-selected="false" data-task="ai">
+            <span class="task__q">I keep chasing people for payments and replies</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-web" aria-controls="taskres-web" aria-selected="false" data-task="web">
+            <span class="task__q">My team runs on WhatsApp groups and sticky notes</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-cloud" aria-controls="taskres-cloud" aria-selected="false" data-task="cloud">
+            <span class="task__q">My app needs a proper home online</span>
+          </button>
         </div>
-        <div class="cert">
-          <h3 class="cert__provider">Microsoft</h3>
-          <ul>
-            <li>Azure AI Fundamentals <span class="nw">(AI-900)</span> <time>Feb 2026</time></li>
-            <li>Azure Fundamentals <span class="nw">(AZ-900)</span> <time>Jan 2026</time></li>
-            <li>Azure Data Fundamentals <span class="nw">(DP-900)</span> <time>Dec 2025</time></li>
-          </ul>
-        </div>
-        <div class="cert">
-          <h3 class="cert__provider">Snowflake</h3>
-          <ul><li>SnowPro Associate: Platform <time>Apr 2026</time></li></ul>
-        </div>
-        <div class="cert">
-          <h3 class="cert__provider">Google Cloud</h3>
-          <ul><li>Associate Cloud Engineer <time>Jul 2026</time></li></ul>
-        </div>
-        <div class="cert">
-          <h3 class="cert__provider">Databricks</h3>
-          <ul><li>Academy Accreditation: Fundamentals &amp; Generative AI <time>Oct 2025</time></li></ul>
-        </div>
-        <div class="cert">
-          <h3 class="cert__provider">ServiceNow</h3>
-          <ul><li>Micro-Certification: Platform Analytics <time>Nov 2025</time></li></ul>
-        </div>
-        <div class="cert">
-          <h3 class="cert__provider">GitHub</h3>
-          <ul><li>GitHub Foundations <span class="nw">(GH-900)</span> <time>Aug 2026</time></li></ul>
+        <div class="picker__result" aria-live="polite">
+          <div class="taskres" role="tabpanel" id="taskres-auto" aria-labelledby="task-auto">
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Automate repetitive work</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Write a small Python script or scheduled job that pulls, tidies and moves the data on its own, then tells you when it&#x27;s done.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="pyauto">IT Automation with Python</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-auto" data-goto="auto">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-data" aria-labelledby="task-data" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Data pipelines &amp; dashboards</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a pipeline that cleans and loads the data once, and a dashboard that refreshes itself.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="dp900">Azure Data Fundamentals (DP-900)</li><li class="cchip" data-cert="gda">Data Analytics</li><li class="cchip" data-cert="gada">Advanced Data Analytics</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-data" data-goto="data">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-ai" aria-labelledby="task-ai" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">AI assistants &amp; bots</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set up a bot that drafts polite reminders with AI and sends them on schedule, through apps people already use, like Telegram.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="ai900">Azure AI Fundamentals (AI-900)</li><li class="cchip" data-cert="dbxgen">Generative AI Fundamentals</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-ai" data-goto="ai">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-web" aria-labelledby="task-web" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Custom web apps for small teams</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a small web app with one shared schedule, sign-in, and the messages written for you.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gh900">GitHub Foundations (GH-900)</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-web" data-goto="web">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-cloud" aria-labelledby="task-cloud" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Cloud setup &amp; hosting</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set it up on Google Cloud, Supabase or Vercel with a database, sign-in and simple deploys.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gcpace">Associate Cloud Engineer</li><li class="cchip" data-cert="az900">Azure Fundamentals (AZ-900)</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-cloud" data-goto="cloud">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
       </div>
-      <p class="certs__next"><strong>Next:</strong> starting the Google Cloud Professional Cloud Architect course with GEAR in October 2026.</p>
     </div>
   </section>
 
-  <!-- 5 · EXPERIENCE -->
-  <section class="floor floor--experience" id="experience" data-floor="5" data-floor-name="Experience" aria-labelledby="exp-h">
+  <!-- 5 · WHAT I ENJOY DOING: services linked both ways to a certificate directory -->
+  <section class="floor floor--enjoy" id="enjoy" data-floor="5" data-floor-name="What I enjoy" aria-labelledby="enjoy-h">
     <div class="wrap">
       <div class="floor__title" data-sc-act="flow">
         <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
-          <h2 id="exp-h" class="h2">Where I've worked.</h2>
+          <h2 id="enjoy-h" class="h2">What I enjoy doing.</h2>
         </div>
       </div>
-      <ol class="timeline" data-sc-in data-sc-stagger="70">
-        <li class="stop">
-          <p class="stop__when">Now</p>
-          <div class="stop__body">
-            <h3 class="stop__role">Freelance: Data &amp; AI automation</h3>
-            <p class="stop__org"><a href="https://www.instagram.com/careershifttechguy/" target="_blank" rel="noopener me">@careershifttechguy<span class="sr-only"> on Instagram (opens in a new tab)</span></a></p>
-            <p>Built and run a crew scheduling web app for a Singapore cleaning company. Built RemindClient to help freelancers send reminders using a Telegram bot. Built MyJobSearchBot, an open-source daily job-alert automation.</p>
-          </div>
-        </li>
-        <li class="stop">
-          <p class="stop__when">Jul 2025 – Oct 2025</p>
-          <div class="stop__body">
-            <h3 class="stop__role">Junior Data Engineer Program Trainee</h3>
-            <p class="stop__org">Generation Singapore, with Microsoft &amp; Temasek Polytechnic</p>
-            <p>Microsoft Fabric, ETL pipelines, Power BI dashboards and data visualisation. Built and presented a data pipeline capstone to stakeholders.</p>
-          </div>
-        </li>
-        <li class="stop">
-          <p class="stop__when">Aug 2021 – Aug 2025</p>
-          <div class="stop__body">
-            <h3 class="stop__role">Escalator &amp; Lift Assistant Engineer II</h3>
-            <p class="stop__org">SMRT Corporation · promoted May 2025</p>
-            <p>Managed monthly maintenance schedules for escalators, lifts and travellators across depots and stations. Coordinated contractors and regulators (BCA, LTA) for inspections, safety audits and incident investigations. Stepped up as team lead on short notice and cleared a documentation backlog by priority.</p>
-          </div>
-        </li>
-        <li class="stop">
-          <p class="stop__when">Jan 2019 – Aug 2021</p>
-          <div class="stop__body">
-            <h3 class="stop__role">Senior Technician</h3>
-            <p class="stop__org">9G Elevator Pte Ltd · promoted Apr 2021</p>
-            <p>Led a team maintaining <span class="num" data-sc-count="0 60">60</span>+ escalator units a month, across KONE, Otis, Hitachi, Schindler and Mitsubishi systems.</p>
-          </div>
-        </li>
-        <li class="stop">
-          <p class="stop__when">Jan 2016 – Jan 2019</p>
-          <div class="stop__body">
-            <h3 class="stop__role">Assistant Executive, Sports Facilities</h3>
-            <p class="stop__org">Nanyang Technological University</p>
-            <p>Ran bookings, logistics, procurement and contractor coordination for a large sports facilities portfolio.</p>
-          </div>
-        </li>
-      </ol>
-      <div class="edu">
-        <h3 class="edu__h">Education</h3>
-        <ul>
-          <li>Diploma in Engineering Operations Management, Republic Polytechnic <time>2018 – 2021</time></li>
-          <li>Higher NITEC in Logistics Management &amp; Supply Chain, ITE College East <time>2007 – 2009</time></li>
-        </ul>
+      <p class="floor__lede">Five kinds of problems I like to work on. Point at one and the certificate directory lights up the training behind it. It works the other way too.</p>
+      <div class="enjoy">
+        <div class="enjoy__svcs">
+          <article class="svc" id="enjoy-ai" data-svc="ai" data-certs="ai900 dbxgen prompt" tabindex="0">
+            <h3 class="svc__title">AI assistants &amp; bots</h3>
+            <p class="svc__line">Bots that draft, remind and answer, using AI where it actually helps.</p>
+            <p class="svc__built"><span>Built:</span> <a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a>, <a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></p>
+            <ul class="cchips" aria-label="Certifications behind it"><li class="cchip" data-cert="ai900">Azure AI Fundamentals (AI-900)</li><li class="cchip" data-cert="dbxgen">Generative AI Fundamentals</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul>
+          </article>
+          <article class="svc" id="enjoy-data" data-svc="data" data-certs="dp900 gda gada" tabindex="0">
+            <h3 class="svc__title">Data pipelines &amp; dashboards</h3>
+            <p class="svc__line">Taking messy data, cleaning it once, and turning it into dashboards people trust.</p>
+            <p class="svc__built"><span>Built:</span> <span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></p>
+            <ul class="cchips" aria-label="Certifications behind it"><li class="cchip" data-cert="dp900">Azure Data Fundamentals (DP-900)</li><li class="cchip" data-cert="gda">Data Analytics</li><li class="cchip" data-cert="gada">Advanced Data Analytics</li></ul>
+          </article>
+          <article class="svc" id="enjoy-cloud" data-svc="cloud" data-certs="gcpace az900" tabindex="0">
+            <h3 class="svc__title">Cloud setup &amp; hosting</h3>
+            <p class="svc__line">Putting apps online with a database, sign-in and simple deploys.</p>
+            <p class="svc__built"><span>Built:</span> <a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a>, <span>This site (Vercel)</span></p>
+            <ul class="cchips" aria-label="Certifications behind it"><li class="cchip" data-cert="gcpace">Associate Cloud Engineer</li><li class="cchip" data-cert="az900">Azure Fundamentals (AZ-900)</li></ul>
+          </article>
+          <article class="svc" id="enjoy-auto" data-svc="auto" data-certs="pyauto prompt" tabindex="0">
+            <h3 class="svc__title">Automate repetitive work</h3>
+            <p class="svc__line">Scripts and scheduled jobs that take over the boring, repeated steps.</p>
+            <p class="svc__built"><span>Built:</span> <a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></p>
+            <ul class="cchips" aria-label="Certifications behind it"><li class="cchip" data-cert="pyauto">IT Automation with Python</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul>
+          </article>
+          <article class="svc" id="enjoy-web" data-svc="web" data-certs="gh900" tabindex="0">
+            <h3 class="svc__title">Custom web apps for small teams</h3>
+            <p class="svc__line">Small, focused web apps that replace group chats and spreadsheets.</p>
+            <p class="svc__built"><span>Built:</span> <a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a>, <a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></p>
+            <ul class="cchips" aria-label="Certifications behind it"><li class="cchip" data-cert="gh900">GitHub Foundations (GH-900)</li></ul>
+          </article>
+        </div>
+        <aside class="dir" aria-label="Certificate directory">
+          <p class="dir__head"><span class="dir__head-mark" aria-hidden="true"></span>Certificate directory</p>
+          <div class="dir__group"><p class="dir__issuer">Microsoft</p><ul class="dir__list"><li class="dir__item" data-cert="ai900" data-svcs="ai" tabindex="0">Azure AI Fundamentals (AI-900)</li><li class="dir__item" data-cert="dp900" data-svcs="data" tabindex="0">Azure Data Fundamentals (DP-900)</li><li class="dir__item" data-cert="az900" data-svcs="cloud" tabindex="0">Azure Fundamentals (AZ-900)</li></ul></div><div class="dir__group"><p class="dir__issuer">Google Cloud</p><ul class="dir__list"><li class="dir__item" data-cert="gcpace" data-svcs="cloud" tabindex="0">Associate Cloud Engineer</li></ul></div><div class="dir__group"><p class="dir__issuer">Google</p><ul class="dir__list"><li class="dir__item" data-cert="prompt" data-svcs="ai auto" tabindex="0">AI Prompting Essentials</li><li class="dir__item" data-cert="gda" data-svcs="data" tabindex="0">Data Analytics</li><li class="dir__item" data-cert="gada" data-svcs="data" tabindex="0">Advanced Data Analytics</li><li class="dir__item" data-cert="pyauto" data-svcs="auto" tabindex="0">IT Automation with Python</li></ul></div><div class="dir__group"><p class="dir__issuer">Databricks</p><ul class="dir__list"><li class="dir__item" data-cert="dbxgen" data-svcs="ai" tabindex="0">Generative AI Fundamentals</li></ul></div><div class="dir__group"><p class="dir__issuer">GitHub</p><ul class="dir__list"><li class="dir__item" data-cert="gh900" data-svcs="web" tabindex="0">GitHub Foundations (GH-900)</li></ul></div>
+        </aside>
+        <svg class="enjoy__wires" aria-hidden="true" focusable="false"></svg>
       </div>
     </div>
   </section>
 
-  <!-- 6 · CONTACT: the lift arrives. Holds; nothing fades out. -->
-  <section class="floor floor--contact" id="contact" data-floor="6" data-floor-name="Contact" aria-labelledby="contact-h">
+  <!-- 6 · LIVE DEMO: a real cleaning pipeline on made-up data, in the browser -->
+  <section class="floor floor--demo" id="demo" data-floor="6" data-floor-name="Live demo" aria-labelledby="demo-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
+          <h2 id="demo-h" class="h2">Watch messy data get cleaned.</h2>
+        </div>
+      </div>
+      <p class="floor__lede">A made-up lift maintenance log, the kind of sheet most data work starts with. Press run and a real cleaning pipeline tidies it, right here in your browser.</p>
+      <div class="demo" data-demo>
+        <div class="demo__bar">
+          <ol class="demo__steps" aria-label="Pipeline steps">
+            <li data-step="1"><span class="demo__n">1</span>Tidy names</li>
+            <li data-step="2"><span class="demo__n">2</span>One date format</li>
+            <li data-step="3"><span class="demo__n">3</span>Remove duplicates</li>
+            <li data-step="4"><span class="demo__n">4</span>Flag missing status</li>
+          </ol>
+          <div class="demo__btns">
+            <button type="button" class="btn btn--primary btn--sm" data-demo-run>Run the pipeline</button>
+            <button type="button" class="btn btn--ghost btn--sm" data-demo-reset disabled>Reset</button>
+          </div>
+        </div>
+        <div class="demo__body">
+          <div class="demo__tablewrap" tabindex="0" aria-label="Maintenance log table, scrollable">
+            <table class="demo__table">
+              <caption class="sr-only">Sample lift maintenance log (made-up data)</caption>
+              <thead><tr><th scope="col">Station</th><th scope="col">Lift</th><th scope="col">Date</th><th scope="col">Task</th><th scope="col">Status</th></tr></thead>
+              <tbody data-demo-rows></tbody>
+            </table>
+          </div>
+          <div class="demo__side">
+            <p class="demo__status" aria-live="polite" data-demo-status>10 raw rows, straight from a shared sheet.</p>
+            <div class="demo__chart" data-demo-chart hidden>
+              <p class="demo__charth">Jobs per station (cleaned)</p>
+              <div class="demo__bars" data-demo-bars></div>
+            </div>
+          </div>
+        </div>
+        <p class="demo__note">Sample data, made up for this demo. The pipeline is real JavaScript running in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · CERTIFIED: framed like a lift's inspection certificate -->
+  <section class="floor floor--plates" id="certified" data-floor="7" data-floor-name="Certified" aria-labelledby="plates-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
+          <h2 id="plates-h" class="h2">Certified, and put to work.</h2>
+        </div>
+      </div>
+      <p class="floor__lede">Every lift carries a framed inspection certificate. Here are mine. Point at one, or tap it, to inspect what I've done with it.</p>
+      <ul class="plates">
+        <li class="plate" data-cert="gcpace">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google Cloud</p>
+              <h3 class="plate__name">Associate Cloud Engineer</h3>
+              <p class="plate__date">Issued <time>Jul 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Associate Cloud Engineer</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Cloud setup &amp; hosting</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/82a36c6d-3f5c-4508-a6c6-521d0d1ed5b9" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="snowpro">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Snowflake</p>
+              <h3 class="plate__name">SnowPro Associate: Platform</h3>
+              <p class="plate__date">Issued <time>Apr 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with SnowPro Associate: Platform</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Trained in</p><p class="plate__svc">Not in a public project yet. Ask me about it.</p>
+              <a class="plate__verify" href="https://achieve.snowflake.com/f787befa-4df9-401a-8ae9-c877354e2617" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="ai900">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Microsoft</p>
+              <h3 class="plate__name">Azure AI Fundamentals <span class="nw">(AI-900)</span></h3>
+              <p class="plate__date">Issued <time>Feb 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure AI Fundamentals (AI-900)</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots</p>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="az900">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Microsoft</p>
+              <h3 class="plate__name">Azure Fundamentals <span class="nw">(AZ-900)</span></h3>
+              <p class="plate__date">Issued <time>Jan 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure Fundamentals (AZ-900)</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Cloud setup &amp; hosting</p>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="dp900">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Microsoft</p>
+              <h3 class="plate__name">Azure Data Fundamentals <span class="nw">(DP-900)</span></h3>
+              <p class="plate__date">Issued <time>Dec 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure Data Fundamentals (DP-900)</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="gh900">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">GitHub</p>
+              <h3 class="plate__name">GitHub Foundations <span class="nw">(GH-900)</span></h3>
+              <p class="plate__date">Issued <time>Aug 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with GitHub Foundations (GH-900)</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Custom web apps for small teams</p>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="dbxgen">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Databricks</p>
+              <h3 class="plate__name">Generative AI Fundamentals</h3>
+              <p class="plate__date">Issued <time>Nov 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Generative AI Fundamentals</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots</p>
+              <a class="plate__verify" href="https://credentials.databricks.com/ffec370c-24e5-4ece-9dcd-ca59fd4b9b90" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="pyauto">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google</p>
+              <h3 class="plate__name">IT Automation with Python</h3>
+              <p class="plate__date">Issued <time>Oct 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with IT Automation with Python</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Automate repetitive work</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/7223d0a7-7098-4d63-8a26-7985501af541" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="gada">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google</p>
+              <h3 class="plate__name">Advanced Data Analytics</h3>
+              <p class="plate__date">Issued <time>Sep 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Advanced Data Analytics</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/f49a596f-5c04-4b85-976d-95d0125de7e0" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="gda">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google</p>
+              <h3 class="plate__name">Data Analytics</h3>
+              <p class="plate__date">Issued <time>Jul 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Data Analytics</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/d1aad0d0-1368-47aa-923f-2cb7617d5301" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="prompt">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google</p>
+              <h3 class="plate__name">AI Prompting Essentials</h3>
+              <p class="plate__date">Issued <time>Jun 2025</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with AI Prompting Essentials</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
+              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots · Automate repetitive work</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/8f640836-810b-438b-8eed-f6ce4210a06e" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="plate" data-cert="cyber">
+          <div class="plate__inner">
+            <div class="plate__face plate__front">
+              <p class="plate__type">Certificate</p>
+              <p class="plate__issuer">Google</p>
+              <h3 class="plate__name">Cybersecurity</h3>
+              <p class="plate__date">Issued <time>Mar 2026</time></p>
+              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Cybersecurity</span></button>
+              <span class="plate__stamp" aria-hidden="true">Verified</span>
+            </div>
+            <div class="plate__face plate__back">
+              <p class="plate__h">Trained in</p><p class="plate__svc">Not in a public project yet. Ask me about it.</p>
+              <a class="plate__verify" href="https://www.credly.com/badges/857a094c-b85b-41db-a991-1606dd2963ca" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8 · BADGES: every badge from Credly and Credential.net; filters regroup the wall -->
+  <section class="floor floor--wall" id="badges" data-floor="8" data-floor-name="Badges" aria-labelledby="wall-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
+          <h2 id="wall-h" class="h2">The badge wall.</h2>
+        </div>
+      </div>
+      <p class="floor__lede">Every badge from my Credly and Credential.net profiles. Pick a topic and watch the wall regroup. Each badge opens its verification page.</p>
+      <div class="wallfilters" role="group" aria-label="Filter badges"><button type="button" class="wallf" data-filter="all" aria-pressed="true">All<span class="wallf__n">26</span></button><button type="button" class="wallf" data-filter="ai" aria-pressed="false">AI<span class="wallf__n">8</span></button><button type="button" class="wallf" data-filter="data" aria-pressed="false">Data<span class="wallf__n">5</span></button><button type="button" class="wallf" data-filter="cloud" aria-pressed="false">Cloud<span class="wallf__n">8</span></button><button type="button" class="wallf" data-filter="auto" aria-pressed="false">Automation<span class="wallf__n">3</span></button><button type="button" class="wallf" data-filter="security" aria-pressed="false">Security &amp; IT<span class="wallf__n">4</span></button><button type="button" class="wallf" data-filter="work" aria-pressed="false">Work &amp; design<span class="wallf__n">4</span></button></div>
+      <p class="sr-only" aria-live="polite" data-wall-status></p>
+      <ul class="wall">
+          <li class="badge" data-tags="cloud"><a href="https://www.credly.com/badges/82a36c6d-3f5c-4508-a6c6-521d0d1ed5b9" target="_blank" rel="noopener" title="Associate Cloud Engineer · Google Cloud">
+            <img src="assets/badges/cr-82a36c6d.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Associate Cloud Engineer</span><span class="badge__meta">Google Cloud · Jul 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data cloud"><a href="https://achieve.snowflake.com/f787befa-4df9-401a-8ae9-c877354e2617" target="_blank" rel="noopener" title="SnowPro Associate: Platform · Snowflake">
+            <img src="assets/badges/ac-snowpro.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">SnowPro Associate: Platform</span><span class="badge__meta">Snowflake · Apr 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://credentials.databricks.com/ffec370c-24e5-4ece-9dcd-ca59fd4b9b90" target="_blank" rel="noopener" title="Generative AI Fundamentals · Databricks">
+            <img src="assets/badges/ac-dbx-genai.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Generative AI Fundamentals</span><span class="badge__meta">Databricks · Nov 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data"><a href="https://credentials.databricks.com/480ab9d1-9a64-436c-bc42-b7c19ed1e1ee" target="_blank" rel="noopener" title="Databricks Fundamentals · Databricks">
+            <img src="assets/badges/ac-dbx-fund.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Databricks Fundamentals</span><span class="badge__meta">Databricks · Oct 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://www.credly.com/badges/e677873b-0c6f-4d16-9873-a93e5abfa070" target="_blank" rel="noopener" title="AI Generalist: AI at Work · Generation">
+            <img src="assets/badges/cr-e677873b.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">AI Generalist: AI at Work</span><span class="badge__meta">Generation · Aug 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai cloud"><a href="https://www.credly.com/badges/8a8d8b63-0771-41d4-bc8a-8d4f9197d0f4" target="_blank" rel="noopener" title="Create Your First Gemini Enterprise Application · Google Cloud">
+            <img src="assets/badges/cr-8a8d8b63.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Create Your First Gemini Enterprise Application</span><span class="badge__meta">Google Cloud · May 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://www.credly.com/badges/161a9fa4-dd29-4e9a-a8de-47b8dff6793e" target="_blank" rel="noopener" title="Power Up Program: Intro to Agents · Microsoft">
+            <img src="assets/badges/cr-161a9fa4.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Power Up Program: Intro to Agents</span><span class="badge__meta">Microsoft · Jan 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://www.credly.com/badges/21a050d8-6c6e-45ab-beef-3b78376cec51" target="_blank" rel="noopener" title="AI Skills Fest 2026 · Microsoft">
+            <img src="assets/badges/cr-21a050d8.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">AI Skills Fest 2026</span><span class="badge__meta">Microsoft · Jun 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://www.credly.com/badges/8f640836-810b-438b-8eed-f6ce4210a06e" target="_blank" rel="noopener" title="Google Prompting Essentials · Google">
+            <img src="assets/badges/cr-8f640836.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google Prompting Essentials</span><span class="badge__meta">Google · May 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://www.credly.com/badges/36d4eb0b-4b83-43d3-8c6b-32aed91de950" target="_blank" rel="noopener" title="Google AI Essentials · Google">
+            <img src="assets/badges/cr-36d4eb0b.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google AI Essentials</span><span class="badge__meta">Google · Oct 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai"><a href="https://skillshop.credential.net/c7c014de-3697-496b-be76-c1141cc92c30" target="_blank" rel="noopener" title="AI-Powered Performance Ads · Google Skillshop">
+            <img src="assets/badges/ac-skillshop-ads.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">AI-Powered Performance Ads</span><span class="badge__meta">Google Skillshop · Oct 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data"><a href="https://www.credly.com/badges/d1aad0d0-1368-47aa-923f-2cb7617d5301" target="_blank" rel="noopener" title="Google Data Analytics · Google">
+            <img src="assets/badges/cr-d1aad0d0.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google Data Analytics</span><span class="badge__meta">Google · Oct 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data"><a href="https://www.credly.com/badges/f49a596f-5c04-4b85-976d-95d0125de7e0" target="_blank" rel="noopener" title="Google Advanced Data Analytics · Google">
+            <img src="assets/badges/cr-f49a596f.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google Advanced Data Analytics</span><span class="badge__meta">Google · Oct 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data"><a href="https://www.credly.com/badges/dc890b45-63f0-485c-8ab4-c0c5783eb048" target="_blank" rel="noopener" title="Platform Analytics · ServiceNow">
+            <img src="assets/badges/cr-dc890b45.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Platform Analytics</span><span class="badge__meta">ServiceNow · Nov 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="auto"><a href="https://www.credly.com/badges/7223d0a7-7098-4d63-8a26-7985501af541" target="_blank" rel="noopener" title="Google IT Automation with Python · Google">
+            <img src="assets/badges/cr-7223d0a7.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google IT Automation with Python</span><span class="badge__meta">Google · Oct 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="auto work"><a href="https://certifications.asana.com/59e28958-29cd-40cf-8816-539638946f76" target="_blank" rel="noopener" title="Workflow Specialist · Asana">
+            <img src="assets/badges/ac-asana-wf.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Workflow Specialist</span><span class="badge__meta">Asana · Jun 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="auto work"><a href="https://certifications.asana.com/57396ca6-766a-4c3c-b670-fb3a4ec4f9fd" target="_blank" rel="noopener" title="Asana Administrator · Asana">
+            <img src="assets/badges/ac-asana-admin.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Asana Administrator</span><span class="badge__meta">Asana · Jun 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud"><a href="https://www.credly.com/badges/8f5ec96c-a168-46d7-abaf-7de3a118a426" target="_blank" rel="noopener" title="Set Up an App Dev Environment on Google Cloud · Google Cloud">
+            <img src="assets/badges/cr-8f5ec96c.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Set Up an App Dev Environment on Google Cloud</span><span class="badge__meta">Google Cloud · Apr 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud"><a href="https://www.credly.com/badges/0019b20c-c2dc-4bdc-9a40-f6054d18b641" target="_blank" rel="noopener" title="Implement Load Balancing on Compute Engine · Google Cloud">
+            <img src="assets/badges/cr-0019b20c.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Implement Load Balancing on Compute Engine</span><span class="badge__meta">Google Cloud · Apr 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud"><a href="https://www.credly.com/badges/7e3da62a-afc7-4f5f-822c-66341457f21d" target="_blank" rel="noopener" title="Develop Your Google Cloud Network · Google Cloud">
+            <img src="assets/badges/cr-7e3da62a.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Develop Your Google Cloud Network</span><span class="badge__meta">Google Cloud · May 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud security"><a href="https://www.credly.com/badges/7cd7add2-f146-4a7d-8e5f-193de7dcf5ea" target="_blank" rel="noopener" title="Build a Secure Google Cloud Network · Google Cloud">
+            <img src="assets/badges/cr-7cd7add2.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Build a Secure Google Cloud Network</span><span class="badge__meta">Google Cloud · May 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud security"><a href="https://www.credly.com/badges/a9b414e8-980b-4cb1-aa5e-9f1343922cf9" target="_blank" rel="noopener" title="Implement Cloud Security Fundamentals on Google Cloud · Google Cloud">
+            <img src="assets/badges/cr-a9b414e8.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Implement Cloud Security Fundamentals on Google Cloud</span><span class="badge__meta">Google Cloud · May 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="security"><a href="https://www.credly.com/badges/857a094c-b85b-41db-a991-1606dd2963ca" target="_blank" rel="noopener" title="Google Cybersecurity · Google">
+            <img src="assets/badges/cr-857a094c.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google Cybersecurity</span><span class="badge__meta">Google · Mar 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="security"><a href="https://www.credly.com/badges/d7eb915d-1ad4-4945-9e5a-1c09a5c5c8cf" target="_blank" rel="noopener" title="Google IT Support · Google">
+            <img src="assets/badges/cr-d7eb915d.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google IT Support</span><span class="badge__meta">Google · Nov 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="work"><a href="https://www.credly.com/badges/f4055b7d-f866-46c0-a7a6-a9f68dddf4e8" target="_blank" rel="noopener" title="Google Project Management · Google">
+            <img src="assets/badges/cr-f4055b7d.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google Project Management</span><span class="badge__meta">Google · Apr 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="work"><a href="https://www.credly.com/badges/d72a9e34-9baa-42ae-ba68-c87b257bebeb" target="_blank" rel="noopener" title="Google UX Design · Google">
+            <img src="assets/badges/cr-d72a9e34.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Google UX Design</span><span class="badge__meta">Google · Sep 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9 · CONTACT: the lift arrives. Holds; nothing fades out. -->
+  <section class="floor floor--contact" id="contact" data-floor="9" data-floor-name="Contact" aria-labelledby="contact-h">
     <div class="wrap contact">
       <h2 id="contact-h" class="contact__h">Making everyday tasks effortless on the side.</h2>
       <ul class="social" aria-label="Find me online">
@@ -514,6 +913,14 @@
           <span class="social__icon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>
           <span class="social__label" aria-hidden="true">Facebook</span>
         </a></li>
+        <li><a class="social__link" href="https://www.credly.com/users/fahmy-m/badges/credly" target="_blank" rel="noopener me" aria-label="Credly badges (opens in a new tab)">
+          <span class="social__icon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 1.5 14.6 4l3.6-.4.9 3.5 3.2 1.8-1.3 3.4 1.3 3.4-3.2 1.8-.9 3.5-3.6-.4L12 22.5 9.4 20l-3.6.4-.9-3.5-3.2-1.8 1.3-3.4-1.3-3.4 3.2-1.8.9-3.5 3.6.4zm-1.3 13.9 5.5-5.5-1.4-1.4-4.1 4.1-2-2-1.4 1.4z"/></svg></span>
+          <span class="social__label" aria-hidden="true">Credly</span>
+        </a></li>
+        <li><a class="social__link" href="https://www.credential.net/profile/fahmymahamud87873/wallet" target="_blank" rel="noopener me" aria-label="Credentials badges (opens in a new tab)">
+          <span class="social__icon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5zm-1.2 15.2-4-4 1.4-1.4 2.6 2.6 5.4-5.4 1.4 1.4z"/></svg></span>
+          <span class="social__label" aria-hidden="true">Credentials</span>
+        </a></li>
       </ul>
     </div>
     <footer class="foot">
@@ -528,5 +935,6 @@
 
 <script src="assets/scrollcraft.js" defer></script>
 <script src="assets/site.js" defer></script>
+<script src="assets/floors.js" defer></script>
 </body>
 </html>
