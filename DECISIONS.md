@@ -165,3 +165,7 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   18 Aug 2026) are now on the badge wall with their official badges and verify links (30 badges in all). The dates match
   the resume.
 - **Grounds alternate so neighbours never blend:** white, off-white, light grey, off-white, white, off-white, green-light.
+- **Search (6 Oct):** added robots.txt, sitemap.xml and Person + WebSite structured data (name Fahmy Mahamud, alternate name
+  Mohammad Fahmy Bin Mahamud, country only, links to LinkedIn, GitHub, Instagram, Facebook and Credly) so Google can match
+  searches for the name. Google Search Console verification uses the HTML-tag method on the URL-prefix property
+  https://fahmymahamud.vercel.app/ (a Domain property is not possible on a vercel.app address).
