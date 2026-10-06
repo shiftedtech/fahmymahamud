@@ -155,3 +155,13 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
 - **Badge images** are downloaded from your own Credly/Credential.net badges into site/assets/badges (27 WebP files,
   220 KB). They are your credentials, not stock images.
 - **Without JS** everything is readable: plates show both sides and the wall shows all badges.
+
+## Update 6 Oct (later): new floor order
+- **Order:** G Lobby · 1 Story · 2 What I enjoy doing · 3 Badge wall · 4 Live demo · 5 Projects · 6 Got something eating
+  your time? · 7 Contact.
+- **Removed, as asked:** "What I work with" (skills) and "Certified, and put to work" (the plates).
+- **Projects:** the lift landing's HPI now reads 5. The picker's "See it in What I enjoy doing" arrow now points up.
+- **Microsoft Learn credentials** (AI-900 27 Feb 2026, AZ-900 22 Jan 2026, DP-900 29 Dec 2025, GitHub Foundations
+  18 Aug 2026) are now on the badge wall with their official badges and verify links (30 badges in all). The dates match
+  the resume.
+- **Grounds alternate so neighbours never blend:** white, off-white, light grey, off-white, white, off-white, green-light.

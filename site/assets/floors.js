@@ -1,6 +1,6 @@
-/* Fahmy Mahamud · floors 4-8
-   The task picker, "What I enjoy doing" with its certificate directory, the
-   live cleaning demo, the inspection-certificate plates and the badge wall.
+/* Fahmy Mahamud · floors 2, 3, 4 and 6
+   "What I enjoy doing" with its certificate directory, the badge wall, the
+   live cleaning demo and the task picker.
    Every section works as plain content without this file. */
 (function () {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -9,7 +9,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  /* -------------------------------------------- 5 · enjoy: two-way links -- */
+  /* -------------------------------------------- 2 · enjoy: two-way links -- */
   var enjoy = $('.enjoy');
   var wires = enjoy && $('.enjoy__wires', enjoy);
   var svcs = enjoy ? $$('.svc', enjoy) : [];
@@ -97,7 +97,7 @@
     addEventListener('resize', function () { if (!pinned) clearTrace(); });
   }
 
-  /* ------------------------------------------------ 4 · task picker -- */
+  /* ------------------------------------------------ 6 · task picker -- */
   var tabs = $$('.task');
   function selectTask(tab, focus) {
     tabs.forEach(function (t) {
@@ -135,7 +135,7 @@
     });
   });
 
-  /* ------------------------------------------------ 6 · live demo -- */
+  /* ------------------------------------------------ 4 · live demo -- */
   var demo = $('[data-demo]');
   if (demo) (function () {
     // Made-up maintenance log. Dates are day-first, the way they're written in Singapore.
@@ -256,37 +256,7 @@
     reset();
   })();
 
-  /* --------------------------------------- 7 · inspection-certificate plates -- */
-  $$('.plate').forEach(function (plate) {
-    var btn = $('.plate__flip', plate);
-    var front = $('.plate__front', plate), back = $('.plate__back', plate);
-    var t = 0;
-    function set(on) {
-      clearTimeout(t);
-      if (on) {
-        plate.classList.add('is-stamped');
-        t = setTimeout(function () { plate.classList.add('is-flipped'); }, reduce ? 0 : 330);
-      } else {
-        plate.classList.remove('is-flipped');
-      }
-      btn.setAttribute('aria-expanded', on ? 'true' : 'false');
-      if ('inert' in back) { back.inert = !on; front.inert = on; }
-    }
-    if ('inert' in back) back.inert = true;
-    if (fine) {
-      plate.addEventListener('mouseenter', function () { set(true); });
-      plate.addEventListener('mouseleave', function () { set(false); });
-    }
-    btn.addEventListener('click', function () {
-      set(true);
-      setTimeout(function () { var l = $('a', back); if (l) l.focus({ preventScroll: true }); }, reduce ? 0 : 700);
-    });
-    // tap the back (not a link) to turn it round again
-    back.addEventListener('click', function (e) { if (!e.target.closest('a')) { set(false); btn.focus({ preventScroll: true }); } });
-    plate.addEventListener('keydown', function (e) { if (e.key === 'Escape' && plate.classList.contains('is-flipped')) { set(false); btn.focus(); } });
-  });
-
-  /* ------------------------------------------------ 8 · the badge wall -- */
+  /* ------------------------------------------------ 3 · the badge wall -- */
   var wall = $('.wall');
   var fbtns = $$('.wallf');
   var wallStatus = $('[data-wall-status]');

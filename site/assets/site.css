@@ -152,7 +152,6 @@ time { font-variant-numeric: tabular-nums; }
 /* ---------------------------------------------------------- floors ---- */
 .floor { position: relative; padding-block: clamp(4.5rem, 9vw, 8.5rem); }
 .floor--story { background: var(--white); }
-.floor--skills { background: var(--off-white); border-top: 1px solid var(--grey-100); }
 .floor--projects { background: var(--white); padding-block: 0 clamp(4.5rem, 9vw, 8rem); }
 .floor--certs { background: var(--light-grey); }
 .floor--experience { background: var(--white); }
@@ -181,18 +180,11 @@ time { font-variant-numeric: tabular-nums; }
 .lede { font-size: clamp(1.35rem, 1.1rem + .9vw, 1.75rem); line-height: 1.35; font-weight: 600; letter-spacing: -0.02em; }
 .lede .num { color: var(--green); }
 
-/* skills: a spec sheet */
-.spec { margin: 0; border-top: 1px solid var(--grey-200); }
-.spec__row { display: grid; grid-template-columns: minmax(10rem, 3fr) 9fr; gap: .6rem 2rem; padding-block: 1.25rem; border-bottom: 1px solid var(--grey-200); }
-.spec dt { font-weight: 700; letter-spacing: -0.01em; padding-top: .3rem; }
-.spec dd { margin: 0; }
-.spec__row--soft dt { color: var(--grey-600); font-weight: 600; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .chips li {
   font-size: .95rem; line-height: 1.3; padding: .45rem .8rem;
   background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--r-sm);
 }
-.spec__row--soft .chips li { background: transparent; color: var(--grey-600); }
 
 /* projects: the lift */
 /* No `position` here: the engine makes this stage sticky, and an author
@@ -217,7 +209,7 @@ time { font-variant-numeric: tabular-nums; }
 .feature__desc { margin: .9rem 0 1.25rem; max-width: 56ch; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); }
 .chips--on-white li { background: var(--white); border-color: color-mix(in oklab, var(--green) 18%, transparent); }
 
-/* floor 3: a lift landing. A wall, a steel frame, a call plate and a hall
+/* floor 5: a lift landing. A wall, a steel frame, a call plate and a hall
    position indicator (HPI). It behaves like a real lift: when you reach the
    floor the car "arrives" on its own (arrow, lanterns), the doors slide open
    on a timer, and you step in as the landing fades. Time-based, not
@@ -456,9 +448,9 @@ time { font-variant-numeric: tabular-nums; }
 .cchip.is-lit { background: var(--green-light); border-color: color-mix(in oklab, var(--green) 35%, transparent); color: var(--green-dark); }
 
 /* project links inside lists and cards: same look, full-size tap target */
-:is(.taskres__list, .plate__list, .svc__built) a { display: inline-block; padding-block: 12px; margin-block: -12px; }
+:is(.taskres__list, .svc__built) a { display: inline-block; padding-block: 12px; margin-block: -12px; }
 
-/* ---- 4 · your task: the picker ---- */
+/* ---- 6 · your task: the picker ---- */
 .floor--task { background: var(--off-white); border-top: 1px solid var(--grey-100); }
 .picker { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 1.5rem; align-items: start; }
 .picker__tasks { display: grid; gap: .6rem; }
@@ -495,7 +487,8 @@ time { font-variant-numeric: tabular-nums; }
 .taskres__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; font-weight: 600; }
 .taskres__go { display: inline-flex; margin-top: 1.25rem; font-weight: 600; min-height: 44px; align-items: center; }
 
-/* ---- 5 · what I enjoy doing + certificate directory ---- */
+/* ---- 2 · what I enjoy doing + certificate directory ---- */
+.floor--enjoy { background: var(--off-white); border-top: 1px solid var(--grey-100); }
 .enjoy { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 1.25rem clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .enjoy__svcs { display: grid; gap: .8rem; position: relative; z-index: 2; }
 .svc {
@@ -540,7 +533,7 @@ time { font-variant-numeric: tabular-nums; }
   @keyframes wire { to { stroke-dashoffset: 0; } }
 }
 
-/* ---- 6 · live demo ---- */
+/* ---- 4 · live demo ---- */
 .floor--demo { background: var(--off-white); border-top: 1px solid var(--grey-100); }
 .demo { background: var(--white); border: 1px solid var(--grey-200); border-radius: 16px; overflow: hidden;
   box-shadow: 0 1px 2px hsl(0 0% 7% / .06), 0 22px 44px -28px hsl(0 0% 7% / .35); }
@@ -573,59 +566,7 @@ time { font-variant-numeric: tabular-nums; }
 .dbar__n { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
 .demo__note { margin: 0; padding: .7rem 1.1rem; font-size: .82rem; color: var(--grey-600); border-top: 1px solid var(--grey-100); }
 
-/* ---- 7 · certified: inspection-certificate plates that flip ---- */
-.floor--plates { background: var(--white); }
-.plates { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-.plate { position: relative; min-height: 15.5rem; perspective: 1200px; }
-.plate__inner { position: relative; height: 100%; min-height: inherit; transform-style: preserve-3d; transition: transform 700ms cubic-bezier(.3, .7, .2, 1); }
-.plate__face {
-  position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
-  display: flex; flex-direction: column; padding: 1.1rem 1.15rem;
-  border-radius: 6px; background: var(--white);
-  /* the frame: brushed steel border with a hairline inner rule, like a framed permit */
-  border: 7px solid var(--grey-300);
-  box-shadow: inset 0 0 0 1px var(--grey-200), inset 0 0 0 5px var(--white), inset 0 0 0 6px color-mix(in oklab, var(--green) 30%, transparent),
-              0 2px 4px hsl(0 0% 7% / .08), 0 16px 30px -18px hsl(0 0% 7% / .35);
-}
-.plate__front { background: linear-gradient(180deg, var(--white), var(--off-white)); }
-.plate__type { margin: 0; font-size: .66rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--grey-500); text-align: center; padding-bottom: .5rem; border-bottom: 1px solid var(--grey-200); }
-.plate__issuer { margin: .7rem 0 0; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green-dark); }
-.plate__name { margin: .25rem 0 0; font-size: 1.12rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.25; }
-.plate__date { margin: .4rem 0 0; font-size: .85rem; color: var(--grey-600); }
-.plate__flip {
-  margin-top: auto; align-self: flex-start; min-height: 44px; padding: .45rem .9rem; border-radius: var(--r-sm);
-  border: 1.5px solid var(--green); background: var(--white); color: var(--green); font-weight: 700; font-size: .85rem; cursor: pointer;
-}
-.plate__flip:hover { background: var(--green-light); }
-.plate__stamp {
-  position: absolute; right: .9rem; bottom: 1.1rem; padding: .25rem .6rem;
-  border: 2.5px solid var(--green); border-radius: 6px; color: var(--green);
-  font-size: .8rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
-  opacity: 0; transform: rotate(-12deg) scale(1.6);
-}
-.plate__back { transform: rotateY(180deg); background: var(--green-light); gap: .3rem; overflow-y: auto; }
-.plate__h { margin: 0; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-dark); }
-.plate__h + * { margin-bottom: .55rem; }
-.plate__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .2rem; font-weight: 600; font-size: .95rem; }
-.plate__svc { margin: 0; font-weight: 600; font-size: .95rem; }
-.plate__verify { margin-top: auto; display: inline-flex; align-items: center; gap: .3rem; min-height: 44px; font-weight: 700; font-size: .9rem; }
-.plate__verify--none { font-weight: 500; color: var(--grey-600); font-size: .8rem; }
-.plate.is-stamped .plate__stamp { animation: stamp 380ms cubic-bezier(.2, 1.4, .4, 1) forwards; }
-@keyframes stamp { 0% { opacity: 0; transform: rotate(-12deg) scale(1.6); } 100% { opacity: .9; transform: rotate(-12deg) scale(1); } }
-.plate.is-flipped .plate__inner { transform: rotateY(180deg); }
-/* without JS (or if it fails) both faces show, stacked, so nothing is hidden */
-:is(.no-js, .sc-failed) .plate__inner { transform: none !important; }
-:is(.no-js, .sc-failed) .plate__face { position: relative; inset: auto; backface-visibility: visible; transform: none; }
-:is(.no-js, .sc-failed) .plate__flip { display: none; }
-@media (prefers-reduced-motion: reduce) {
-  .plate__inner { transition: none; transform: none !important; }
-  .plate__back { transform: none; opacity: 0; transition: opacity 200ms; }
-  .plate.is-flipped .plate__back { opacity: 1; }
-  .plate.is-flipped .plate__front { opacity: 0; }
-  .plate.is-stamped .plate__stamp { animation: none; opacity: .9; transform: rotate(-12deg); }
-}
-
-/* ---- 8 · the badge wall ---- */
+/* ---- 3 · the badge wall ---- */
 .floor--wall { background: var(--light-grey); }
 .wallfilters { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.5rem; }
 .wallf {
@@ -766,7 +707,6 @@ time { font-variant-numeric: tabular-nums; }
   .enjoy { grid-template-columns: 1fr; }
   .dir { position: static; }
   .enjoy__wires { display: none; }
-  .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .demo__body { grid-template-columns: 1fr; }
   .demo__side { border-left: 0; border-top: 1px solid var(--grey-100); }
 }
@@ -777,13 +717,9 @@ time { font-variant-numeric: tabular-nums; }
   .lobby { min-height: 0; padding-top: calc(var(--bar-h) + 1rem); }
   .lobby__ctas .btn { flex: 1 1 auto; }
   .skyline { height: 195px; margin-top: 1.5rem; }
-  .spec__row { grid-template-columns: 1fr; }
-  .spec dt { padding-top: 0; }
   .lift__floor { padding-block: 1.5rem 3rem; }
   .foot__in { flex-direction: column; align-items: flex-start; }
   .taskres__cols { grid-template-columns: 1fr; }
-  .plates { grid-template-columns: 1fr; }
-  .plate { min-height: 14rem; }
   .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
   .badge img { width: 72px; height: 72px; }
   .demo__table { font-size: .82rem; }

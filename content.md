@@ -6,6 +6,10 @@ in `brand_assets/` are left off the site (see DECISIONS.md).
 
 ---
 
+## Floor order (6 Oct)
+G Lobby · 1 Story · 2 What I enjoy doing · 3 Badge wall · 4 Live demo · 5 Projects · 6 Your task (picker) · 7 Contact.
+"What I work with" (skills) and the "Certified" plates were removed.
+
 ## Hero (floor G: Lobby)
 - Heading: **Fahmy Mahamud**
 - Avatar: `brand_assets/avatar.png`
@@ -22,15 +26,6 @@ Singapore's rail network, was promoted to Assistant Engineer II, and stepped up 
 to clear a backlog of undone documentation by priority. That is where I saw how much more I could do with data
 and AI. So I retrained through Generation Singapore's Junior Data Engineer programme (with Microsoft and
 Temasek Polytechnic), and now I build data pipelines and AI automations.
-
-## 2. Skills
-Heading: What I work with.
-
-- **Data engineering:** Python, SQL, ETL/ELT pipelines, Microsoft Fabric, Power BI, computational notebooks, Snowflake, Databricks
-- **Cloud:** Microsoft Azure, Google Cloud (Cloud Run, Firebase), Supabase, Vercel
-- **AI & automation:** prompt engineering, AI agents (Claude Code), Trigger.dev, Telegram bots, workflow automation
-- **Web:** HTML, CSS, JavaScript, TypeScript, GitHub, version control
-- **Also:** stakeholder management, vendor and contractor coordination, regulatory compliance (BCA, LTA), Agile
 
 ## 3. Projects
 Heading: Things I've built.
@@ -73,14 +68,14 @@ Pick a problem, see "How I'd tackle it", what's already built, and the certifica
 tidy names, one date format, remove duplicates, flag missing status. Result: 7 clean rows, 3 duplicates removed, 2 flagged,
 plus a jobs-per-station chart. Labelled as sample data.
 
-## 7. Certified (inspection-certificate plates; hover or tap to flip)
+## (removed 6 Oct) Certified plates
 Google Cloud ACE (Jul 2026), SnowPro Associate: Platform (Apr 2026), AI-900 (Feb 2026), AZ-900 (Jan 2026), DP-900 (Dec 2025),
 GitHub Foundations GH-900 (Aug 2026), Databricks Generative AI Fundamentals (Nov 2025), Google IT Automation with Python (Oct 2025),
 Google Advanced Data Analytics (Sep 2025), Google Data Analytics (Jul 2025), Google AI Prompting Essentials (Jun 2025),
 Google Cybersecurity (Mar 2026). Back of each: "Used it for" projects, "Helps with" service, Verify link where public.
 
-## 8. Badge wall
-All 26 badges from https://www.credly.com/users/fahmy-m/badges/credly and
+## Badge wall (floor 3)
+All 30 badges: Microsoft Learn (AI-900, AZ-900, DP-900, GitHub Foundations) plus https://www.credly.com/users/fahmy-m/badges/credly and
 https://www.credential.net/profile/fahmymahamud87873/wallet, filterable by AI, Data, Cloud, Automation, Security & IT,
 Work & design. Each badge links to its verification page. Images in site/assets/badges/.
 

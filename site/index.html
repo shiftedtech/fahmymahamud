@@ -67,14 +67,12 @@
     <span class="sr-only">: open the section menu</span>
   </button>
   <ol class="lift-nav__panel" id="lift-panel" hidden>
-    <li><a href="#contact" data-floor-link="9"><span class="key">9</span>Contact</a></li>
-    <li><a href="#badges" data-floor-link="8"><span class="key">8</span>Badges</a></li>
-    <li><a href="#certified" data-floor-link="7"><span class="key">7</span>Certified</a></li>
-    <li><a href="#demo" data-floor-link="6"><span class="key">6</span>Live demo</a></li>
-    <li><a href="#enjoy" data-floor-link="5"><span class="key">5</span>What I enjoy</a></li>
-    <li><a href="#task" data-floor-link="4"><span class="key">4</span>Your task</a></li>
-    <li><a href="#projects" data-floor-link="3"><span class="key">3</span>Projects</a></li>
-    <li><a href="#skills" data-floor-link="2"><span class="key">2</span>Skills</a></li>
+    <li><a href="#contact" data-floor-link="7"><span class="key">7</span>Contact</a></li>
+    <li><a href="#task" data-floor-link="6"><span class="key">6</span>Your task</a></li>
+    <li><a href="#projects" data-floor-link="5"><span class="key">5</span>Projects</a></li>
+    <li><a href="#demo" data-floor-link="4"><span class="key">4</span>Live demo</a></li>
+    <li><a href="#badges" data-floor-link="3"><span class="key">3</span>Badges</a></li>
+    <li><a href="#enjoy" data-floor-link="2"><span class="key">2</span>What I enjoy</a></li>
     <li><a href="#story" data-floor-link="1"><span class="key">1</span>Story</a></li>
     <li><a href="#top" data-floor-link="G"><span class="key">G</span>Lobby</a></li>
   </ol>
@@ -224,246 +222,8 @@
     </div>
   </section>
 
-  <!-- 2 · SKILLS -->
-  <section class="floor floor--skills" id="skills" data-floor="2" data-floor-name="Skills" aria-labelledby="skills-h">
-    <div class="wrap">
-      <div class="floor__title" data-sc-act="flow">
-        <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
-          <h2 id="skills-h" class="h2">What I work with.</h2>
-        </div>
-      </div>
-      <dl class="spec" data-sc-in data-sc-stagger="60">
-        <div class="spec__row">
-          <dt>Data engineering</dt>
-          <dd><ul class="chips"><li>Python</li><li>SQL</li><li>ETL/ELT pipelines</li><li>Microsoft Fabric</li><li>Power BI</li><li>Computational notebooks</li><li>Snowflake</li><li>Databricks</li></ul></dd>
-        </div>
-        <div class="spec__row">
-          <dt>Cloud</dt>
-          <dd><ul class="chips"><li>Microsoft Azure</li><li>Google Cloud (Cloud Run, Firebase)</li><li>Supabase</li><li>Vercel</li></ul></dd>
-        </div>
-        <div class="spec__row">
-          <dt>AI &amp; automation</dt>
-          <dd><ul class="chips"><li>Prompt engineering</li><li>AI agents (Claude Code)</li><li>Trigger.dev</li><li>Telegram bots</li><li>Workflow automation</li></ul></dd>
-        </div>
-        <div class="spec__row">
-          <dt>Web</dt>
-          <dd><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>GitHub</li><li>Version control</li></ul></dd>
-        </div>
-        <div class="spec__row spec__row--soft">
-          <dt>Also</dt>
-          <dd><ul class="chips"><li>Stakeholder management</li><li>Vendor &amp; contractor coordination</li><li>Regulatory compliance (BCA, LTA)</li><li>Agile</li></ul></dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- 3 · PROJECTS: the peak. Pinned; the lift doors part under the scroll. -->
-  <section class="floor floor--projects" id="projects" data-floor="3" data-floor-name="Projects" aria-labelledby="projects-h">
-    <div class="lift" data-sc-act="pin" data-sc-span="1.8">
-      <div class="lift__stage" data-sc-stage>
-        <div class="wrap lift__floor">
-          <h2 id="projects-h" class="h2">Things I've built.</h2>
-          <article class="feature">
-            <div class="feature__main">
-              <p class="feature__kicker">Open source · runs every day</p>
-              <h3 class="feature__title">MyJobSearchBot</h3>
-              <p class="feature__desc">A daily bot that checks 5 job sites, keeps the remote AI and data roles open to Singapore, ranks them against my resume, and sends the top 15 to Telegram.</p>
-              <ul class="chips chips--on-white" aria-label="Stack"><li>TypeScript</li><li>Trigger.dev</li><li>Telegram Bot API</li><li>GitHub</li></ul>
-            </div>
-            <a class="btn btn--primary feature__link" href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-          </article>
-        </div>
-        <div class="landing" aria-hidden="true">
-          <div class="landing__rig">
-            <div class="landing__doorway">
-              <div class="landing__car"></div>
-              <div class="landing__door landing__door--l"></div>
-              <div class="landing__door landing__door--r"></div>
-            </div>
-            <div class="hpi">
-              <span class="hpi__lantern"></span>
-              <span class="hpi__screen">
-                <svg class="hpi__arrow" viewBox="0 0 12 12" width="16" height="16"><path d="M6 1.5 11 9.5H1z" fill="currentColor"/></svg>
-                <span class="hpi__digit">3</span>
-                <span class="hpi__label">Projects</span>
-              </span>
-              <span class="hpi__lantern"></span>
-            </div>
-            <div class="callplate"><span class="callplate__btn callplate__btn--up"></span><span class="callplate__btn"></span></div>
-          </div>
-          <div class="landing__floor"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Also built: the escalator. Pinned; four projects ride up the incline
-         as you scroll. Without JS or with reduced motion it is a plain grid. -->
-    <div class="esc3d" data-sc-act="pin" data-sc-span="7" role="region" aria-labelledby="also-h">
-      <div class="esc3d__stage" data-sc-stage>
-        <div class="wrap esc3d__head">
-          <h3 class="esc3d__title" id="also-h">Also built</h3>
-          <p class="esc3d__hint">Four more projects, riding up. Tap a card to open it.</p>
-        </div>
-        <div class="esc3d__scene" aria-hidden="true">
-          <div class="esc3d__assembly">
-            <div class="esc3d__shadow"></div>
-            <div class="esc3d__truss"><i></i></div>
-            <div class="esc3d__glass esc3d__glass--back"></div>
-            <div class="esc3d__steps"><div class="esc3d__belt esc3d__belt--steps"></div></div>
-            <div class="esc3d__rail esc3d__rail--back"><div class="esc3d__belt esc3d__belt--rail"></div></div>
-            <div class="esc3d__glass esc3d__glass--front"><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="esc3d__rail esc3d__rail--front"><div class="esc3d__belt esc3d__belt--rail"></div></div>
-          </div>
-        </div>
-        <div class="esc3d__cards">
-          <a class="card3d" href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener" data-i="0">
-            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">crewscheduling.netlify.app</span><span class="card3d__n" aria-hidden="true">P1</span></span>
-            <span class="card3d__shot"><img src="assets/projects/crew.webp" width="720" height="450" loading="lazy" alt="Crew Scheduling landing page: your crew's whole week, in one link"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
-            <span class="card3d__body">
-              <span class="card3d__tag">Client project</span>
-              <h4 class="card3d__title">Crew scheduling app</h4>
-              <span class="card3d__desc">Scheduling web app for a Singapore cleaning company: job assignment, WhatsApp messages, crew availability, calendar sync and an audit log.</span>
-              <span class="card3d__tags"><span>JavaScript</span><span>Supabase</span><span>Google sign-in</span></span>
-            </span>
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
-          <a class="card3d" href="https://remindclient.app/" target="_blank" rel="noopener" data-i="1">
-            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">remindclient.app</span><span class="card3d__n" aria-hidden="true">P2</span></span>
-            <span class="card3d__shot"><img src="assets/projects/remind.webp" width="720" height="450" loading="lazy" alt="RemindClient landing page: never chase payments again"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
-            <span class="card3d__body">
-              <span class="card3d__tag">Web app</span>
-              <h4 class="card3d__title">RemindClient</h4>
-              <span class="card3d__desc">Sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders through a Telegram bot.</span>
-              <span class="card3d__tags"><span>AI</span><span>Telegram bot</span></span>
-            </span>
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
-          <a class="card3d" href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener" data-i="2">
-            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">waseelapp.github.io</span><span class="card3d__n" aria-hidden="true">P3</span></span>
-            <span class="card3d__shot"><img src="assets/projects/waseel.webp" width="720" height="450" loading="lazy" alt="Waseel landing page: test and reinforce your Quran memory"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
-            <span class="card3d__body">
-              <span class="card3d__tag">Free web app</span>
-              <h4 class="card3d__title">Waseel: Quran memory tester</h4>
-              <span class="card3d__desc">Tests Quran memorisation with a random ayah by Juz.</span>
-              <span class="card3d__tags"><span>HTML</span><span>JavaScript</span><span>GitHub Pages</span></span>
-            </span>
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
-          <a class="card3d" href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener" data-i="3">
-            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">github.com/fahmymahamud/DataSentinel</span><span class="card3d__n" aria-hidden="true">P4</span></span>
-            <span class="card3d__shot"><img src="assets/projects/sentinel.webp" width="720" height="450" loading="lazy" alt="DataSentinel repository on GitHub"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
-            <span class="card3d__body">
-              <span class="card3d__tag">Open source</span>
-              <h4 class="card3d__title">DataSentinel</h4>
-              <span class="card3d__desc">An agent-based pipeline that uses the Model Context Protocol (MCP) to automate data auditing.</span>
-              <span class="card3d__tags"><span>Python</span><span>MCP</span><span>Docker</span></span>
-            </span>
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
-        </div>
-        <div class="esc3d__hud" aria-hidden="true">
-          <span class="esc3d__stat"><small>Escalator position</small><b class="esc3d__pos">0%</b></span>
-          <span class="esc3d__sep"></span>
-          <span class="esc3d__stat"><small>Now riding</small><b class="esc3d__now">Crew scheduling app</b></span>
-          <span class="esc3d__sep"></span>
-          <span class="esc3d__dir">Stationary</span>
-        </div>
-        <div class="esc3d__levels" role="group" aria-label="Jump to a project">
-          <span class="esc3d__levels-label" aria-hidden="true">Level</span>
-          <button type="button" data-level="0" aria-label="Crew scheduling app">P1</button>
-          <button type="button" data-level="1" aria-label="RemindClient">P2</button>
-          <button type="button" data-level="2" aria-label="Waseel">P3</button>
-          <button type="button" data-level="3" aria-label="DataSentinel">P4</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 · YOUR TASK: pick a problem, see how I'd tackle it -->
-  <section class="floor floor--task" id="task" data-floor="4" data-floor-name="Your task" aria-labelledby="task-h">
-    <div class="wrap">
-      <div class="floor__title" data-sc-act="flow">
-        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
-          <h2 id="task-h" class="h2">Got something eating your time?</h2>
-        </div>
-      </div>
-      <p class="floor__lede">Pick the one that sounds like you. I'll show you how I'd tackle it, and what I've already built that's close.</p>
-      <div class="picker">
-        <div class="picker__tasks" role="tablist" aria-label="Pick a problem">
-          <button type="button" class="task" role="tab" id="task-auto" aria-controls="taskres-auto" aria-selected="true" data-task="auto">
-            <span class="task__q">I copy the same data between spreadsheets every week</span>
-          </button>
-          <button type="button" class="task" role="tab" id="task-data" aria-controls="taskres-data" aria-selected="false" data-task="data">
-            <span class="task__q">My weekly report takes hours to put together</span>
-          </button>
-          <button type="button" class="task" role="tab" id="task-ai" aria-controls="taskres-ai" aria-selected="false" data-task="ai">
-            <span class="task__q">I keep chasing people for payments and replies</span>
-          </button>
-          <button type="button" class="task" role="tab" id="task-web" aria-controls="taskres-web" aria-selected="false" data-task="web">
-            <span class="task__q">My team runs on WhatsApp groups and sticky notes</span>
-          </button>
-          <button type="button" class="task" role="tab" id="task-cloud" aria-controls="taskres-cloud" aria-selected="false" data-task="cloud">
-            <span class="task__q">My app needs a proper home online</span>
-          </button>
-        </div>
-        <div class="picker__result" aria-live="polite">
-          <div class="taskres" role="tabpanel" id="taskres-auto" aria-labelledby="task-auto">
-            <p class="taskres__kicker">This sounds like</p>
-            <h3 class="taskres__title">Automate repetitive work</h3>
-            <p class="taskres__how"><strong>How I'd tackle it:</strong> Write a small Python script or scheduled job that pulls, tidies and moves the data on its own, then tells you when it&#x27;s done.</p>
-            <div class="taskres__cols">
-              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
-              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="pyauto">IT Automation with Python</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
-            </div>
-            <a class="taskres__go" href="#enjoy-auto" data-goto="auto">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="taskres" role="tabpanel" id="taskres-data" aria-labelledby="task-data" hidden>
-            <p class="taskres__kicker">This sounds like</p>
-            <h3 class="taskres__title">Data pipelines &amp; dashboards</h3>
-            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a pipeline that cleans and loads the data once, and a dashboard that refreshes itself.</p>
-            <div class="taskres__cols">
-              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul></div>
-              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="dp900">Azure Data Fundamentals (DP-900)</li><li class="cchip" data-cert="gda">Data Analytics</li><li class="cchip" data-cert="gada">Advanced Data Analytics</li></ul></div>
-            </div>
-            <a class="taskres__go" href="#enjoy-data" data-goto="data">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="taskres" role="tabpanel" id="taskres-ai" aria-labelledby="task-ai" hidden>
-            <p class="taskres__kicker">This sounds like</p>
-            <h3 class="taskres__title">AI assistants &amp; bots</h3>
-            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set up a bot that drafts polite reminders with AI and sends them on schedule, through apps people already use, like Telegram.</p>
-            <div class="taskres__cols">
-              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
-              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="ai900">Azure AI Fundamentals (AI-900)</li><li class="cchip" data-cert="dbxgen">Generative AI Fundamentals</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
-            </div>
-            <a class="taskres__go" href="#enjoy-ai" data-goto="ai">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="taskres" role="tabpanel" id="taskres-web" aria-labelledby="task-web" hidden>
-            <p class="taskres__kicker">This sounds like</p>
-            <h3 class="taskres__title">Custom web apps for small teams</h3>
-            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a small web app with one shared schedule, sign-in, and the messages written for you.</p>
-            <div class="taskres__cols">
-              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
-              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gh900">GitHub Foundations (GH-900)</li></ul></div>
-            </div>
-            <a class="taskres__go" href="#enjoy-web" data-goto="web">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="taskres" role="tabpanel" id="taskres-cloud" aria-labelledby="task-cloud" hidden>
-            <p class="taskres__kicker">This sounds like</p>
-            <h3 class="taskres__title">Cloud setup &amp; hosting</h3>
-            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set it up on Google Cloud, Supabase or Vercel with a database, sign-in and simple deploys.</p>
-            <div class="taskres__cols">
-              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul></div>
-              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gcpace">Associate Cloud Engineer</li><li class="cchip" data-cert="az900">Azure Fundamentals (AZ-900)</li></ul></div>
-            </div>
-            <a class="taskres__go" href="#enjoy-cloud" data-goto="cloud">See it in What I enjoy doing <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 · WHAT I ENJOY DOING: services linked both ways to a certificate directory -->
-  <section class="floor floor--enjoy" id="enjoy" data-floor="5" data-floor-name="What I enjoy" aria-labelledby="enjoy-h">
+  <!-- 2 · WHAT I ENJOY DOING: services linked both ways to a certificate directory -->
+  <section class="floor floor--enjoy" id="enjoy" data-floor="2" data-floor-name="What I enjoy" aria-labelledby="enjoy-h">
     <div class="wrap">
       <div class="floor__title" data-sc-act="flow">
         <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
@@ -513,271 +273,16 @@
     </div>
   </section>
 
-  <!-- 6 · LIVE DEMO: a real cleaning pipeline on made-up data, in the browser -->
-  <section class="floor floor--demo" id="demo" data-floor="6" data-floor-name="Live demo" aria-labelledby="demo-h">
-    <div class="wrap">
-      <div class="floor__title" data-sc-act="flow">
-        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
-          <h2 id="demo-h" class="h2">Watch messy data get cleaned.</h2>
-        </div>
-      </div>
-      <p class="floor__lede">A made-up lift maintenance log, the kind of sheet most data work starts with. Press run and a real cleaning pipeline tidies it, right here in your browser.</p>
-      <div class="demo" data-demo>
-        <div class="demo__bar">
-          <ol class="demo__steps" aria-label="Pipeline steps">
-            <li data-step="1"><span class="demo__n">1</span>Tidy names</li>
-            <li data-step="2"><span class="demo__n">2</span>One date format</li>
-            <li data-step="3"><span class="demo__n">3</span>Remove duplicates</li>
-            <li data-step="4"><span class="demo__n">4</span>Flag missing status</li>
-          </ol>
-          <div class="demo__btns">
-            <button type="button" class="btn btn--primary btn--sm" data-demo-run>Run the pipeline</button>
-            <button type="button" class="btn btn--ghost btn--sm" data-demo-reset disabled>Reset</button>
-          </div>
-        </div>
-        <div class="demo__body">
-          <div class="demo__tablewrap" tabindex="0" aria-label="Maintenance log table, scrollable">
-            <table class="demo__table">
-              <caption class="sr-only">Sample lift maintenance log (made-up data)</caption>
-              <thead><tr><th scope="col">Station</th><th scope="col">Lift</th><th scope="col">Date</th><th scope="col">Task</th><th scope="col">Status</th></tr></thead>
-              <tbody data-demo-rows></tbody>
-            </table>
-          </div>
-          <div class="demo__side">
-            <p class="demo__status" aria-live="polite" data-demo-status>10 raw rows, straight from a shared sheet.</p>
-            <div class="demo__chart" data-demo-chart hidden>
-              <p class="demo__charth">Jobs per station (cleaned)</p>
-              <div class="demo__bars" data-demo-bars></div>
-            </div>
-          </div>
-        </div>
-        <p class="demo__note">Sample data, made up for this demo. The pipeline is real JavaScript running in your browser.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7 · CERTIFIED: framed like a lift's inspection certificate -->
-  <section class="floor floor--plates" id="certified" data-floor="7" data-floor-name="Certified" aria-labelledby="plates-h">
-    <div class="wrap">
-      <div class="floor__title" data-sc-act="flow">
-        <div data-sc-reveal="left" data-sc-reveal-at="0.08 0.36">
-          <h2 id="plates-h" class="h2">Certified, and put to work.</h2>
-        </div>
-      </div>
-      <p class="floor__lede">Every lift carries a framed inspection certificate. Here are mine. Point at one, or tap it, to inspect what I've done with it.</p>
-      <ul class="plates">
-        <li class="plate" data-cert="gcpace">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google Cloud</p>
-              <h3 class="plate__name">Associate Cloud Engineer</h3>
-              <p class="plate__date">Issued <time>Jul 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Associate Cloud Engineer</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Cloud setup &amp; hosting</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/82a36c6d-3f5c-4508-a6c6-521d0d1ed5b9" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="snowpro">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Snowflake</p>
-              <h3 class="plate__name">SnowPro Associate: Platform</h3>
-              <p class="plate__date">Issued <time>Apr 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with SnowPro Associate: Platform</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Trained in</p><p class="plate__svc">Not in a public project yet. Ask me about it.</p>
-              <a class="plate__verify" href="https://achieve.snowflake.com/f787befa-4df9-401a-8ae9-c877354e2617" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="ai900">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Microsoft</p>
-              <h3 class="plate__name">Azure AI Fundamentals <span class="nw">(AI-900)</span></h3>
-              <p class="plate__date">Issued <time>Feb 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure AI Fundamentals (AI-900)</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots</p>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="az900">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Microsoft</p>
-              <h3 class="plate__name">Azure Fundamentals <span class="nw">(AZ-900)</span></h3>
-              <p class="plate__date">Issued <time>Jan 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure Fundamentals (AZ-900)</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Cloud setup &amp; hosting</p>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="dp900">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Microsoft</p>
-              <h3 class="plate__name">Azure Data Fundamentals <span class="nw">(DP-900)</span></h3>
-              <p class="plate__date">Issued <time>Dec 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Azure Data Fundamentals (DP-900)</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="gh900">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">GitHub</p>
-              <h3 class="plate__name">GitHub Foundations <span class="nw">(GH-900)</span></h3>
-              <p class="plate__date">Issued <time>Aug 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with GitHub Foundations (GH-900)</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Custom web apps for small teams</p>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="dbxgen">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Databricks</p>
-              <h3 class="plate__name">Generative AI Fundamentals</h3>
-              <p class="plate__date">Issued <time>Nov 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Generative AI Fundamentals</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots</p>
-              <a class="plate__verify" href="https://credentials.databricks.com/ffec370c-24e5-4ece-9dcd-ca59fd4b9b90" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="pyauto">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google</p>
-              <h3 class="plate__name">IT Automation with Python</h3>
-              <p class="plate__date">Issued <time>Oct 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with IT Automation with Python</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Automate repetitive work</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/7223d0a7-7098-4d63-8a26-7985501af541" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="gada">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google</p>
-              <h3 class="plate__name">Advanced Data Analytics</h3>
-              <p class="plate__date">Issued <time>Sep 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Advanced Data Analytics</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/f49a596f-5c04-4b85-976d-95d0125de7e0" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="gda">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google</p>
-              <h3 class="plate__name">Data Analytics</h3>
-              <p class="plate__date">Issued <time>Jul 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Data Analytics</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">Data pipelines &amp; dashboards</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/d1aad0d0-1368-47aa-923f-2cb7617d5301" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="prompt">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google</p>
-              <h3 class="plate__name">AI Prompting Essentials</h3>
-              <p class="plate__date">Issued <time>Jun 2025</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with AI Prompting Essentials</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Used it for</p><ul class="plate__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul>
-              <p class="plate__h">Helps with</p><p class="plate__svc">AI assistants &amp; bots · Automate repetitive work</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/8f640836-810b-438b-8eed-f6ce4210a06e" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-        <li class="plate" data-cert="cyber">
-          <div class="plate__inner">
-            <div class="plate__face plate__front">
-              <p class="plate__type">Certificate</p>
-              <p class="plate__issuer">Google</p>
-              <h3 class="plate__name">Cybersecurity</h3>
-              <p class="plate__date">Issued <time>Mar 2026</time></p>
-              <button type="button" class="plate__flip" aria-expanded="false">Inspect<span class="sr-only">: what I've done with Cybersecurity</span></button>
-              <span class="plate__stamp" aria-hidden="true">Verified</span>
-            </div>
-            <div class="plate__face plate__back">
-              <p class="plate__h">Trained in</p><p class="plate__svc">Not in a public project yet. Ask me about it.</p>
-              <a class="plate__verify" href="https://www.credly.com/badges/857a094c-b85b-41db-a991-1606dd2963ca" target="_blank" rel="noopener">Verify <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 8 · BADGES: every badge from Credly and Credential.net; filters regroup the wall -->
-  <section class="floor floor--wall" id="badges" data-floor="8" data-floor-name="Badges" aria-labelledby="wall-h">
+  <!-- 3 · BADGES: every badge from Credly and Credential.net; filters regroup the wall -->
+  <section class="floor floor--wall" id="badges" data-floor="3" data-floor-name="Badges" aria-labelledby="wall-h">
     <div class="wrap">
       <div class="floor__title" data-sc-act="flow">
         <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
           <h2 id="wall-h" class="h2">The badge wall.</h2>
         </div>
       </div>
-      <p class="floor__lede">Every badge from my Credly and Credential.net profiles. Pick a topic and watch the wall regroup. Each badge opens its verification page.</p>
-      <div class="wallfilters" role="group" aria-label="Filter badges"><button type="button" class="wallf" data-filter="all" aria-pressed="true">All<span class="wallf__n">26</span></button><button type="button" class="wallf" data-filter="ai" aria-pressed="false">AI<span class="wallf__n">8</span></button><button type="button" class="wallf" data-filter="data" aria-pressed="false">Data<span class="wallf__n">5</span></button><button type="button" class="wallf" data-filter="cloud" aria-pressed="false">Cloud<span class="wallf__n">8</span></button><button type="button" class="wallf" data-filter="auto" aria-pressed="false">Automation<span class="wallf__n">3</span></button><button type="button" class="wallf" data-filter="security" aria-pressed="false">Security &amp; IT<span class="wallf__n">4</span></button><button type="button" class="wallf" data-filter="work" aria-pressed="false">Work &amp; design<span class="wallf__n">4</span></button></div>
+      <p class="floor__lede">Every badge from my Credly, Credential.net and Microsoft Learn profiles. Pick a topic and watch the wall regroup. Each badge opens its verification page.</p>
+      <div class="wallfilters" role="group" aria-label="Filter badges"><button type="button" class="wallf" data-filter="all" aria-pressed="true">All<span class="wallf__n">30</span></button><button type="button" class="wallf" data-filter="ai" aria-pressed="false">AI<span class="wallf__n">9</span></button><button type="button" class="wallf" data-filter="data" aria-pressed="false">Data<span class="wallf__n">6</span></button><button type="button" class="wallf" data-filter="cloud" aria-pressed="false">Cloud<span class="wallf__n">11</span></button><button type="button" class="wallf" data-filter="auto" aria-pressed="false">Automation<span class="wallf__n">3</span></button><button type="button" class="wallf" data-filter="security" aria-pressed="false">Security &amp; IT<span class="wallf__n">4</span></button><button type="button" class="wallf" data-filter="work" aria-pressed="false">Work &amp; design<span class="wallf__n">5</span></button></div>
       <p class="sr-only" aria-live="polite" data-wall-status></p>
       <ul class="wall">
           <li class="badge" data-tags="cloud"><a href="https://www.credly.com/badges/82a36c6d-3f5c-4508-a6c6-521d0d1ed5b9" target="_blank" rel="noopener" title="Associate Cloud Engineer · Google Cloud">
@@ -787,6 +292,22 @@
           <li class="badge" data-tags="data cloud"><a href="https://achieve.snowflake.com/f787befa-4df9-401a-8ae9-c877354e2617" target="_blank" rel="noopener" title="SnowPro Associate: Platform · Snowflake">
             <img src="assets/badges/ac-snowpro.webp" width="120" height="120" loading="lazy" alt="">
             <span class="badge__name">SnowPro Associate: Platform</span><span class="badge__meta">Snowflake · Apr 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="ai cloud"><a href="https://learn.microsoft.com/api/credentials/share/en-us/FahmyMahamudd-1361/C64E478E77C8AA9C?sharingId=685F437A59FD794A" target="_blank" rel="noopener" title="Azure AI Fundamentals (AI-900) · Microsoft">
+            <img src="assets/badges/ms-fundamentals.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Azure AI Fundamentals <span class="nw">(AI-900)</span></span><span class="badge__meta">Microsoft · Feb 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="cloud"><a href="https://learn.microsoft.com/api/credentials/share/en-us/FahmyMahamudd-1361/AE1468A9D7A3E879?sharingId=685F437A59FD794A" target="_blank" rel="noopener" title="Azure Fundamentals (AZ-900) · Microsoft">
+            <img src="assets/badges/ms-fundamentals.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Azure Fundamentals <span class="nw">(AZ-900)</span></span><span class="badge__meta">Microsoft · Jan 2026</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="data cloud"><a href="https://learn.microsoft.com/api/credentials/share/en-us/FahmyMahamudd-1361/AA2C80E29B13A044?sharingId=685F437A59FD794A" target="_blank" rel="noopener" title="Azure Data Fundamentals (DP-900) · Microsoft">
+            <img src="assets/badges/ms-fundamentals.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">Azure Data Fundamentals <span class="nw">(DP-900)</span></span><span class="badge__meta">Microsoft · Dec 2025</span><span class="sr-only"> (opens in a new tab)</span>
+          </a></li>
+          <li class="badge" data-tags="work"><a href="https://learn.microsoft.com/api/credentials/share/en-us/FahmyMahamudd-1361/8EF770CB355E3F2?sharingId=685F437A59FD794A" target="_blank" rel="noopener" title="GitHub Foundations (GH-900) · GitHub · Microsoft">
+            <img src="assets/badges/ms-github-foundations.webp" width="120" height="120" loading="lazy" alt="">
+            <span class="badge__name">GitHub Foundations <span class="nw">(GH-900)</span></span><span class="badge__meta">GitHub · Microsoft · Aug 2026</span><span class="sr-only"> (opens in a new tab)</span>
           </a></li>
           <li class="badge" data-tags="ai"><a href="https://credentials.databricks.com/ffec370c-24e5-4ece-9dcd-ca59fd4b9b90" target="_blank" rel="noopener" title="Generative AI Fundamentals · Databricks">
             <img src="assets/badges/ac-dbx-genai.webp" width="120" height="120" loading="lazy" alt="">
@@ -888,8 +409,256 @@
     </div>
   </section>
 
-  <!-- 9 · CONTACT: the lift arrives. Holds; nothing fades out. -->
-  <section class="floor floor--contact" id="contact" data-floor="9" data-floor-name="Contact" aria-labelledby="contact-h">
+  <!-- 4 · LIVE DEMO: a real cleaning pipeline on made-up data, in the browser -->
+  <section class="floor floor--demo" id="demo" data-floor="4" data-floor-name="Live demo" aria-labelledby="demo-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
+          <h2 id="demo-h" class="h2">Watch messy data get cleaned.</h2>
+        </div>
+      </div>
+      <p class="floor__lede">A made-up lift maintenance log, the kind of sheet most data work starts with. Press run and a real cleaning pipeline tidies it, right here in your browser.</p>
+      <div class="demo" data-demo>
+        <div class="demo__bar">
+          <ol class="demo__steps" aria-label="Pipeline steps">
+            <li data-step="1"><span class="demo__n">1</span>Tidy names</li>
+            <li data-step="2"><span class="demo__n">2</span>One date format</li>
+            <li data-step="3"><span class="demo__n">3</span>Remove duplicates</li>
+            <li data-step="4"><span class="demo__n">4</span>Flag missing status</li>
+          </ol>
+          <div class="demo__btns">
+            <button type="button" class="btn btn--primary btn--sm" data-demo-run>Run the pipeline</button>
+            <button type="button" class="btn btn--ghost btn--sm" data-demo-reset disabled>Reset</button>
+          </div>
+        </div>
+        <div class="demo__body">
+          <div class="demo__tablewrap" tabindex="0" aria-label="Maintenance log table, scrollable">
+            <table class="demo__table">
+              <caption class="sr-only">Sample lift maintenance log (made-up data)</caption>
+              <thead><tr><th scope="col">Station</th><th scope="col">Lift</th><th scope="col">Date</th><th scope="col">Task</th><th scope="col">Status</th></tr></thead>
+              <tbody data-demo-rows></tbody>
+            </table>
+          </div>
+          <div class="demo__side">
+            <p class="demo__status" aria-live="polite" data-demo-status>10 raw rows, straight from a shared sheet.</p>
+            <div class="demo__chart" data-demo-chart hidden>
+              <p class="demo__charth">Jobs per station (cleaned)</p>
+              <div class="demo__bars" data-demo-bars></div>
+            </div>
+          </div>
+        </div>
+        <p class="demo__note">Sample data, made up for this demo. The pipeline is real JavaScript running in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · PROJECTS: the peak. Pinned; the lift doors part under the scroll. -->
+  <section class="floor floor--projects" id="projects" data-floor="5" data-floor-name="Projects" aria-labelledby="projects-h">
+    <div class="lift" data-sc-act="pin" data-sc-span="1.8">
+      <div class="lift__stage" data-sc-stage>
+        <div class="wrap lift__floor">
+          <h2 id="projects-h" class="h2">Things I've built.</h2>
+          <article class="feature">
+            <div class="feature__main">
+              <p class="feature__kicker">Open source · runs every day</p>
+              <h3 class="feature__title">MyJobSearchBot</h3>
+              <p class="feature__desc">A daily bot that checks 5 job sites, keeps the remote AI and data roles open to Singapore, ranks them against my resume, and sends the top 15 to Telegram.</p>
+              <ul class="chips chips--on-white" aria-label="Stack"><li>TypeScript</li><li>Trigger.dev</li><li>Telegram Bot API</li><li>GitHub</li></ul>
+            </div>
+            <a class="btn btn--primary feature__link" href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+          </article>
+        </div>
+        <div class="landing" aria-hidden="true">
+          <div class="landing__rig">
+            <div class="landing__doorway">
+              <div class="landing__car"></div>
+              <div class="landing__door landing__door--l"></div>
+              <div class="landing__door landing__door--r"></div>
+            </div>
+            <div class="hpi">
+              <span class="hpi__lantern"></span>
+              <span class="hpi__screen">
+                <svg class="hpi__arrow" viewBox="0 0 12 12" width="16" height="16"><path d="M6 1.5 11 9.5H1z" fill="currentColor"/></svg>
+                <span class="hpi__digit">5</span>
+                <span class="hpi__label">Projects</span>
+              </span>
+              <span class="hpi__lantern"></span>
+            </div>
+            <div class="callplate"><span class="callplate__btn callplate__btn--up"></span><span class="callplate__btn"></span></div>
+          </div>
+          <div class="landing__floor"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Also built: the escalator. Pinned; four projects ride up the incline
+         as you scroll. Without JS or with reduced motion it is a plain grid. -->
+    <div class="esc3d" data-sc-act="pin" data-sc-span="7" role="region" aria-labelledby="also-h">
+      <div class="esc3d__stage" data-sc-stage>
+        <div class="wrap esc3d__head">
+          <h3 class="esc3d__title" id="also-h">Also built</h3>
+          <p class="esc3d__hint">Four more projects, riding up. Tap a card to open it.</p>
+        </div>
+        <div class="esc3d__scene" aria-hidden="true">
+          <div class="esc3d__assembly">
+            <div class="esc3d__shadow"></div>
+            <div class="esc3d__truss"><i></i></div>
+            <div class="esc3d__glass esc3d__glass--back"></div>
+            <div class="esc3d__steps"><div class="esc3d__belt esc3d__belt--steps"></div></div>
+            <div class="esc3d__rail esc3d__rail--back"><div class="esc3d__belt esc3d__belt--rail"></div></div>
+            <div class="esc3d__glass esc3d__glass--front"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="esc3d__rail esc3d__rail--front"><div class="esc3d__belt esc3d__belt--rail"></div></div>
+          </div>
+        </div>
+        <div class="esc3d__cards">
+          <a class="card3d" href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener" data-i="0">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">crewscheduling.netlify.app</span><span class="card3d__n" aria-hidden="true">P1</span></span>
+            <span class="card3d__shot"><img src="assets/projects/crew.webp" width="720" height="450" loading="lazy" alt="Crew Scheduling landing page: your crew's whole week, in one link"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Client project</span>
+              <h4 class="card3d__title">Crew scheduling app</h4>
+              <span class="card3d__desc">Scheduling web app for a Singapore cleaning company: job assignment, WhatsApp messages, crew availability, calendar sync and an audit log.</span>
+              <span class="card3d__tags"><span>JavaScript</span><span>Supabase</span><span>Google sign-in</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="card3d" href="https://remindclient.app/" target="_blank" rel="noopener" data-i="1">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">remindclient.app</span><span class="card3d__n" aria-hidden="true">P2</span></span>
+            <span class="card3d__shot"><img src="assets/projects/remind.webp" width="720" height="450" loading="lazy" alt="RemindClient landing page: never chase payments again"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Web app</span>
+              <h4 class="card3d__title">RemindClient</h4>
+              <span class="card3d__desc">Sends polite, AI-crafted payment and lesson reminders to your clients. Built to help freelancers send reminders through a Telegram bot.</span>
+              <span class="card3d__tags"><span>AI</span><span>Telegram bot</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="card3d" href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener" data-i="2">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">waseelapp.github.io</span><span class="card3d__n" aria-hidden="true">P3</span></span>
+            <span class="card3d__shot"><img src="assets/projects/waseel.webp" width="720" height="450" loading="lazy" alt="Waseel landing page: test and reinforce your Quran memory"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Free web app</span>
+              <h4 class="card3d__title">Waseel: Quran memory tester</h4>
+              <span class="card3d__desc">Tests Quran memorisation with a random ayah by Juz.</span>
+              <span class="card3d__tags"><span>HTML</span><span>JavaScript</span><span>GitHub Pages</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="card3d" href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener" data-i="3">
+            <span class="card3d__bar"><span class="card3d__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="card3d__url">github.com/fahmymahamud/DataSentinel</span><span class="card3d__n" aria-hidden="true">P4</span></span>
+            <span class="card3d__shot"><img src="assets/projects/sentinel.webp" width="720" height="450" loading="lazy" alt="DataSentinel repository on GitHub"><span class="card3d__peek" aria-hidden="true">Visit <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            <span class="card3d__body">
+              <span class="card3d__tag">Open source</span>
+              <h4 class="card3d__title">DataSentinel</h4>
+              <span class="card3d__desc">An agent-based pipeline that uses the Model Context Protocol (MCP) to automate data auditing.</span>
+              <span class="card3d__tags"><span>Python</span><span>MCP</span><span>Docker</span></span>
+            </span>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+        <div class="esc3d__hud" aria-hidden="true">
+          <span class="esc3d__stat"><small>Escalator position</small><b class="esc3d__pos">0%</b></span>
+          <span class="esc3d__sep"></span>
+          <span class="esc3d__stat"><small>Now riding</small><b class="esc3d__now">Crew scheduling app</b></span>
+          <span class="esc3d__sep"></span>
+          <span class="esc3d__dir">Stationary</span>
+        </div>
+        <div class="esc3d__levels" role="group" aria-label="Jump to a project">
+          <span class="esc3d__levels-label" aria-hidden="true">Level</span>
+          <button type="button" data-level="0" aria-label="Crew scheduling app">P1</button>
+          <button type="button" data-level="1" aria-label="RemindClient">P2</button>
+          <button type="button" data-level="2" aria-label="Waseel">P3</button>
+          <button type="button" data-level="3" aria-label="DataSentinel">P4</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · YOUR TASK: pick a problem, see how I'd tackle it -->
+  <section class="floor floor--task" id="task" data-floor="6" data-floor-name="Your task" aria-labelledby="task-h">
+    <div class="wrap">
+      <div class="floor__title" data-sc-act="flow">
+        <div data-sc-reveal="up" data-sc-reveal-at="0.08 0.36">
+          <h2 id="task-h" class="h2">Got something eating your time?</h2>
+        </div>
+      </div>
+      <p class="floor__lede">Pick the one that sounds like you. I'll show you how I'd tackle it, and what I've already built that's close.</p>
+      <div class="picker">
+        <div class="picker__tasks" role="tablist" aria-label="Pick a problem">
+          <button type="button" class="task" role="tab" id="task-auto" aria-controls="taskres-auto" aria-selected="true" data-task="auto">
+            <span class="task__q">I copy the same data between spreadsheets every week</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-data" aria-controls="taskres-data" aria-selected="false" data-task="data">
+            <span class="task__q">My weekly report takes hours to put together</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-ai" aria-controls="taskres-ai" aria-selected="false" data-task="ai">
+            <span class="task__q">I keep chasing people for payments and replies</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-web" aria-controls="taskres-web" aria-selected="false" data-task="web">
+            <span class="task__q">My team runs on WhatsApp groups and sticky notes</span>
+          </button>
+          <button type="button" class="task" role="tab" id="task-cloud" aria-controls="taskres-cloud" aria-selected="false" data-task="cloud">
+            <span class="task__q">My app needs a proper home online</span>
+          </button>
+        </div>
+        <div class="picker__result" aria-live="polite">
+          <div class="taskres" role="tabpanel" id="taskres-auto" aria-labelledby="task-auto">
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Automate repetitive work</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Write a small Python script or scheduled job that pulls, tidies and moves the data on its own, then tells you when it&#x27;s done.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://github.com/fahmymahamud/remotejobsearch" target="_blank" rel="noopener">MyJobSearchBot<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="pyauto">IT Automation with Python</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-auto" data-goto="auto">See it in What I enjoy doing <span aria-hidden="true">↑</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-data" aria-labelledby="task-data" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Data pipelines &amp; dashboards</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a pipeline that cleans and loads the data once, and a dashboard that refreshes itself.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><span>Data pipeline capstone (Microsoft Fabric, Power BI)</span></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="dp900">Azure Data Fundamentals (DP-900)</li><li class="cchip" data-cert="gda">Data Analytics</li><li class="cchip" data-cert="gada">Advanced Data Analytics</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-data" data-goto="data">See it in What I enjoy doing <span aria-hidden="true">↑</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-ai" aria-labelledby="task-ai" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">AI assistants &amp; bots</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set up a bot that drafts polite reminders with AI and sends them on schedule, through apps people already use, like Telegram.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://remindclient.app/" target="_blank" rel="noopener">RemindClient<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://github.com/fahmymahamud/DataSentinel" target="_blank" rel="noopener">DataSentinel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="ai900">Azure AI Fundamentals (AI-900)</li><li class="cchip" data-cert="dbxgen">Generative AI Fundamentals</li><li class="cchip" data-cert="prompt">AI Prompting Essentials</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-ai" data-goto="ai">See it in What I enjoy doing <span aria-hidden="true">↑</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-web" aria-labelledby="task-web" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Custom web apps for small teams</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Build a small web app with one shared schedule, sign-in, and the messages written for you.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://waseelapp.github.io/quranmemorytester/" target="_blank" rel="noopener">Waseel<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gh900">GitHub Foundations (GH-900)</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-web" data-goto="web">See it in What I enjoy doing <span aria-hidden="true">↑</span></a>
+          </div>
+          <div class="taskres" role="tabpanel" id="taskres-cloud" aria-labelledby="task-cloud" hidden>
+            <p class="taskres__kicker">This sounds like</p>
+            <h3 class="taskres__title">Cloud setup &amp; hosting</h3>
+            <p class="taskres__how"><strong>How I'd tackle it:</strong> Set it up on Google Cloud, Supabase or Vercel with a database, sign-in and simple deploys.</p>
+            <div class="taskres__cols">
+              <div><p class="taskres__h">Already built</p><ul class="taskres__list"><li><a href="https://crewscheduling.netlify.app/" target="_blank" rel="noopener">Crew scheduling app (Supabase)<span class="sr-only"> (opens in a new tab)</span></a></li><li><span>This site (Vercel)</span></li></ul></div>
+              <div><p class="taskres__h">Certified in</p><ul class="cchips"><li class="cchip" data-cert="gcpace">Associate Cloud Engineer</li><li class="cchip" data-cert="az900">Azure Fundamentals (AZ-900)</li></ul></div>
+            </div>
+            <a class="taskres__go" href="#enjoy-cloud" data-goto="cloud">See it in What I enjoy doing <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · CONTACT: the lift arrives. Holds; nothing fades out. -->
+  <section class="floor floor--contact" id="contact" data-floor="7" data-floor-name="Contact" aria-labelledby="contact-h">
     <div class="wrap contact">
       <h2 id="contact-h" class="contact__h">Making everyday tasks effortless on the side.</h2>
       <ul class="social" aria-label="Find me online">
