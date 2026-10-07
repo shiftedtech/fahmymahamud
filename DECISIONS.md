@@ -169,3 +169,11 @@ Built 28 Sep 2026 with Claude Code, following `CLAUDE.md` and `PROMPT.md`.
   Mohammad Fahmy Bin Mahamud, country only, links to LinkedIn, GitHub, Instagram, Facebook and Credly) so Google can match
   searches for the name. Google Search Console verification uses the HTML-tag method on the URL-prefix property
   https://fahmymahamud.vercel.app/ (a Domain property is not possible on a vercel.app address).
+
+## Update 8 Oct: contact links and BitsExplorer badge
+- **Removed, as asked:** the BitsExplorer "Featured" badge from the footer. It is an automatic index, so it says more about
+  the tool than about my work. It stays on Waseel only.
+- **Contact, changed as asked in chat (overrides the email + LinkedIn + GitHub rule):** removed Credly and Credentials
+  (the badge wall still links every badge); added Telegram (t.me/shiftedtech) and Discord (@careershifttechguy).
+- **Discord** has no public profile link by username, so its button copies the username and shows "Copied!".
+- Structured data `sameAs` keeps Credly and now also lists Telegram.

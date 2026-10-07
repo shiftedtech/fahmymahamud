@@ -356,4 +356,23 @@
   });
 
   kick();
+
+  // Discord has no username profile link: the button copies the username instead.
+  Array.prototype.forEach.call(document.querySelectorAll('.social__link--copy'), function (btn) {
+    var label = btn.querySelector('.social__label');
+    var original = label ? label.textContent : '';
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      var done = function () {
+        if (!label) return;
+        label.textContent = 'Copied!';
+        setTimeout(function () { label.textContent = original; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { window.prompt('Discord username:', text); });
+      } else {
+        window.prompt('Discord username:', text);
+      }
+    });
+  });
 })();

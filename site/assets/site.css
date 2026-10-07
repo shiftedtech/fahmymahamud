@@ -606,6 +606,7 @@ time { font-variant-numeric: tabular-nums; }
   display: flex; flex-direction: column; align-items: center; gap: .45rem; min-width: 60px;
   color: var(--grey-600); text-decoration: none; font-size: .8125rem; font-weight: 600;
 }
+button.social__link { background: none; border: 0; padding: 0; margin: 0; width: 100%; font-family: inherit; line-height: inherit; cursor: pointer; }
 .social__icon {
   display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
   background: var(--white); color: var(--green-dark);
@@ -623,8 +624,6 @@ time { font-variant-numeric: tabular-nums; }
 .foot { border-top: 1px solid color-mix(in oklab, var(--green) 20%, transparent); }
 .foot__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
 .foot img { width: auto; height: 34px; }
-.foot .foot__badge { display: inline-flex; line-height: 0; }
-.foot .foot__badge img { height: 22px; width: auto; }
 .foot p { margin: 0; font-size: .9rem; color: var(--grey-600); }
 
 /* ------------------------------------------------ the floor indicator ---- */
