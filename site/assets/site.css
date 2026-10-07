@@ -623,6 +623,8 @@ time { font-variant-numeric: tabular-nums; }
 .foot { border-top: 1px solid color-mix(in oklab, var(--green) 20%, transparent); }
 .foot__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
 .foot img { width: auto; height: 34px; }
+.foot .foot__badge { display: inline-flex; line-height: 0; }
+.foot .foot__badge img { height: 22px; width: auto; }
 .foot p { margin: 0; font-size: .9rem; color: var(--grey-600); }
 
 /* ------------------------------------------------ the floor indicator ---- */
